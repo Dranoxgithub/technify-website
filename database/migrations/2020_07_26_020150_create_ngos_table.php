@@ -18,8 +18,8 @@ class CreateNgosTable extends Migration
             $table->string('name');
             $table->string('website')->nullable();
             $table->string('cause');
-            $table->string('contact_name');
-            $table->string('contact_email');
+            $table->string('contact_name'); 
+            $table->string('contact_email');  // same as User's email 
             $table->timestamps();
         });
     }

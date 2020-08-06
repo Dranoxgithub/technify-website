@@ -20,22 +20,58 @@
 					<a href="#menu"><span>Menu</span></a>
 				</nav>
 				<a href="index.html" class="logo">technify</a>
-				<nav class="right">
-					<a href="#" class="button alt">Log in</a>
+				<nav class="right navbar navbar-expand-md navbar-light bg-white">
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						
+
+						<!-- Right Side Of Navbar -->
+						<ul class="navbar-nav ml-auto">
+						@guest
+                            
+								<a href="{{ route('login') }}" class="button alt">Log in</a>
+								<!-- <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a> -->
+							
+							<!-- @if (Route::has('register'))
+								<li class="nav-item">
+									<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+								</li>
+							@endif -->
+						@else
+							<li class="nav-item dropdown">
+								<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+									{{ Auth::user()->name }} <span class="caret"></span>
+								</a>
+
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="{{ route('logout') }}"
+									onclick="event.preventDefault();
+													document.getElementById('logout-form').submit();">
+										{{ __('Logout') }}
+									</a>
+
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+										@csrf
+									</form>
+								</div>
+							</li>
+						@endguest
+						</ul>
+						
 				</nav>
 			</header>
+			
 
 		<!-- Menu -->
 			<nav id="menu">
             <ul class="navbar-nav mr-auto links">
                 <li class="nav-item">
-                    <a class="{{ Request::is('home*') ? 'nav-link active' : 'nav-link' }}" href="/home">Home</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="{{ Request::is('project_listing*') ? 'nav-link active' : 'nav-link' }}" href="/project_listing">Projects</a>
+                    <a class="{nav-link" href="/project_listing">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="{{ Request::is('join_us*') ? 'nav-link active' : 'nav-link' }}" href="/join_us">Join us</a>
+                    <a class="nav-link" href="/join_us">Join us</a>
                 </li>
             </ul>
 			</nav>

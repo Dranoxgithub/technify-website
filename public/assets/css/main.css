@@ -2719,6 +2719,9 @@
 				text-decoration: none;
 				display: inline-block;
 			}
+			#header nav a:active {
+				background-color: transparent;
+			}
 
 				#header nav a[href="#menu"] {
 					text-decoration: none;
@@ -3236,5 +3239,9 @@
 			width: 100%;
 			margin:0;
 		}
+		.dropdown-menu {
+			line-height: 2em;
+		}
+		
 		
 	

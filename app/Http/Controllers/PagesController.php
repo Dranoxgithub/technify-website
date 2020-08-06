@@ -8,6 +8,6 @@ class PagesController extends Controller
 {
     public function show($page) {
         
-        return view('page/' . $page);
+        return view('pages/' . $page);
     }
 }

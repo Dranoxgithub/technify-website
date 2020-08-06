@@ -1,4 +1,4 @@
-@extends ('page/layout')
+@extends ('pages/layout')
 
 @section ('content')
 <section id="main" class="wrapper">
@@ -12,8 +12,14 @@
                 <h3>Magna odio tempus commodo</h3>
                 <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis commodo ornare aliquet accumsan erat tempus amet porttitor. Ante commodo blandit adipiscing integer semper orci eget. Faucibus commodo adipiscing mi eu nullam accumsan morbi arcu ornare odio mi adipiscing nascetur lacus ac interdum morbi accumsan vis mi accumsan ac praesent.</p>
             </div>
+            <ul class="actions">
+                <li><a href="#" class="button special">Default</a></li>
+                <li><a href="#" class="button">Default</a></li>
+                <li><a href="#" class="button alt">Default</a></li>
+			</ul>
         </div>
     </div>
+
 </section>
 @endsection
 

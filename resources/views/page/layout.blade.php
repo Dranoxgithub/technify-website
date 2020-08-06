@@ -19,7 +19,7 @@
 				<nav class="left">
 					<a href="#menu"><span>Menu</span></a>
 				</nav>
-				<a href="index.html" class="logo">intensify</a>
+				<a href="index.html" class="logo">technify</a>
 				<nav class="right">
 					<a href="#" class="button alt">Log in</a>
 				</nav>

@@ -4,9 +4,13 @@
 
 <!-- Banner -->
 <section id="banner">
-				<div class="content">
+				<div class="content d-flex flex-column justify-content-center">
 					<h1>Use tech to transform & empower</h1>
-					<p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod<br />sed arcu cras consecuat lorem ipsum dolor sit amet.</p>
+					<div class="d-flex flex-row justify-content-center">
+						<p class="col-md-6">
+							Technify is aims to connect the top tech talents of U.S colleges with social impact organisations throughout Southeast Asia. 
+						</p>
+					</div>
 					<ul class="actions">
 						<li><a href="#one" class="button scrolly">Get Started</a></li>
 					</ul>
@@ -19,7 +23,10 @@
 					<div class="flex-item left">
 						<div>
 							<h1>Why</h1>
-							<p>Morbi in sem quis dui plalorem ipsum<br /> euismod in, pharetra sed ultricies.smod in, pharetra sed ultrsmod in, pharetra sed ultrsmod in, pharetra sed ultrsmod in,smod in, pharetra sed ultrsmod in, pharetra sed ultrsmod in, pharetra sed ultrsmod in, pharetra sed ultrsmod in, pharetra sed ultr pharetra sed ultr</p>
+							<p class="text-right">
+								We believe in tech, but we believe more in the people. 
+								Join us now to find out how you can help bridge the digital gap and make change!
+							</p>
 						</div>
 						
 					</div>
@@ -29,7 +36,7 @@
 					<div class="flex-item right">
 						<div>
 							<h1>How</h1>
-							<p>Sed adipiscing ornare risus. Morbi estes<br /> blandit sit et amet, sagittis magna.</p>
+							<p>We help changemakers fight obstacles through pro bono tech consulting and innovative digital solutions.</p>
 						</div>
 					</div>
 				</div>
@@ -45,7 +52,7 @@
 					    </blockquote>
 					    <footer>
 					        <cite class="author">Jane Anderson</cite>
-					        <cite class="company">CEO, Untitled</cite>
+					        <cite class="company">CEO, Soup Kitchen</cite>
 					    </footer>
 					</figure>
 				</div>

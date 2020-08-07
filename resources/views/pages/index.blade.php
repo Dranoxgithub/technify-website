@@ -8,7 +8,7 @@
 					<h1>Use tech to transform & empower</h1>
 					<div class="d-flex flex-row justify-content-center">
 						<p class="col-md-6">
-							Technify is aims to connect the top tech talents of U.S colleges with social impact organisations throughout Southeast Asia. 
+							Technify aims to connect the top tech talents of U.S colleges with social impact organisations throughout Southeast Asia. 
 						</p>
 					</div>
 					<ul class="actions">

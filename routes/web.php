@@ -19,11 +19,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function () {
     return view('pages/index');
 });
+
+
+
+Route::post('/NGO', 'NGOsController@store');
 Route::get('/{page}', 'PagesController@show');
 
 
-// Route::get('/{page}', function () {
-//     return view('welcome');
-// });
+
 
 

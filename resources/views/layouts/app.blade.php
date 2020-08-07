@@ -27,15 +27,14 @@
 				<a href="index.html" class="logo">technify</a>
 				<nav class="right navbar navbar-expand-md navbar-light bg-white">
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						
-
 						<!-- Right Side Of Navbar -->
 						<ul class="navbar-nav ml-auto">
-                            
-							<a href="/register" class="button alt">New User</a>
-								
-						
-						</ul>
+                            @if (Request::is('register'))
+							    <a href="/register" class="button alt">Log in</a>
+                            @else 
+                                <a href="/register" class="button alt">Register</a>
+                            @endif
+                        </ul>
 						
 				</nav>
 			</header>

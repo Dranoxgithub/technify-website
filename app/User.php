@@ -41,4 +41,11 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Project');
     }
+
+    public function NGO()
+    {
+        return $this->hasOne('App\NGO');
+    }
+
+    
 }

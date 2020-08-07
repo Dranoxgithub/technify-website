@@ -4,15 +4,10 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class NGO extends Model
+class Student extends Model
 {
     public function user()
     {
         return $this->belongsTo(User::class);
-    }
-    
-    public function projects()
-    {
-        return $this->hasMany('App\Project');
     }
 }

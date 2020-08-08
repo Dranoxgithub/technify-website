@@ -54,8 +54,7 @@ class ProjectsController extends Controller
         if($project){
             $project->delete();
         }
-        
-
+    
         return redirect('/NGO_project_index')->with('success', 'Contact deleted!');
     }
     public function edit($id)

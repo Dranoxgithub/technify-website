@@ -148,7 +148,7 @@
     </div>
 
     <div class="form-group row">
-        <label for="skill" class="col-md-4 col-form-label text-md-right">{{ __('Skills preferred') }}</label>
+        <label for="skill" class="col-md-4 col-form-label text-md-right">{{ __('Skills Preferred') }}</label>
 
         <div class="col-md-6">
             <input id="skill" type="text" class="form-control @error('skill') is-invalid @enderror" name="skill" value="{{ old('skill') }}" required autocomplete="skill" autofocus>

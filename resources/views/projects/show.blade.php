@@ -6,7 +6,7 @@
 <div class="wrapper">
     
     <?php $ngo = $project->Ngo ?>
-    <h2>{{ $project->name }}</h2>
+    <h2 class="align-center">{{ $project->name }}</h2>
     
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('NGO Full Name') }}</label>

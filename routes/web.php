@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -29,10 +28,11 @@ Route::post('/NGO_project_index', [
     'middleware' => 'auth',
     'uses' => 'ProjectsController@store'
 ]);
-
+Route::get('/project_listing','ProjectsController@showAllProjects')->name('projects.showAllProjects');
 Route::get('/projects/{id}','ProjectsController@show')->name('projects.show');
 Route::delete('/projects/{id}','ProjectsController@destroy')->name('projects.destroy');
 Route::get('/projects/{id}/edit','ProjectsController@edit')->name('projects.edit');
+Route::patch('/projects/{id}','ProjectsController@update')->name('projects.update');
 
 Route::post('/NGO', 'NgosController@store');
 Route::post('/NGO/update', 'NgosController@update');

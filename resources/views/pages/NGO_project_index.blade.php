@@ -5,8 +5,8 @@
 
 <div class="wrapper">
     
-<h1>Project Dashboard</h1>
-<h2>{{ Auth::user()->ngo->name }}</h2>
+<h1 class="align-center">Project Dashboard</h1>
+<h2 class="align-center">{{ Auth::user()->ngo->name }}</h2>
 
     <?php $ngo = Auth::user()->ngo ?>
     <?php $projects = $ngo->projects ?>

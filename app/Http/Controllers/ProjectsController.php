@@ -17,6 +17,13 @@ class ProjectsController extends Controller
         return view('pages.NGO_project_index');
     }
 
+    public function showAllProjects()
+    {
+        $projects = Project::all();
+        
+        return view('pages.project_listing', ['projects' => $projects]);
+    }
+
     public function store()
     {
         
@@ -44,7 +51,7 @@ class ProjectsController extends Controller
     {
         $project = Project::find($id);
         
-        return view('pages.project',['project' => $project]);
+        return view('projects.show',['project' => $project]);
 
     }
     public function destroy($id) 
@@ -59,11 +66,26 @@ class ProjectsController extends Controller
     }
     public function edit($id)
     {
-
+        $project = Project::find($id);
+        return view('projects.edit',['project' => $project]);
     }
     public function update(Request $request, $id)
-    {
-        //
+    {   
+        $project = Project::find($id);
+        $project->name = request('name');
+        $project->goal = request('goal');
+        $project->skill = request('skill');
+        $project->start_date = request('start_date');
+        $project->end_date = request('end_date');
+        $project->timezone = request('timezone');
+        $project->country = request('country');
+        $project->commitment = request('commitment');
+        $project->contact_name = request('contact_name');
+        $project->contact_email = request('contact_email');
+        $project->description = request('description');
+        $project->save();
+
+        return view('projects.show',['project' => $project]);
     }
 
 }

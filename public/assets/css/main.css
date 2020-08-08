@@ -2420,6 +2420,8 @@
 		button:hover,
 		.button:hover {
 			background-color: #f78a76;
+			color: white;
+			text-decoration: none;
 		}
 
 		input[type="submit"]:active,
@@ -2513,6 +2515,7 @@
 		.button.special {
 			background-color: #25a2c3;
 			color: #ffffff !important;
+			margin: 0 auto;
 		}
 
 			input[type="submit"].special:hover,
@@ -3243,5 +3246,12 @@
 			line-height: 2em;
 		}
 		
-		
+		.button-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	
+		#bannerLOGIN {
+			background-image: 
+		}

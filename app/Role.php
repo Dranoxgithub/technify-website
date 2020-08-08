@@ -24,7 +24,7 @@ class Role extends Model
         'deleted_at',
     ];
 
-    public function rolesUsers()
+    public function roleUsers()
     {
         return $this->belongsToMany(User::class);
     }

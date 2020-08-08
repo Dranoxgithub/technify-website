@@ -1,4 +1,4 @@
-@extends ('pages/layout')
+@extends ('layouts.index')
 
 @section ('content')
 <section id="main" class="wrapper">

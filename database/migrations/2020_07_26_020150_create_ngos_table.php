@@ -15,11 +15,10 @@ class CreateNgosTable extends Migration
     {
         Schema::create('ngos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('user_id');
             $table->string('name');
             $table->string('website')->nullable();
             $table->string('cause');
-            $table->string('contact_name'); 
-            $table->string('contact_email');  // same as User's email 
             $table->timestamps();
         });
     }

@@ -21,8 +21,21 @@ Route::get('/', function () {
 });
 
 
+Route::get('/NGO_project_index', [
+    'middleware' => 'auth',
+    'uses' => 'ProjectsController@getNGOProjects'
+]);
+Route::post('/NGO_project_index', [
+    'middleware' => 'auth',
+    'uses' => 'ProjectsController@store'
+]);
 
-Route::post('/NGO', 'NGOsController@store');
+Route::get('/projects/{id}','ProjectsController@show')->name('projects.show');
+Route::delete('/projects/{id}','ProjectsController@destroy')->name('projects.destroy');
+Route::get('/projects/{id}/edit','ProjectsController@edit')->name('projects.edit');
+
+Route::post('/NGO', 'NgosController@store');
+Route::post('/NGO/update', 'NgosController@update');
 Route::get('/{page}', 'PagesController@show');
 
 

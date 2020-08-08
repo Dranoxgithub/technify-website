@@ -1852,6 +1852,8 @@
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
+	input[type="date"],
+	input[type="number"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -1874,6 +1876,8 @@
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		input[type="tel"]:invalid,
+		input[type="date"]:invalid,
+		input[type="number"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -1883,6 +1887,8 @@
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		input[type="tel"]:focus,
+		input[type="date"]:focus,
+		input[type="number"]:focus,
 		select:focus,
 		textarea:focus {
 			border-color: #25a2c3;
@@ -1925,6 +1931,8 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
+	input[type="number"],
 	select {
 		height: 3.5em;
 		line-height: 3.5em;
@@ -2465,7 +2473,16 @@
 		.button.small {
 			font-size: 0.8em;
 		}
+		
+	
+		button.tiny {
+			height: 2em;
+			font-size: 1em;
+			padding: 0 10% 0 10%;
+			border-radius: 10%;
+		}
 
+		
 		input[type="submit"].big,
 		input[type="reset"].big,
 		input[type="button"].big,
@@ -2557,7 +2574,7 @@
 			input[type="button"],
 			button,
 			.button {
-				padding: 0;
+				padding: 0.5;
 			}
 
 		}
@@ -3254,4 +3271,23 @@
 	
 		#bannerLOGIN {
 			background-image: 
+		}
+
+		#log-out-vertical {
+			color: white;
+			text-decoration: none;
+		}
+		.remove-blue,
+		.remove-blue:hover {
+			color: white;
+			text-decoration: none;
+		}
+		
+		
+		@media screen and (max-width: 980px) {
+
+			table td {
+				padding: 0.5em 0.1em;
+			}
+
 		}

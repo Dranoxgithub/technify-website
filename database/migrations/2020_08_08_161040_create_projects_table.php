@@ -15,6 +15,8 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->integer('ngo_id')->unsigned();
+            $table->foreign('ngo_id')->references('id')->on('ngos')->onDelete('cascade');
             $table->string('name');
             $table->string('skill'); 
             $table->string('goal');

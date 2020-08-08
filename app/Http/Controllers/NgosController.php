@@ -10,17 +10,37 @@ use Illuminate\Support\Facades\Auth;
 
 class NgosController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function store() 
     {   
-        dd(Auth::user()->id);
+        
         $ngo = new Ngo();
-        $ngo->contact_name = Auth::user()->name;
-        $ngo->contact_email = Auth::user()->email;
+        $ngo->user_id = Auth::user()->id;
+        // $ngo->contact_name = Auth::user()->name;
+        // $ngo->contact_email = Auth::user()->email;
         $ngo->name = request('name');
         $ngo->website = request('website');
         $ngo->cause = request('cause');
         $ngo->save();
-
+        
         return redirect()->back();
     } 
+    public function update()
+    {
+        $ngo = Ngo::where('user_id', Auth::user()->id) -> first();
+        $ngo->user_id = Auth::user()->id;
+        // $ngo->contact_name = Auth::user()->name;
+        // $ngo->contact_email = Auth::user()->email;
+        $ngo->name = request('name');
+        $ngo->website = request('website');
+        $ngo->cause = request('cause');
+        $ngo->save();
+        
+        return redirect()->action(
+            'ProjectsController@getNGOProjects'
+        );
+    }
 }

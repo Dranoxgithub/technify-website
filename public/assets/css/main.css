@@ -3283,6 +3283,35 @@
 			text-decoration: none;
 		}
 		
+		/* for project_listing */
+		.tag {
+			height: 1.5em;
+			font-size: 1em;
+			padding: 0 3% 0 3%;
+			border-radius: 10%;
+		}
+		.card-body {
+			padding: 0.5rem !important;
+		}
+		.card-content {
+			text-align: left;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 150px;
+			font-size: 0.9rem;
+		}
+		.card-title {
+			overflow: hidden;
+
+			text-overflow: ellipsis;
+			height: 40px;
+		}
+		.card-title h5 {
+			font-weight:50;
+			font-size: 1rem;
+			color: #2190ae;
+		}
+		
 		
 		@media screen and (max-width: 980px) {
 

@@ -47,7 +47,7 @@ Route::get('/getResume', 'StudentsController@getResume');
 Route::get('/NGO', 'PagesController@checkStudentOrNGO');
 Route::get('/student', 'PagesController@checkStudentOrNGO');
 
-
+Route::post('/projects/{id}','ProjectsController@apply')->name('projects.apply');
 
 Route::get('/search',['uses' => 'ProjectsController@search','as' => 'search']);
 

@@ -42,7 +42,7 @@ Route::get('/student', 'StudentsController@show');
 Route::get('/student/edit', 'StudentsController@edit');
 Route::post('/student', 'StudentsController@store');
 Route::patch('/student', 'StudentsController@update');
-
+Route::get('/getResume', 'StudentsController@getResume');
 
 Route::get('/NGO', 'PagesController@checkStudentOrNGO');
 Route::get('/student', 'PagesController@checkStudentOrNGO');

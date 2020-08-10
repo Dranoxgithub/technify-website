@@ -3368,5 +3368,15 @@
 
 				padding: 0;
 			}
-
+			.sm-hidden {
+				display:none;
+			}
 		}
+		@media screen and (max-width: 480px) {
+			.sm-hidden {
+				display:none;
+			}
+		}
+
+		
+		

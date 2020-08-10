@@ -11,7 +11,7 @@
 	
 
 <div class="wrapper">
-        <form method="POST" action="/student">
+        <form method="POST" action="/student" enctype="multipart/form-data">
         
         @csrf
         @method('PATCH')
@@ -60,6 +60,24 @@
                 @enderror
             </div>
         </div>
+        <div class="form-group row">
+				<label for="position" class="col-md-4 col-form-label text-md-right">{{ __('Role interested') }}</label>
+
+				<div class="col-md-6">
+					
+					<select id="position" name="position" value="{{ $student->position }}" autofocus required>
+  						<option value="Software Engineering">Software Engineering</option>
+						<option value="UI/UX Designer">UI/UX Designer</option>
+						<option value="Product Manager">Product Manager</option>
+					</select>
+					@error('position')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong>
+						</span>
+					@enderror
+				</div>
+			</div>
+
 
         <div class="form-group row">
             <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
@@ -122,6 +140,37 @@
             </div>
         </div>
         
+
+        
+        <div class="form-group row mb-0 sm-hidden">
+            <div class="col-md-6 offset-md-4">
+            <embed
+            src="{{ action('StudentsController@getResume') }}"
+            style="width:100%; height:500px;"
+            frameborder="0"
+            alt="resume in pdf">
+            </div>
+        </div>
+        
+        <div class="form-group row mb-0 sm-hidden">
+            <div class="col-md-6 offset-md-4">
+            Your previously saved resume displayed here.
+            </div>
+        </div>
+        
+        <div class="form-group row">
+				<label for="resume" class="col-md-4 col-form-label text-md-right">{{ __('Resume') }}</label>
+
+				<div class="col-md-6">
+                    <input id="resume" type="file" class="@error('resume') is-invalid @enderror" name="resume" value="{{ old('resume') }}" accept=".pdf" autocomplete="resume" autofocus>
+                    {{ $student->resume_name }}
+                </div>
+                @error('resume')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+        </div>
 
         <div class="form-group row mb-0">
             <div class="col-md-6 offset-md-4">

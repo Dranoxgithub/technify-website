@@ -10,7 +10,7 @@
 
 @if (Auth::check())
 		<div class="wrapper">
-			<form method="POST" action="/student">
+			<form method="POST" action="/student" enctype="multipart/form-data">
 
 			@csrf
 			<div class="form-group row">
@@ -35,7 +35,7 @@
 				<label for="school" class="col-md-4 col-form-label text-md-right">{{ __('University') }}</label>
 
 				<div class="col-md-6">
-					<input id="school" type="text" class="form-control @error('school') is-invalid @enderror" name="school" value="{{ old('school') }}" required autocomplete="school" autofocus>
+					<input id="school" type="text" class="form-control @error('school') is-invalid @enderror" name="school" value="{{ old('school') }}" autocomplete="school" autofocus>
 
 					@error('school')
 						<span class="invalid-feedback" role="alert">
@@ -49,7 +49,7 @@
 
 				<div class="col-md-6">
 					
-					<select id="position" name="position">
+					<select id="position" name="position" autofocus required>
   						<option value="Software Engineering">Software Engineering</option>
 						<option value="UI/UX Designer">UI/UX Designer</option>
 						<option value="Product Manager">Product Manager</option>
@@ -62,19 +62,7 @@
 				</div>
 			</div>
 
-			<div class="form-group row">
-				<label for="position" class="col-md-4 col-form-label text-md-right">{{ __('Role interested') }}</label>
-
-				<div class="col-md-6">
-					<input id="position" type="text" class="form-control @error('position') is-invalid @enderror" name="position" value="{{ old('position') }}" autocomplete="position" autofocus>
-
-					@error('position')
-						<span class="invalid-feedback" role="alert">
-							<strong>{{ $message }}</strong>
-						</span>
-					@enderror
-				</div>
-			</div>
+			
 
 			<div class="form-group row">
 				<label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
@@ -136,7 +124,22 @@
 						</span>
 					@enderror
 				</div>
-            </div>
+			</div>
+
+			<div class="form-group row">
+				<label for="resume" class="col-md-4 col-form-label text-md-right">{{ __('Resume') }}</label>
+
+				<div class="col-md-6">
+					<input id="resume" type="file" class="@error('resume') is-invalid @enderror" name="resume" value="{{ old('resume') }}" accept=".pdf" autocomplete="resume" autofocus>
+				</div>
+				@error('resume')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+        </div>
+			
+			
             
 
 			<div class="form-group row mb-0">

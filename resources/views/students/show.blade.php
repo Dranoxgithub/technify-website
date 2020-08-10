@@ -83,12 +83,19 @@
             
         </div>
     </div>
-
+    
     
 
- 
     
-  
+    
+    <div class="align-center sm-hidden">
+        <embed
+        src="{{ action('StudentsController@getResume') }}"
+        style="width:600px; height:500px;"
+        frameborder="0"
+        alt="resume in pdf">
+    </div>
+    
     
     
     

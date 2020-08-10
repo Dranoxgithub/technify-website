@@ -4,7 +4,7 @@
 <section id="main" class="wrapper">
     <div class="inner">
         <header class="align-center">
-            <h1>Project listing</h1>
+            <h1>Project Listing</h1>
             
         </header>
     </div>

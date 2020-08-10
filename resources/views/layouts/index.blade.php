@@ -10,7 +10,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/assets/css/main.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		
 	</head>
 	<body>
 		
@@ -33,10 +34,12 @@
 								<a href="{{ route('login') }}" class="button alt">Log in</a>
 								
 						@else
-							@if (Request::is('NGO_project_index'))
-								<li class="button-wrapper">
-        						<a href="/NGO_project_new" class="button">+ Add Project</a>
-								</li>
+							@if (Auth::user()->ngo != null)
+								@if (Request::is('NGO_project_index') or Request::is('project_listing'))
+									<li class="button-wrapper">
+									<a href="/NGO_project_new" class="button">+ Add Project</a>
+									</li>
+								@endif
 							@endif
 							<li class="nav-item dropdown">
 								<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -71,10 +74,24 @@
                 </li>
                 <li class="nav-item">
                     <a class="{nav-link" href="/project_listing">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/join_us">Join us</a>
 				</li>
+
+				@guest
+					<li class="nav-item">
+						<a class="nav-link" href="/join_us">Join us</a>
+					</li>
+				@else 
+					
+					@if (Auth::user()->ngo == null and Auth::User()->student == null)
+						<li class="nav-item">
+							<a class="nav-link" href="/join_us">Join us</a>
+						</li>
+					@else
+						<li class="nav-item">
+							<a class="nav-link" href="/portal">Portal</a>
+						</li>
+					@endif
+				@endif
 				
 			</ul>
 			<ul class="actions vertical">
@@ -100,6 +117,7 @@
 			@endguest
 			</ul>
 			</nav>
+			
 
 		@yield ('content')
 
@@ -119,6 +137,7 @@
 			</footer>
 
 		<!-- Scripts -->
+			
 			<script src="/assets/js/jquery.min.js"></script>
 			<script src="/assets/js/jquery.scrolly.min.js"></script>
 			<script src="/assets/js/skel.min.js"></script>

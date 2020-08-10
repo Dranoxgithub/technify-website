@@ -10,6 +10,34 @@
     </div>
 </section>
 
+<form action="/search" method="POST" role="search" class="">
+@csrf
+@method('GET')
+<div class="container">
+  <div class="row">
+  	<div class="col-lg-7 col-md-4 col-sm-1 col-xs-1">		
+	</div>
+    <div class="col-lg-3 col-md-4 col-sm-7 col-xs-7">		
+		<input class="" type="text" placeholder="Search" aria-label="Search" name="q">	
+	</div>
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2">
+		<button type="submit" class="button special" id="search-button">
+			Search
+		</button>
+		
+	</div>
+	<div class="col-lg-1 col-md-2 col-sm-1 col-xs-2">
+		<a href="/project_listing" class="button alt" id="cancel-button">
+			Cancel
+		</a>
+	</div>
+  </div>
+  
+</div>
+</form>
+
+
+
 <div class="row gallery">
 	
 	@foreach($projects as $project)

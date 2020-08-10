@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="wrapper">
-    <h2>New Project</h2>
+    <h2 class="align-center">New Project</h2>
     <?php $ngo = Auth::user()->ngo ?>
     <form method="POST" action="/NGO_project_index">
     @csrf

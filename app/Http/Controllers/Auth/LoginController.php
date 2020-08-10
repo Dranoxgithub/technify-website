@@ -42,9 +42,14 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
+        
         if(!session()->has('url.intended'))
         {
             session(['url.intended' => url()->previous()]);
+        }
+        if (url()->previous() == "http://127.0.0.1:8000/join_us")
+        {
+            session(['url.intended' => "http://127.0.0.1:8000/portal"]);
         }
         return view('auth.login');    
     }

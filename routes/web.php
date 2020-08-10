@@ -36,10 +36,19 @@ Route::patch('/projects/{id}','ProjectsController@update')->name('projects.updat
 
 Route::post('/NGO', 'NgosController@store');
 Route::post('/NGO/update', 'NgosController@update');
+
+
+Route::get('/student', 'StudentsController@show');
+Route::get('/student/edit', 'StudentsController@edit');
+Route::post('/student', 'StudentsController@store');
+Route::patch('/student', 'StudentsController@update');
+
+
+Route::get('/NGO', 'PagesController@checkStudentOrNGO');
+Route::get('/student', 'PagesController@checkStudentOrNGO');
+
+
+
+Route::get('/search',['uses' => 'ProjectsController@search','as' => 'search']);
+
 Route::get('/{page}', 'PagesController@show');
-
-
-
-
-
-

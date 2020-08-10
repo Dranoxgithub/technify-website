@@ -55,13 +55,30 @@
 					@enderror
 				</div>
 			</div>
+		
 
 			<div class="form-group row">
 				<label for="cause" class="col-md-4 col-form-label text-md-right">{{ __('Causes') }}</label>
 
 				<div class="col-md-6">
-					<input id="cause" type="text" class="form-control @error('cause') is-invalid @enderror" name="cause" value="{{ old('cause') }}" required autocomplete="causes" autofocus>
-
+					
+					<select id="cause" name="cause">
+  						<option value="Animal Welfare">Animal Welfare</option>
+						<option value="Arts">Arts</option>
+						<option value="Children & Youth">Children & Youth</option>
+						<option value="Community">Community</option>
+						<option value="Education">Education</option>
+						<option value="Eldercare">Eldercare</option>
+						<option value="Environment & Water">Environment & Water</option>
+						<option value="Families">Families</option>
+						<option value="Health">Health</option>
+						<option value="Heritage">Heritage</option>
+						<option value="Humanitarian">Humanitarian</option>
+						<option value="Social Services">Social Services</option>
+						<option value="Special Needs/ Disabilities">Special Needs/ Disabilities</option>
+						<option value="Sports">Sports</option>
+						<option value="Women & Girls">Women & Girls</option>
+					</select>
 					@error('cause')
 						<span class="invalid-feedback" role="alert">
 							<strong>{{ $message }}</strong>
@@ -134,7 +151,7 @@
 				<label for="cause" class="col-md-4 col-form-label text-md-right">{{ __('Causes') }}</label>
 
 				<div class="col-md-6">
-					<input id="cause" type="text" class="form-control @error('cause') is-invalid @enderror" name="cause" value="{{ $ngo->cause }}" required autocomplete="causes" autofocus>
+					<input id="cause" type="text" class="form-control @error('cause') is-invalid @enderror" name="cause" value="{{ $ngo->cause }}" required autocomplete="cause" autofocus>
 
 					@error('cause')
 						<span class="invalid-feedback" role="alert">

@@ -7,6 +7,7 @@ use App\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class ProjectsController extends Controller
 {
     
@@ -78,7 +79,7 @@ class ProjectsController extends Controller
         $project->start_date = request('start_date');
         $project->end_date = request('end_date');
         $project->timezone = request('timezone');
-        $project->country = request('country');
+        $project->country = request('timezone');
         $project->commitment = request('commitment');
         $project->contact_name = request('contact_name');
         $project->contact_email = request('contact_email');
@@ -86,6 +87,33 @@ class ProjectsController extends Controller
         $project->save();
 
         return view('projects.show',['project' => $project]);
+    }
+
+    public function search() {
+        $keyword = request()->input('q');
+        $projects = Project::where ( 'name', 'LIKE', '%' . $keyword . '%' )
+        ->orWhere ( 'goal', 'LIKE', '%' . $keyword . '%' )
+        ->orWhere ( 'skill', 'LIKE', '%' . $keyword . '%' )
+        ->orWhere ( 'start_date', 'LIKE', '%' . $keyword . '%' )
+        ->orWhere ( 'end_date', 'LIKE', '%' . $keyword . '%' )
+        ->orWhere ( 'timezone', 'LIKE', '%' . $keyword . '%' )
+        ->orWhere ( 'commitment', 'LIKE', '%' . $keyword . '%' )
+        ->orWhere ( 'contact_name', 'LIKE', '%' . $keyword . '%' )
+        ->orWhere ( 'contact_email', 'LIKE', '%' . $keyword . '%' )
+        ->orWhere ( 'description', 'LIKE', '%' . $keyword . '%' )
+        ->get();
+
+        $ngos = NGO::where ( 'name', 'LIKE', '%' . $keyword . '%' )
+                        ->orWhere ( 'cause', 'LIKE', '%' . $keyword . '%' )
+                        ->orWhere ( 'website', 'LIKE', '%' . $keyword . '%' )
+                        ->get();
+
+        foreach ($ngos as $ngo)
+        {
+            $projects = $projects->merge($ngo->projects);
+        }
+        return view('pages.project_listing', ['projects' => $projects]);
+
     }
 
 }

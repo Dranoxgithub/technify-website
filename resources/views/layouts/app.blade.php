@@ -32,8 +32,10 @@
 						<ul class="navbar-nav ml-auto">
                             @if (Request::is('register'))
 							    <a href="/login" class="button alt">Log in</a>
-                            @else 
+                            @elseif (Request::is('login'))
                                 <a href="/register" class="button alt">Register</a>
+                            @else
+                                <a href="/" class="button alt">Home</a>
                             @endif
                         </ul>
 						

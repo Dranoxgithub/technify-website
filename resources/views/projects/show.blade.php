@@ -1,7 +1,13 @@
 @extends('layouts.index')
 @section('content')
+
 <div class="button-wrapper">
-    <a class="button" href="/NGO_project_index">Return to Dashboard</a>
+    @if(URL::previous() == 'http://127.0.0.1:8000/project_listing')
+        <a class="button" href="{{ URL::previous() }}">Return to Projects</a>
+    @else
+        <a class="button" href="{{ URL::previous() }}">Return to Dashboard</a>
+    @endif
+   
 </div>
 <div class="wrapper">
     
@@ -61,10 +67,10 @@
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-md-4 col-form-label text-md-right">{{ __('Project Start Datel') }}</label>
+        <label class="col-md-4 col-form-label text-md-right">{{ __('Project Start Date') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->start_date }}</label>
+            <label class="col-md-4 col-form-label">{{ date('d M, Y', strtotime($project->start_date)) }}</label>
             
         </div>
     </div>
@@ -72,7 +78,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Project End Datel') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->end_date }}</label>
+            <label class="col-md-4 col-form-label">{{ date('d M, Y', strtotime($project->end_date)) }}</label>
             
         </div>
     </div>
@@ -108,25 +114,38 @@
             
         </div>
     </div>
-
-    <div class="form-group row">
-        <label class="col-md-4 col-form-label text-md-right">{{ __('Project Contact Person') }}</label>
-
-        <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->contact_name }}</label>
-            
+    @guest
+        <div class="button-wrapper">
+            <a class="button" href="/join_us">Apply</a>
         </div>
-    </div>
-    <div class="form-group row">
-        <label class="col-md-4 col-form-label text-md-right">{{ __('Project Contact Email') }}</label>
+    
+    @else
+        @if(Auth::user()->student != null)
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label text-md-right">{{ __('Project Contact Person') }}</label>
 
-        <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->contact_email }}</label>
-            
-        </div>
-    </div>
+                <div class="col-md-6">
+                    <label class="col-md-4 col-form-label">{{ $project->contact_name }}</label>
+                    
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-4 col-form-label text-md-right">{{ __('Project Contact Email') }}</label>
 
+                <div class="col-md-6">
+                    <label class="col-md-4 col-form-label">{{ $project->contact_email }}</label>
+                    
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <a class="button" href="/">Apply</a>
+            </div>
+       
+        @endif
+        
+        
 
+    @endguest
     
 
     

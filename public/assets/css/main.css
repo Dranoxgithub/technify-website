@@ -3277,11 +3277,7 @@
 			color: white;
 			text-decoration: none;
 		}
-		.remove-blue,
-		.remove-blue:hover {
-			color: white;
-			text-decoration: none;
-		}
+		
 		
 		/* for project_listing */
 		.tag {
@@ -3317,6 +3313,60 @@
 
 			table td {
 				padding: 0.5em 0.1em;
+			}
+
+		}
+
+		/* student */
+		#commitment-range {
+			padding-right: 0;
+		}
+		#min_commitment {
+			margin-left: 15px;
+			margin-right: auto;
+			width: 42%;
+			display: flex;
+		}
+
+		#max_commitment {
+			margin-left: auto;
+			margin-right: 0px;
+			width: 42%;
+			display: flex;
+		}
+
+		/* general */
+		.red-theme {
+			color: #f6755e !important; 
+		}
+
+
+
+		.remove-blue,
+		.remove-blue:hover {
+			color: white;
+			text-decoration: none;
+		}
+
+		/* searchbar */
+		#search-button {
+			width: 80px;
+			padding: 0;
+		}
+		#cancel-button {
+			width: 80px;
+			padding: 0;
+		}
+		  
+		@media screen and (max-width: 980px) {
+
+			#search-bar {
+				width: 40%
+			}
+			#search-button {
+				width: 90px;
+
+				padding: 0;
 			}
 
 		}

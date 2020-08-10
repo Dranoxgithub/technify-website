@@ -37,7 +37,7 @@
             <label for="school" class="col-md-4 col-form-label text-md-right">{{ __('University') }}</label>
 
             <div class="col-md-6">
-                <input id="school" type="text" class="form-control @error('school') is-invalid @enderror" name="school" value="{{ $student->school }}" required autocomplete="school" autofocus>
+                <input id="school" type="text" class="form-control @error('school') is-invalid @enderror" name="school" value="{{ $student->school }}" autocomplete="school" autofocus>
 
                 @error('school')
                     <span class="invalid-feedback" role="alert">
@@ -157,7 +157,7 @@
             Your previously saved resume displayed here.
             </div>
         </div>
-        
+
         <div class="form-group row">
 				<label for="resume" class="col-md-4 col-form-label text-md-right">{{ __('Resume') }}</label>
 

@@ -59,12 +59,12 @@ class StudentsController extends Controller
             if(Storage::disk('s3')->exists($old_resume_url) ) {
                 Storage::disk('s3')->delete($old_resume_url);
             }
-            $path = $resume->store(
-                'resumes/'.$student->id, 's3'
-            );
-            $student->resume_url = $path;
+            
         }
-    
+        $path = $resume->store(
+            'resumes/'.$student->id, 's3'
+        );
+        $student->resume_url = $path;
         
         // $path = $resume->store('files');
         // $student->resume_url = $path;

@@ -6,6 +6,7 @@ use App\Ngo;
 use App\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Mail;
 
 class ProjectsController extends Controller
@@ -119,29 +120,58 @@ class ProjectsController extends Controller
     public function apply($id) {
         $project = Project::find($id);
         $to_name = $project->ngo->name;
-        $to_email = 'chenanni02@gmail.com';
         // $to_email = $project->contact_email;
+        // $cc_email = Auth::user()->email;
+
+        $to_email = 'chenanni02@gmail.com';
+        $cc_email = 'anni.chen@duke.edu';
+
         $student = Auth::user()->student;
         if ($student == null) {
             abort(404);
         }
+        $resume_name = Auth::user()->name.".pdf";
+        $resume_link = $student->resume_url;
+
+        
+        
         $data = array('project_name'=>$project->name, "ngo_name" => $to_name, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
-        Mail::send("projects.email_template", $data, function($message) use ($to_name, $to_email, $project) {
+        Mail::send("projects.email_template", $data, function($message) use ($to_name, $to_email, $project, $resume_link, $resume_name, $cc_email) {
         $message->to($to_email, $to_name)
-        ->subject('New Application for '. $project->name .' 🎉-Technify');
-        $message->from('technifyinitiative@gmail.com','Technify');
+        ->subject('New Application for '. $project->name .' 🎉-Technify')
+        ->from('technifyinitiative@gmail.com','Technify')
+        ->cc($cc_email);
+        if ($resume_link != null && Storage::disk('s3')->exists($resume_link)) {
+            $message->attach(Storage::disk('s3')->url($resume_link), array(
+                'as' => $resume_name,
+                'mime' => 'application/pdf'));
+        }
         
         });
 
-        $to_name = Auth::user()->name;
-        // $to_email = Auth::user()->email;
-        $data = array('project'=>$project, "ngo" => $project->ngo, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
-        Mail::send("projects.application_receipt", $data, function($message) use ($to_name, $to_email, $project) {
-            $message->to($to_email, $to_name)
-            ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
-            $message->from('technifyinitiative@gmail.com','Technify');
+            // $to_name = Auth::user()->name;
+            // // $to_email = Auth::user()->email;
+            // $data = array('project'=>$project, "ngo" => $project->ngo, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
+            // Mail::send("projects.application_receipt", $data, function($message) use ($to_name, $to_email, $project) {
+            // $message->to($to_email, $to_name)
+            // ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
+            // $message->from('technifyinitiative@gmail.com','Technify');
             
-        });
+            // });
+        
+            // $to_name = Auth::user()->name;
+            // // $to_email = Auth::user()->email;
+            // $data = array('project'=>$project, "ngo" => $project->ngo, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
+            // Mail::send("projects.application_receipt", $data, function($message) use ($to_name, $to_email, $project, $resume_link, $resume_name) {
+            // $message->to($to_email, $to_name)
+            // ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
+            // $message->from('technifyinitiative@gmail.com','Technify');
+            // $message->attach(Storage::disk('s3')->url($resume_link), array(
+            //         'as' => $resume_name,
+            //         'mime' => 'application/pdf'));
+            // });
+        
+        
         return view('projects.show',['project' => $project]);
     }
 }

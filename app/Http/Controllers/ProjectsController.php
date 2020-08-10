@@ -119,8 +119,8 @@ class ProjectsController extends Controller
     public function apply($id) {
         $project = Project::find($id);
         $to_name = $project->ngo->name;
-        // $to_email = 'chenanni02@gmail.com';
-        $to_email = $project->contact_name;
+        $to_email = 'chenanni02@gmail.com';
+        // $to_email = $project->contact_email;
         $student = Auth::user()->student;
         if ($student == null) {
             abort(404);
@@ -128,9 +128,19 @@ class ProjectsController extends Controller
         $data = array('project_name'=>$project->name, "ngo_name" => $to_name, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
         Mail::send("projects.email_template", $data, function($message) use ($to_name, $to_email, $project) {
         $message->to($to_email, $to_name)
-        ->subject('New Application for '. $project->name .' 🎉');
+        ->subject('New Application for '. $project->name .' 🎉-Technify');
         $message->from('technifyinitiative@gmail.com','Technify');
         
+        });
+
+        $to_name = Auth::user()->name;
+        // $to_email = Auth::user()->email;
+        $data = array('project'=>$project, "ngo" => $project->ngo, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
+        Mail::send("projects.application_receipt", $data, function($message) use ($to_name, $to_email, $project) {
+            $message->to($to_email, $to_name)
+            ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
+            $message->from('technifyinitiative@gmail.com','Technify');
+            
         });
         return view('projects.show',['project' => $project]);
     }

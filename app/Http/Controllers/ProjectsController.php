@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Mail;
+use Session;
 
 class ProjectsController extends Controller
 {
@@ -149,29 +150,29 @@ class ProjectsController extends Controller
         
         });
 
-            // $to_name = Auth::user()->name;
-            // // $to_email = Auth::user()->email;
-            // $data = array('project'=>$project, "ngo" => $project->ngo, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
-            // Mail::send("projects.application_receipt", $data, function($message) use ($to_name, $to_email, $project) {
-            // $message->to($to_email, $to_name)
-            // ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
-            // $message->from('technifyinitiative@gmail.com','Technify');
-            
-            // });
+        // $to_name = Auth::user()->name;
+        // // $to_email = Auth::user()->email;
+        // $data = array('project'=>$project, "ngo" => $project->ngo, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
+        // Mail::send("projects.application_receipt", $data, function($message) use ($to_name, $to_email, $project) {
+        // $message->to($to_email, $to_name)
+        // ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
+        // $message->from('technifyinitiative@gmail.com','Technify');
         
-            // $to_name = Auth::user()->name;
-            // // $to_email = Auth::user()->email;
-            // $data = array('project'=>$project, "ngo" => $project->ngo, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
-            // Mail::send("projects.application_receipt", $data, function($message) use ($to_name, $to_email, $project, $resume_link, $resume_name) {
-            // $message->to($to_email, $to_name)
-            // ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
-            // $message->from('technifyinitiative@gmail.com','Technify');
-            // $message->attach(Storage::disk('s3')->url($resume_link), array(
-            //         'as' => $resume_name,
-            //         'mime' => 'application/pdf'));
-            // });
-        
-        
+        // });
+    
+        // $to_name = Auth::user()->name;
+        // // $to_email = Auth::user()->email;
+        // $data = array('project'=>$project, "ngo" => $project->ngo, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
+        // Mail::send("projects.application_receipt", $data, function($message) use ($to_name, $to_email, $project, $resume_link, $resume_name) {
+        // $message->to($to_email, $to_name)
+        // ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
+        // $message->from('technifyinitiative@gmail.com','Technify');
+        // $message->attach(Storage::disk('s3')->url($resume_link), array(
+        //         'as' => $resume_name,
+        //         'mime' => 'application/pdf'));
+        // });
+
+        Session::flash('message', 'Congrats! Applied successfully.');
         return view('projects.show',['project' => $project]);
     }
 }

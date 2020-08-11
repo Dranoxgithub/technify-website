@@ -7,6 +7,7 @@ use App\Ngo;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
+use Session;
 
 class NgosController extends Controller
 {
@@ -39,6 +40,7 @@ class NgosController extends Controller
         $ngo->cause = request('cause');
         $ngo->save();
         
+        Session::flash('message', 'Successfully updated.');
         return redirect()->action(
             'ProjectsController@getNGOProjects'
         );

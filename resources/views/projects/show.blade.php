@@ -1,5 +1,11 @@
 @extends('layouts.index')
 @section('content')
+@if (Session::has('message'))
+    <div class="alert alert-success alert-dismissible" role="alert">
+        <button class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        {{ Session::get('message') }}
+    </div>
+@endif
 
 <div class="button-wrapper">
     @if(URL::previous() == 'http://127.0.0.1:8000/project_listing')

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Response;
+use Session;
 
 class StudentsController extends Controller
 {
@@ -59,12 +60,13 @@ class StudentsController extends Controller
             if(Storage::disk('s3')->exists($old_resume_url) ) {
                 Storage::disk('s3')->delete($old_resume_url);
             }
-            
+            $path = $resume->store(
+                'resumes/'.$student->id, 's3'
+            );
+            $student->resume_url = $path;
         }
-        $path = $resume->store(
-            'resumes/'.$student->id, 's3'
-        );
-        $student->resume_url = $path;
+        
+        
         
         // $path = $resume->store('files');
         // $student->resume_url = $path;
@@ -72,7 +74,10 @@ class StudentsController extends Controller
         
 
         $student->save();
+        Session::flash('message', 'Successfully updated!');
+        // $request->session()->flash('status', 'Task was successful!');
         return view('students.show', ['student' => $student]);
+        // return view('students.show', ['student' => $student])->with('message', 'Updated successfully.');
 
 
     }

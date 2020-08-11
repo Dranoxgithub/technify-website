@@ -16,7 +16,7 @@ Hello {{ $ngo_name }},<br><br>
     <strong>{{ __('Language') }}: </strong>{{ $student->language }}<br>
     <strong>{{ __('Commitment') }}: </strong>{{ $student->min_commitment . ' - ' . $student->max_commitment . ' hours/ week'}}<br>
 
-    <strong>The student is cc'ed here. To contact the student, please email the student at $student_email directly.</strong><br><br>
+    <strong>The student is cc'ed here. To contact the student, please email the student at {{ $student_email }} directly.</strong><br><br>
 
     For questions and feedback, please contact technifyinitiative@gmail.com.<br><br>
 

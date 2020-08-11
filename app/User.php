@@ -49,6 +49,6 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function ngo()
     {
-        return $this->hasOne(NGO::class, 'user_id');
+        return $this->hasOne(Ngo::class, 'user_id');
     }
 }

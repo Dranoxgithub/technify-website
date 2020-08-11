@@ -11,7 +11,7 @@ class Project extends Model
 
     public function Ngo()
     {
-        return $this->belongsTo('App\NGO');
+        return $this->belongsTo('App\Ngo');
     }
 
     // public function User()

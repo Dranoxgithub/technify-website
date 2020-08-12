@@ -24,7 +24,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('NGO Full Name') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $ngo->name }}</label>
+            <label class="col-md-4">{{ $ngo->name }}</label>
             
         </div>
     </div>
@@ -33,7 +33,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('NGO Website') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $ngo->website }}</label>
+            <label class="col-md-4">{{ $ngo->website }}</label>
             
         </div>
     </div>
@@ -42,7 +42,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Causes') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $ngo->cause }}</label>
+            <label class="col-md-4">{{ $ngo->cause }}</label>
             
         </div>
     </div>
@@ -51,7 +51,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Project Name') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->name }}</label>
+            <label class="col-md-4">{{ $project->name }}</label>
             
         </div>
     </div>
@@ -60,7 +60,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Project Goal') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->goal }}</label>
+            <label class="col-md-4">{{ $project->goal }}</label>
             
         </div>
     </div>
@@ -68,7 +68,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Weekly Commitment') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->commitment }}</label>
+            <label class="col-md-4">{{ $project->commitment }}</label>
             
         </div>
     </div>
@@ -76,7 +76,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Project Start Date') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ date('d M, Y', strtotime($project->start_date)) }}</label>
+            <label class="col-md-4">{{ date('d M, Y', strtotime($project->start_date)) }}</label>
             
         </div>
     </div>
@@ -84,7 +84,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Project End Datel') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ date('d M, Y', strtotime($project->end_date)) }}</label>
+            <label class="col-md-4">{{ date('d M, Y', strtotime($project->end_date)) }}</label>
             
         </div>
     </div>
@@ -92,7 +92,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->country }}</label>
+            <label class="col-md-4">{{ $project->country }}</label>
             
         </div>
     </div>
@@ -100,7 +100,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->timezone }}</label>
+            <label class="col-md-4">{{ $project->timezone }}</label>
             
         </div>
     </div>
@@ -108,7 +108,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->description }}</label>
+            <label class="col-md-4">{{ $project->description }}</label>
             
         </div>
     </div>
@@ -116,7 +116,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Skills Preferred') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label">{{ $project->skill }}</label>
+            <label class="col-md-4">{{ $project->skill }}</label>
             
         </div>
     </div>

@@ -132,7 +132,7 @@
 					</ul>
 				</div>
 				<div class="copyright">
-					&copy; Technify. Design <a href="https://templated.co">TEMPLATED</a>.
+					&copy; Technify. Design <a href="https://templated.co">TEMPLATED</a>. Photo <a href="https://unsplash.com/">Unsplash</a>.
 				</div>
 			</footer>
 

@@ -20,8 +20,6 @@ class NgosController extends Controller
         
         $ngo = new Ngo();
         $ngo->user_id = Auth::user()->id;
-        // $ngo->contact_name = Auth::user()->name;
-        // $ngo->contact_email = Auth::user()->email;
         $ngo->name = request('name');
         $ngo->website = request('website');
         $ngo->cause = request('cause');
@@ -33,16 +31,23 @@ class NgosController extends Controller
     {
         $ngo = Ngo::where('user_id', Auth::user()->id) -> first();
         $ngo->user_id = Auth::user()->id;
-        // $ngo->contact_name = Auth::user()->name;
-        // $ngo->contact_email = Auth::user()->email;
         $ngo->name = request('name');
         $ngo->website = request('website');
         $ngo->cause = request('cause');
         $ngo->save();
         
         Session::flash('message', 'Successfully updated.');
-        return redirect()->action(
-            'ProjectsController@getNGOProjects'
-        );
+
+        return view('ngos.show', ['ngo' => $ngo]);
+    }
+    public function edit()
+    {
+        $ngo = Auth::user()->ngo;
+        if ($ngo == null) {
+            return view('ngos.register');
+        } else {
+            return view('ngos.edit', ['ngo' => $ngo]);
+        }
+
     }
 }

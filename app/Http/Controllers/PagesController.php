@@ -25,10 +25,10 @@ class PagesController extends Controller
             
         } else {
             if (Auth::user()->ngo != null) {
-                return view('pages.ngo');
+                return view('ngos.show', ['ngo' => Auth::user()->ngo]);
             } else {
                 if (Auth::user()->student == null) {
-                    return view('pages.ngo');
+                    return view('ngos.register');
                 }
             }
         }

@@ -81,7 +81,7 @@ class ProjectsController extends Controller
         $project->start_date = request('start_date');
         $project->end_date = request('end_date');
         $project->timezone = request('timezone');
-        $project->country = request('timezone');
+        $project->country = request('country');
         $project->commitment = request('commitment');
         $project->contact_name = request('contact_name');
         $project->contact_email = request('contact_email');

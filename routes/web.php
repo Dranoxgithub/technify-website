@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -13,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function () {
@@ -21,12 +20,37 @@ Route::get('/', function () {
 });
 
 
+Route::get('/NGO_project_index', [
+    'middleware' => 'auth',
+    'uses' => 'ProjectsController@getNGOProjects'
+]);
+Route::post('/NGO_project_index', [
+    'middleware' => 'auth',
+    'uses' => 'ProjectsController@store'
+]);
+Route::get('/project_listing','ProjectsController@showAllProjects')->name('projects.showAllProjects');
+Route::get('/projects/{id}','ProjectsController@show')->name('projects.show');
+Route::delete('/projects/{id}','ProjectsController@destroy')->name('projects.destroy');
+Route::get('/projects/{id}/edit','ProjectsController@edit')->name('projects.edit');
+Route::patch('/projects/{id}','ProjectsController@update')->name('projects.update');
 
-Route::post('/NGO', 'NGOsController@store');
+Route::post('/NGO', 'NgosController@store');
+Route::get('/NGO/edit', 'NgosController@edit');
+Route::patch('/NGO', 'NgosController@update');
+Route::get('/NGO', 'PagesController@checkStudentOrNGO');
+
+
+
+Route::get('/student/edit', 'StudentsController@edit');
+Route::post('/student', 'StudentsController@store');
+Route::patch('/student', 'StudentsController@update');
+Route::get('/getResume', 'StudentsController@getResume');
+Route::get('/student', 'PagesController@checkStudentOrNGO');
+
+
+
+Route::post('/projects/{id}','ProjectsController@apply')->name('projects.apply');
+
+Route::get('/search',['uses' => 'ProjectsController@search','as' => 'search']);
+
 Route::get('/{page}', 'PagesController@show');
-
-
-
-
-
-

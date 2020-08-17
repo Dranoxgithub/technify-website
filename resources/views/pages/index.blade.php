@@ -31,7 +31,7 @@
 						
 					</div>
 					<div class="flex-item image fit round">
-						<img src="images/pic01.jpg" alt="" />
+						<img src="images/heart.jpg" alt="" />
 					</div>
 					<div class="flex-item right">
 						<div>
@@ -64,11 +64,11 @@
 				<div class="inner flex flex-3">
 					<div class="flex-item box">
 						<div class="image fit">
-							<img src="images/pic02.jpg" alt="" />
+							<img src="images/lostfood.png" alt="" />
 						</div>
 						<div class="content">
-							<h3>Consequat</h3>
-							<p>Placerat ornare. Pellentesque od sed euismod in, pharetra ltricies edarcu cas consequat.</p>
+							<h3>The Lost Food Project</h3>
+							<p>Build a web app to address food supply & volunteer onboarding</p>
 						</div>
 					</div>
 					<div class="flex-item box">
@@ -76,8 +76,8 @@
 							<img src="images/pic03.jpg" alt="" />
 						</div>
 						<div class="content">
-							<h3>Adipiscing</h3>
-							<p>Morbi in sem quis dui placerat Pellentesque odio nisi, euismod pharetra lorem ipsum.</p>
+							<h3>Soup Kitchen</h3>
+							<p>Build a website to help us recruit volunteers in Malaysia.</p>
 						</div>
 					</div>
 					<div class="flex-item box">

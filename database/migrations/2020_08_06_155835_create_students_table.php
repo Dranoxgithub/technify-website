@@ -16,8 +16,16 @@ class CreateStudentsTable extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('user_id');
-            $table->string('school');
+            $table->string('school')->nullable();
+            $table->string('position');
+            $table->string('country');
+            $table->string('timezone');
+            $table->string('language');
+            $table->integer('min_commitment'); 
+            $table->integer('max_commitment'); 
+            $table->string('resume_url')->nullable(); 
             $table->timestamps();
+
         });
     }
 

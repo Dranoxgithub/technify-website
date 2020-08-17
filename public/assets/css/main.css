@@ -1852,6 +1852,8 @@
 	input[type="password"],
 	input[type="email"],
 	input[type="tel"],
+	input[type="date"],
+	input[type="number"],
 	select,
 	textarea {
 		-moz-appearance: none;
@@ -1874,6 +1876,8 @@
 		input[type="password"]:invalid,
 		input[type="email"]:invalid,
 		input[type="tel"]:invalid,
+		input[type="date"]:invalid,
+		input[type="number"]:invalid,
 		select:invalid,
 		textarea:invalid {
 			box-shadow: none;
@@ -1883,6 +1887,8 @@
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		input[type="tel"]:focus,
+		input[type="date"]:focus,
+		input[type="number"]:focus,
 		select:focus,
 		textarea:focus {
 			border-color: #25a2c3;
@@ -1925,6 +1931,8 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	input[type="date"],
+	input[type="number"],
 	select {
 		height: 3.5em;
 		line-height: 3.5em;
@@ -2465,7 +2473,16 @@
 		.button.small {
 			font-size: 0.8em;
 		}
+		
+	
+		button.tiny {
+			height: 2em;
+			font-size: 1em;
+			padding: 0 10% 0 10%;
+			border-radius: 10%;
+		}
 
+		
 		input[type="submit"].big,
 		input[type="reset"].big,
 		input[type="button"].big,
@@ -2557,7 +2574,7 @@
 			input[type="button"],
 			button,
 			.button {
-				padding: 0;
+				padding: 0.5;
 			}
 
 		}
@@ -3255,3 +3272,119 @@
 		#bannerLOGIN {
 			background-image: 
 		}
+
+		#log-out-vertical {
+			color: white;
+			text-decoration: none;
+		}
+		
+		
+		/* for project_listing */
+		.tag {
+			height: 1.5em;
+			font-size: 1em;
+			padding: 0 3% 0 3%;
+			border-radius: 10%;
+		}
+		.card-body {
+			padding: 0.5rem !important;
+		}
+		.card-content {
+			text-align: left;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			height: 150px;
+			font-size: 0.9rem;
+		}
+		.card-title {
+			overflow: hidden;
+
+			text-overflow: ellipsis;
+			height: 40px;
+		}
+		.card-title h5 {
+			font-weight:50;
+			font-size: 1rem;
+			color: #2190ae;
+		}
+		
+		
+		@media screen and (max-width: 980px) {
+
+			table td {
+				padding: 0.5em 0.1em;
+			}
+
+		}
+
+		/* student */
+		#commitment-range {
+			padding-right: 0;
+		}
+		#min_commitment {
+			margin-left: 15px;
+			margin-right: auto;
+			width: 42%;
+			display: flex;
+		}
+
+		#max_commitment {
+			margin-left: auto;
+			margin-right: 0px;
+			width: 42%;
+			display: flex;
+		}
+
+		/* general */
+		.red-theme {
+			color: #f6755e !important; 
+		}
+
+
+
+		.remove-blue,
+		.remove-blue:hover {
+			color: white;
+			text-decoration: none;
+		}
+
+		/* searchbar */
+		#search-button {
+			width: 80px;
+			padding: 0;
+		}
+		#cancel-button {
+			width: 80px;
+			padding: 0;
+		}
+		  
+		@media screen and (max-width: 980px) {
+
+			#search-bar {
+				width: 40%
+			}
+			#search-button {
+				width: 90px;
+
+				padding: 0;
+			}
+			.sm-hidden {
+				display:none;
+			}
+		}
+		@media screen and (max-width: 480px) {
+			.sm-hidden {
+				display:none;
+			}
+		}
+
+		.close {
+			height: 1em;
+		}
+		/* project show */
+		.form-max-width {
+			max-width: 100% !important;
+		}
+
+		
+		

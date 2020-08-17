@@ -6,13 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    public function NGO()
+    // allow all attributes mass assignable
+    protected $guarded = [];
+
+    public function Ngo()
     {
-        return $this->belongsTo('App\NGO');
+        return $this->belongsTo('App\Ngo');
     }
 
-    public function User()
-    {
-        return $this->belongsTo('App\User');
-    }
+    // public function User()
+    // {
+    //     return $this->belongsTo('App\User');
+    // }
 }

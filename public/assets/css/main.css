@@ -1962,8 +1962,8 @@
 			color: #767d85;
 			cursor: pointer;
 			display: inline-block;
-			font-size: 1em;
-			font-weight: 300;
+			font-size: 1.2em;
+			font-weight: 300%;
 			padding-left: 2.4em;
 			padding-right: 0.75em;
 			position: relative;
@@ -1979,6 +1979,7 @@
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
+			
 			}
 
 			input[type="checkbox"] + label:before,
@@ -2017,6 +2018,9 @@
 
 	input[type="radio"] + label:before {
 		border-radius: 100%;
+		border: none;
+		background: #fff;
+		
 	}
 
 	::-webkit-input-placeholder {
@@ -3453,3 +3457,65 @@
 		.description {
 			color: white;
 		}
+
+
+
+
+
+		/**
+ * Tabs
+ */
+.tabs {
+	display: flex;
+	flex-wrap: wrap; // make sure it wraps
+}
+.tabs label {
+	margin: 0px 0px;
+	order: 1;
+	display: block;
+	padding: 1rem 2rem;
+	margin-right: 0.2rem;
+	cursor: pointer;
+	font-weight: bolder;
+	background: #fff;
+	transition: background ease 0s;
+}
+.tabs .tab {
+  order: 99; // Put the tabs last
+  flex-grow: 1;
+	width: 100%;
+	display: none;
+	margin-bottom: 0px;
+  background: #f6755e;
+  color: #fff;
+}
+.tabs input[type="radio"] {
+	display: none;
+}
+.tabs input[type="radio"]:checked + label {
+	color: #fff;
+	margin-bottom: 0px;
+	background: #f6755e;
+}
+.tabs input[type="radio"]:checked + label + .tab {
+	border: none;
+	background-color: none;
+	margin: 0px;
+	display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
+
+
+
+  

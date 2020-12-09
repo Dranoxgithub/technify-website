@@ -75,6 +75,9 @@
                 <li class="nav-item">
                     <a class="{nav-link" href="/project_listing">Projects</a>
 				</li>
+				<li class="nav-item">
+                    <a class="nav-link" href="/about_us">About us</a>
+				</li>
 
 				@guest
 					<li class="nav-item">

@@ -43,7 +43,12 @@
 			</section>
 
 		<!-- Two -->
-			<section id="two" class="wrapper style1 special">
+			
+			<div class="tabs">
+  <input type="radio" name="tabs" id="tabone" checked="checked">
+  <label class="test" for="tabone">Student</label>
+  <div class="tab">
+  <section id="two" class="wrapper style1 special">
 				<div class="inner">
 				<div class="container">
             <h4>Technify as a Student Techie!</h4>
@@ -94,6 +99,71 @@
         
 				</div>
 			</section>
+  </div>
+  
+  
+  
+  <input type="radio" name="tabs" id="tabthree">
+  <label for="tabthree">NGO/ Social Enterprise</label>
+  <div class="tab">
+    
+  <section id="two" class="wrapper style1 special">
+				<div class="inner">
+				<div class="container">
+            <h4>Technify as an NGO/ Social Enterprise!</h4>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline">
+                        <a class="timeline">
+                            <div class="timeline-icon"><i class="fa fa-check-square-o"></i></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Sign up</h3>
+                                <p class="description">
+									Register and fill out basic information about your organization on your organization profile. 
+                                </p>
+                            </div>
+                        </a>
+                        <a class="timeline">
+                            <div class="timeline-icon"><i class="fa fa-laptop"></i></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Apply for projects</h3>
+                                <p class="description">
+									You can create multiple projects specifying your need for software engineers or project managers. You can manage projects under Project Dashboard.
+                                </p>
+                            </div>
+                        </a>
+                        <a class="timeline">
+                            <div class="timeline-icon"><i class="fa fa-globe"></i></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Matched</h3>
+                                <p class="description">
+								Student profiles will be sent to your organization via email when a student applied. You can easily contact them by replying the email. 
+
+                                </p>
+                            </div>
+                        </a>
+                        <a class="timeline">
+                            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+                            <div class="timeline-content">
+                                <h3 class="title">Serve & Contribute</h3>
+                                <p class="description">
+									Once you finished recruiting techies for your project, you’re all set to change the world and technify social impact! 
+
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+				</div>
+			</section>
+
+
+  </div>
+</div>
+		
 
         <!-- Three -->
         

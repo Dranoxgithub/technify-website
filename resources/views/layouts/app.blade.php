@@ -48,10 +48,14 @@
             <ul class="navbar-nav mr-auto links">
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="{nav-link" href="/project_listing">Projects</a>
-                </li>
+				</li>
+				
+				<li class="nav-item">
+                    <a class="nav-link" href="/project_listing">Projects</a>
+				</li>
+				<li class="nav-item">
+                    <a class="nav-link" href="/about_us">About us</a>
+				</li>
                 <li class="nav-item">
                     <a class="nav-link" href="/join_us">Join us</a>
                 </li>

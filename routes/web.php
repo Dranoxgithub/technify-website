@@ -16,7 +16,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function () {
-    return view('pages/index');
+    return view('pages.index');
 });
 
 
@@ -40,7 +40,7 @@ Route::patch('/NGO', 'NgosController@update');
 Route::get('/NGO', 'PagesController@checkStudentOrNGO');
 
 
-
+    
 Route::get('/student/edit', 'StudentsController@edit');
 Route::post('/student', 'StudentsController@store');
 Route::patch('/student', 'StudentsController@update');

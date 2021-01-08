@@ -44,9 +44,9 @@
 
 		<!-- Two -->
 			
-			<div class="tabs">
+<div class="tabs">
   <input type="radio" name="tabs" id="tabone" checked="checked">
-  <label class="test" for="tabone">Student</label>
+  <label class="test" for="tabone" style="border:solid; border-color:#f6755e">Student</label>
   <div class="tab">
   <section id="two" class="wrapper style1 special">
 				<div class="inner">
@@ -59,7 +59,7 @@
                             <div class="timeline-icon"><i class="fa fa-check-square-o"></i></div>
                             <div class="timeline-content">
                                 <h3 class="title">Sign up</h3>
-                                <p class="description">
+                                <p class="description" style="text-align:left">
 									Register and complete your Student profile. Tell us how much time you want to commit, career interest and more to help us match you better.
                                 </p>
                             </div>
@@ -97,14 +97,14 @@
             </div>
         </div>
         
-				</div>
+		</div>
 			</section>
   </div>
   
   
   
   <input type="radio" name="tabs" id="tabthree">
-  <label for="tabthree">NGO/ Social Enterprise</label>
+  <label for="tabthree" style="border:solid; border-color:#f6755e">NGO/ Social Enterprise</label>
   <div class="tab">
     
   <section id="two" class="wrapper style1 special">
@@ -178,7 +178,7 @@
 										<div class="card w-100" style="height:550px">
 											<img class="card-img-top" src="images/lostfood.png" style="height:250px">
 											<div class="card-body overflow-auto">
-												<h4 class="card-title">The Lost Food Project</h4>
+												<h4 class="card-title"> <a href="https://www.thelostfoodproject.org/" target="blank">The Lost Food Project</a></h4>
 												<p class="card-text text-left">
 													<span style="font-weight:bold; color:#f6755e">Problem</span><br>
 													Confronted with a rising shortage of food donations since the pandemic, TLFP has been struggling to engage with more potential donors as the logistics of collecting food donations is a discouraging factor for neighborhood grocers. <br>
@@ -194,7 +194,7 @@
 										<div class="card w-100" style="height:550px">
 											<img class="featured-project-image" src="images/pertiwisoupkitchen.jpg" style="height:250px">
 											<div class="card-body overflow-auto">
-												<h4 class="card-title">Pertiwi Soup Kitchen</h4>
+												<h4 class="card-title"> <a href="https://pertiwi.org.my/" target="blank">Pertiwi Soup Kitchen</a></h4>
 												<p class="card-text text-left">
 													<span style="font-weight:bold;color:#f6755e">Problem</span><br>
 													Established more than a decade ago, PSK is currently serving about 1,700 homeless Malaysians, and they have been struggling to build a stronger online presence with their obsolete, static website. They need a dynamic website with backend controls to share the locations of their operations and reach out to more communities and volunteers.<br>

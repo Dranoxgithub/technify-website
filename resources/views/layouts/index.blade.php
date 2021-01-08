@@ -129,8 +129,8 @@
 				<div class="inner">
 					<h2>Get In Touch</h2>
 					<ul class="actions">
-						<!-- <li><span class="icon fa-phone"></span> <a href="#">(000) 000-0000</a></li> -->
-						<li><span class="icon fa-envelope"></span> <a href="#"> technifyinitiative@gmail.com</a></li>
+						
+						<li><span class="icon fa-envelope"></span> <a href="mailto:technifyinitiative@gmail.com"> technifyinitiative@gmail.com</a></li>
 						<li><span class="icon fa-map-marker"></span> Duke University, NC, USA 27705</li>
 					</ul>
 				</div>

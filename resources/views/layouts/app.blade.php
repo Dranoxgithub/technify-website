@@ -25,7 +25,7 @@
 				<nav class="left">
 					<a href="#menu"><span>Menu</span></a>
 				</nav>
-				<a href="index.html" class="logo">technify</a>
+				<a href="/" class="logo">Technify</a>
 				<nav class="right navbar navbar-expand-md navbar-light bg-white">
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<!-- Right Side Of Navbar -->

@@ -14,7 +14,7 @@ Your Profile<br><br>
     <strong>{{ __('Country') }}: </strong>{{ $student->country }}<br>
             
     <strong>{{ __('Timezone') }}: </strong>  {{ $student->timezone }}<br>
-    <strong>{{ __('Language') }}: </strong>{{ $student->language }}<br>
+    <strong>{{ __('Spoken Languages') }}: </strong>{{ $student->language }}<br>
     <strong>{{ __('Commitment') }}: </strong>{{ $student->min_commitment . ' - ' . $student->max_commitment . ' hours/ week'}}<br>
 
 <br><br>

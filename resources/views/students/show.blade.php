@@ -114,7 +114,7 @@
                 {{ __('Edit info') }}
             </a>
             <a href="/project_listing" class="button">
-                {{ __('Apply projects') }}
+                {{ __('Apply for projects') }}
             </a>
         </div>
     </div>

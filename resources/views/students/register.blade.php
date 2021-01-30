@@ -3,11 +3,6 @@
 
 
 
-        
-
-      
-           
-
 @if (Auth::check())
 		<div class="wrapper">
 			<form method="POST" action="/student" enctype="multipart/form-data">
@@ -68,7 +63,20 @@
 				<label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
 				<div class="col-md-6">
-					<input id="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country" autofocus>
+					<input id="country" list="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country" autofocus>
+					<datalist id="country">
+						<option value="Brunei">
+						<option value="Cambodia">
+						<option value="Indonesia">
+						<option value="Laos">
+						<option value="Malaysia">
+						<option value="Myanmar">
+						<option value="Phillipines">
+						<option value="Singapore">
+						<option value="Thailand">
+						<option value="Vietnam">
+						<option value="United States">												
+					</datalist>
 
 					@error('country')
 						<span class="invalid-feedback" role="alert">

@@ -1,0 +1,34 @@
+# Query: technifyinitiative@gmail
+# Flags: CaseSensitive
+# ContextLines: 1
+
+
+7 results - 4 files
+
+app/Http/Controllers/ProjectsController.php:
+  142          ->subject('New Application for '. $project->name .' 🎉-Technify')
+  143:         ->from('technifyinitiative@gmail.com','Technify')
+  144          ->cc($cc_email);
+
+  158          // ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
+  159:         // $message->from('technifyinitiative@gmail.com','Technify');
+  160          
+
+  168          // ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
+  169:         // $message->from('technifyinitiative@gmail.com','Technify');
+  170          // $message->attach(Storage::disk('s3')->url($resume_link), array(
+
+resources/views/layouts/index.blade.php:
+  132  						
+  133: 						<li><span class="icon fa-envelope"></span> <a href="mailto:technifyinitiative@gmail.com"> technifyinitiative@gmail.com</a></li>
+  134  						<li><span class="icon fa-map-marker"></span> Duke University, NC, USA 27705</li>
+
+resources/views/projects/application_receipt.blade.php:
+  44  
+  45:     For questions and feedback, please contact technifyinitiative@gmail.com.<br><br>
+  46  
+
+resources/views/projects/email_template.blade.php:
+  20  
+  21:     For questions and feedback, please contact technifyinitiative@gmail.com.<br><br>
+  22  

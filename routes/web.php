@@ -53,4 +53,6 @@ Route::post('/projects/{id}','ProjectsController@apply')->name('projects.apply')
 
 Route::get('/search',['uses' => 'ProjectsController@search','as' => 'search']);
 
+Route::get('/NGO_project_new', 'PagesController@NGO_project_new');
 Route::get('/{page}', 'PagesController@show');
+

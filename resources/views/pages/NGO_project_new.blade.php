@@ -119,7 +119,7 @@
         </div>
     </div>
 
-    <div class="form-group row">
+    <!-- <div class="form-group row">
         <label for="timezone" class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
 
         <div class="col-md-6">
@@ -131,7 +131,34 @@
                 </span>
             @enderror
         </div>
+    </div> -->
+
+    <div class="form-group row">
+        <label for="timezone" class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
+
+        <div class="col-md-6">
+        <select name="timezone">
+        <option selected="selected">Choose one</option>
+        <?php
+        // A sample product array
+        
+        
+        // Iterating through the product array
+        foreach($timezone_list as $item){
+            echo "<option value='$item'>$item</option>";
+        }
+        ?>
+    </select>
+
+            @error('timezone')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+            @enderror
+        </div>
     </div>
+
+
 
     <div class="form-group row">
         <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Project Description') }}</label>

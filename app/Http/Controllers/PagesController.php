@@ -11,6 +11,10 @@ class PagesController extends Controller
         
         return view('pages/' . $page);
     }
+    public function NGO_project_new() {
+        $timezone_list = app('App\Http\Controllers\ProjectsController')->generate_timezone_list();
+        return view('pages/NGO_project_new',['timezone_list' => $timezone_list]); 
+    }
     public function checkStudentOrNGO()
     {
         
@@ -37,4 +41,5 @@ class PagesController extends Controller
     
         
     }
+    
 }

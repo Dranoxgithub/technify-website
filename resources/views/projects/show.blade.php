@@ -128,22 +128,6 @@
     
     @else
         @if(Auth::user()->student != null)
-            <!-- <div class="form-group row">
-                <label class="col-md-4 col-form-label text-md-right">{{ __('Project Contact Person') }}</label>
-
-                <div class="col-md-6">
-                    <label class="col-md-4 col-form-label">{{ $project->contact_name }}</label>
-                    
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-md-4 col-form-label text-md-right">{{ __('Project Contact Email') }}</label>
-
-                <div class="col-md-6">
-                    <label class="col-md-4 col-form-label">{{ $project->contact_email }}</label>
-                    
-                </div>
-            </div> -->
             
             <form  method="POST" action="/projects/{{$project->id}}">
                 @csrf

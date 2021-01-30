@@ -63,7 +63,7 @@
 				<label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
 				<div class="col-md-6">
-					<input id="country" list="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country" autofocus>
+					<input list="country" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required>
 					<datalist id="country">
 						<option value="Brunei">
 						<option value="Cambodia">

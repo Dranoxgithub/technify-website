@@ -8,12 +8,13 @@
 @endif
 
 <div class="button-wrapper">
-    @if(URL::previous() == 'http://127.0.0.1:8000/project_listing')
+    <!-- @if(URL::previous() == 'http://127.0.0.1:8000/project_listing')
         <a class="button" href="{{ URL::previous() }}">Return to Projects</a>
     @else
         <a class="button" href="{{ URL::previous() }}">Return to Dashboard</a>
-    @endif
-   
+    @endif -->
+    <a class="button" href="/about_us">Return to Projects</a>
+    
 </div>
 <div class="wrapper">
     

@@ -131,9 +131,7 @@
         <select name="timezone">
             <option selected="selected">Choose one</option>
             <?php
-            // A sample product array
             
-            // Iterating through the product array
             foreach($timezone_list as $item){
                 echo "<option value='$item'>$item</option>";
             }

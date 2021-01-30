@@ -93,21 +93,21 @@ class ProjectsController extends Controller
 
     public function search() {
         $keyword = request()->input('q');
-        $projects = Project::where ( 'name', 'LIKE', '%' . $keyword . '%' )
-        ->orWhere ( 'goal', 'LIKE', '%' . $keyword . '%' )
-        ->orWhere ( 'skill', 'LIKE', '%' . $keyword . '%' )
-        ->orWhere ( 'start_date', 'LIKE', '%' . $keyword . '%' )
-        ->orWhere ( 'end_date', 'LIKE', '%' . $keyword . '%' )
-        ->orWhere ( 'timezone', 'LIKE', '%' . $keyword . '%' )
-        ->orWhere ( 'commitment', 'LIKE', '%' . $keyword . '%' )
-        ->orWhere ( 'contact_name', 'LIKE', '%' . $keyword . '%' )
-        ->orWhere ( 'contact_email', 'LIKE', '%' . $keyword . '%' )
-        ->orWhere ( 'description', 'LIKE', '%' . $keyword . '%' )
+        $projects = Project::where ( 'name', 'ilike', '%' . $keyword . '%' )
+        ->orWhere ( 'goal', 'ilike', '%' . $keyword . '%' )
+        ->orWhere ( 'skill', 'ilike', '%' . $keyword . '%' )
+        ->orWhere ( 'start_date', 'ilike', '%' . $keyword . '%' )
+        ->orWhere ( 'end_date', 'ilike', '%' . $keyword . '%' )
+        ->orWhere ( 'timezone', 'ilike', '%' . $keyword . '%' )
+        ->orWhere ( 'commitment', 'ilike', '%' . $keyword . '%' )
+        ->orWhere ( 'contact_name', 'ilike', '%' . $keyword . '%' )
+        ->orWhere ( 'contact_email', 'ilike', '%' . $keyword . '%' )
+        ->orWhere ( 'description', 'ilike', '%' . $keyword . '%' )
         ->get();
 
-        $ngos = NGO::where ( 'name', 'LIKE', '%' . $keyword . '%' )
-                        ->orWhere ( 'cause', 'LIKE', '%' . $keyword . '%' )
-                        ->orWhere ( 'website', 'LIKE', '%' . $keyword . '%' )
+        $ngos = NGO::where ( 'name', 'ilike', '%' . $keyword . '%' )
+                        ->orWhere ( 'cause', 'ilike', '%' . $keyword . '%' )
+                        ->orWhere ( 'website', 'ilike', '%' . $keyword . '%' )
                         ->get();
 
         foreach ($ngos as $ngo)

@@ -23,11 +23,11 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src="https://media-exp1.licdn.com/dms/image/C5103AQFVJQWJdUNwig/profile-displayphoto-shrink_800_800/0/1578108557315?e=1615420800&v=beta&t=QJeuswEBNWvy6-5fws3b6lWQmpRC7SgiToKnVBzWc7Q" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Khoo Qi Xuan</h4>
                         <small class="text-muted">Co-Founder</small>
-                        <p></p>
+                        <p>Sophomore at Duke studying Economics and Computer Science. A part-time musician, full-time foodie, and a dreamer who aspires to inspire before he expires.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
@@ -41,11 +41,11 @@
             
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar8.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src="https://media-exp1.licdn.com/dms/image/C4D03AQH1HGzAAzKyAA/profile-displayphoto-shrink_400_400/0/1591807679648?e=1615420800&v=beta&t=ZX9-rFfKefNpGCKQzVmPmEzg35ZF_1BRowhQxM4Jk70" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Anni Chen</h4>
                         <small class="text-muted">Co-Founder, Tech Lead</small>
-                        <p>I am a sophomore at Duke University majoring in Mathematics and Computer Science. I am passionate about women in tech.</p>
+                        <p>Sophomore at Duke University majoring in Mathematics and Computer Science. Passionate about women in tech and tech for social good.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

@@ -121,11 +121,24 @@
         </div>
     </div>
 
+
     <div class="form-group row">
         <label for="timezone" class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
 
         <div class="col-md-6">
-            <input id="timezone" type="text" class="form-control @error('skill') is-invalid @enderror" name="timezone" value="{{ $project->timezone }}" required autocomplete="timezone" autofocus>
+
+        
+        <select name="timezone">
+            <option selected="selected">Choose one</option>
+            <?php
+            
+            foreach($timezone_list as $item){
+                echo "<option value='$item'>$item</option>";
+            }
+            ?>
+
+            
+        </select>
 
             @error('timezone')
                 <span class="invalid-feedback" role="alert">
@@ -134,6 +147,7 @@
             @enderror
         </div>
     </div>
+
 
     <div class="form-group row">
         <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Project Description') }}</label>

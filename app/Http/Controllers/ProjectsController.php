@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Mail;
 use Session;
+use DateTimeZone;
+use DateTime;
 
 class ProjectsController extends Controller
 {
@@ -70,7 +72,8 @@ class ProjectsController extends Controller
     public function edit($id)
     {
         $project = Project::find($id);
-        return view('projects.edit',['project' => $project]);
+        $timezone_list = $this->generate_timezone_list();
+        return view('projects.edit',['project' => $project, 'timezone_list' => $timezone_list]);
     }
     public function update(Request $request, $id)
     {   
@@ -150,29 +153,49 @@ class ProjectsController extends Controller
         
         });
 
-        // $to_name = Auth::user()->name;
-        // // $to_email = Auth::user()->email;
-        // $data = array('project'=>$project, "ngo" => $project->ngo, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
-        // Mail::send("projects.application_receipt", $data, function($message) use ($to_name, $to_email, $project) {
-        // $message->to($to_email, $to_name)
-        // ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
-        // $message->from('technifyinitiative@gmail.com','Technify');
-        
-        // });
-    
-        // $to_name = Auth::user()->name;
-        // // $to_email = Auth::user()->email;
-        // $data = array('project'=>$project, "ngo" => $project->ngo, "student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
-        // Mail::send("projects.application_receipt", $data, function($message) use ($to_name, $to_email, $project, $resume_link, $resume_name) {
-        // $message->to($to_email, $to_name)
-        // ->subject('Application Receipt for '. $project->name .' 🎉 -Technify');
-        // $message->from('technifyinitiative@gmail.com','Technify');
-        // $message->attach(Storage::disk('s3')->url($resume_link), array(
-        //         'as' => $resume_name,
-        //         'mime' => 'application/pdf'));
-        // });
-
         Session::flash('message', 'Congrats! Applied successfully.');
         return view('projects.show',['project' => $project]);
     }
+
+    public function generate_timezone_list() {
+        static $regions = array(
+            DateTimeZone::AFRICA,
+            DateTimeZone::AMERICA,
+            DateTimeZone::ANTARCTICA,
+            DateTimeZone::ASIA,
+            DateTimeZone::ATLANTIC,
+            DateTimeZone::AUSTRALIA,
+            DateTimeZone::EUROPE,
+            DateTimeZone::INDIAN,
+            DateTimeZone::PACIFIC,
+        );
+        $timezones = array();
+        foreach( $regions as $region )
+        {
+            $timezones = array_merge( $timezones, DateTimeZone::listIdentifiers( $region ) );
+        }
+
+        $timezone_offsets = array();
+        foreach( $timezones as $timezone )
+        {
+            $tz = new DateTimeZone($timezone);
+            $timezone_offsets[$timezone] = $tz->getOffset(new DateTime);
+        }
+
+        // sort timezone by offset
+        ksort($timezone_offsets);
+
+        $timezone_list = array();
+        foreach( $timezone_offsets as $timezone => $offset )
+        {
+            $offset_prefix = $offset < 0 ? '-' : '+';
+            $offset_formatted = gmdate( 'H:i', abs($offset) );
+
+            $pretty_offset = "UTC${offset_prefix}${offset_formatted}";
+
+            $timezone_list[$timezone] = "$timezone (${pretty_offset})";
+        }
+        return $timezone_list;
+    }
+
 }

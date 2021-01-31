@@ -66,7 +66,7 @@
         <label for="commitment" class="col-md-4 col-form-label text-md-right">{{ __('Weekly Commitment') }}</label>
 
         <div class="col-md-6">
-            <input placeholder="Hours" id="commitment" type="number" class="form-control @error('commitment') is-invalid @enderror" name="commitment" value="{{ old('commitment') }}" required autocomplete="commitment" autofocus>
+            <input placeholder="Hours" id="commitment" type="number" class="form-control @error('commitment') is-invalid @enderror" name="commitment" value="{{ old('commitment') }}" required autocomplete="commitment">
     
             @error('commitment')
                 <span class="invalid-feedback" role="alert">
@@ -80,7 +80,7 @@
         <label for="start_date" class="col-md-4 col-form-label text-md-right">{{ __('Project Start Date') }}</label>
 
         <div class="col-md-6">
-            <input id="start_date" type="date" class="form-control @error('start_date') is-invalid @enderror" name="start_date" value="{{ old('start_date') }}" required autocomplete="start_date" autofocus>
+            <input id="start_date" type="date" class="form-control @error('start_date') is-invalid @enderror" name="start_date" value="{{ old('start_date') }}" required autocomplete="start_date">
 
             @error('start_date')
                 <span class="invalid-feedback" role="alert">
@@ -94,7 +94,7 @@
         <label for="end_date" class="col-md-4 col-form-label text-md-right">{{ __('Project End Date') }}</label>
 
         <div class="col-md-6">
-            <input id="end_date" type="date" class="form-control @error('end_date') is-invalid @enderror" name="end_date" value="{{ old('end_date') }}" required autocomplete="end_date" autofocus>
+            <input id="end_date" type="date" class="form-control @error('end_date') is-invalid @enderror" name="end_date" value="{{ old('end_date') }}" required autocomplete="end_date">
 
             @error('end_date')
                 <span class="invalid-feedback" role="alert">
@@ -150,17 +150,17 @@
 
         <div class="col-md-6">
         <select name="timezone">
-        <option selected="selected">Choose one</option>
-        <?php
-        // A sample product array
-        
-        
-        // Iterating through the product array
-        foreach($timezone_list as $item){
-            echo "<option value='$item'>$item</option>";
-        }
-        ?>
-    </select>
+            <option selected="selected">Choose one</option>
+            <?php
+            // A sample product array
+            
+            
+            // Iterating through the product array
+            foreach($timezone_list as $item){
+                echo "<option value='$item'>$item</option>";
+            }
+            ?>
+        </select>
 
             @error('timezone')
                 <span class="invalid-feedback" role="alert">

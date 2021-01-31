@@ -75,6 +75,9 @@ class ProjectsController extends Controller
         $timezone_list = $this->generate_timezone_list();
         return view('projects.edit',['project' => $project, 'timezone_list' => $timezone_list]);
     }
+
+    
+
     public function update(Request $request, $id)
     {   
         $project = Project::find($id);

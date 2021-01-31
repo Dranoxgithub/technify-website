@@ -47,19 +47,7 @@
             </div>
         </div>
 
-        <div class="form-group row">
-            <label for="position" class="col-md-4 col-form-label text-md-right">{{ __('Role interested') }}</label>
-
-            <div class="col-md-6">
-                <input id="position" type="text" class="form-control @error('position') is-invalid @enderror" name="position" value="{{ $student->position }}" autocomplete="position" autofocus>
-
-                @error('position')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-        </div>
+        
         <div class="form-group row">
 				<label for="position" class="col-md-4 col-form-label text-md-right">{{ __('Role interested') }}</label>
 
@@ -83,6 +71,7 @@
             <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
             <div class="col-md-6">
+                
                 <input id="country" list="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ $student->country }}" required autocomplete="country" autofocus>
                 <datalist id="country">
 					<option value="Brunei">
@@ -105,20 +94,41 @@
                 @enderror
             </div>
         </div>
-        
+
+
         <div class="form-group row">
-            <label for="timezone" class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
+				<label for="timezone" class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
 
-            <div class="col-md-6">
-                <input id="timezone" type="text" class="form-control @error('country') is-invalid @enderror" name="timezone" value="{{ $student->timezone }}" required autocomplete="timezone" autofocus>
+				<div class="col-md-6">
+					<select id="timezone" type="text" class="form-control @error('country') is-invalid @enderror" name="timezone" value="{{ $student->timezone }}" required autocomplete="timezone" autofocus>
+						<option>Choose one</option>
+						<?php
+						
+						foreach($timezone_list as $item){
+                            $selectedValue = '';
+                            if(strcmp($item, $student->timezone) == 0) {
+                                $selectedValue = "selected";
+                            }
+                            echo "<option value='$item' $selectedValue>$item</option>";
+                            
+						}
+						?>
+					</select>
+					
 
-                @error('timezone')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
+					@error('timezone')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong>
+						</span>
+					@enderror
+				</div>
             </div>
-        </div>
+            
+
+        
+        
+
+        
         
         <div class="form-group row">
             <label for="language" class="col-md-4 col-form-label text-md-right">{{ __('Spoken Languages') }}</label>

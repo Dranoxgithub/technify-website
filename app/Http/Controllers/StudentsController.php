@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Response;
 use Session;
+use DateTimeZone;
+use DateTime;
 
 class StudentsController extends Controller
 {
@@ -91,7 +93,7 @@ class StudentsController extends Controller
 
         $student = Auth::user()->student;
         if ($student == null) {
-            return view('students.register');
+            return view('students.register', ['timezone_list' => $timezone_list]);
         } else {
             return view('students.show', ['student' => $student]);
         }
@@ -100,13 +102,15 @@ class StudentsController extends Controller
     public function edit()
     {
         $student = Auth::user()->student;
+        $timezone_list = $this->generate_timezone_list();
         if ($student == null) {
-            return view('students.register');
+            return view('students.register', ['timezone_list' => $timezone_list]);
         } else {
-            return view('students.edit', ['student' => $student]);
+            return view('students.edit', ['student' => $student, 'timezone_list' => $timezone_list]);
         }
 
     }
+
 
     public function getResume()
     {
@@ -115,8 +119,6 @@ class StudentsController extends Controller
         $student = Auth::user()->student;
         $filePath = $student->resume_url;
        
-        
-        
         
         // file not found
         if( ! Storage::disk('s3')->exists($filePath) ) {
@@ -136,4 +138,44 @@ class StudentsController extends Controller
         ]);
     }
     
+    public function generate_timezone_list() {
+        static $regions = array(
+            DateTimeZone::AFRICA,
+            DateTimeZone::AMERICA,
+            DateTimeZone::ANTARCTICA,
+            DateTimeZone::ASIA,
+            DateTimeZone::ATLANTIC,
+            DateTimeZone::AUSTRALIA,
+            DateTimeZone::EUROPE,
+            DateTimeZone::INDIAN,
+            DateTimeZone::PACIFIC,
+        );
+        $timezones = array();
+        foreach( $regions as $region )
+        {
+            $timezones = array_merge( $timezones, DateTimeZone::listIdentifiers( $region ) );
+        }
+
+        $timezone_offsets = array();
+        foreach( $timezones as $timezone )
+        {
+            $tz = new DateTimeZone($timezone);
+            $timezone_offsets[$timezone] = $tz->getOffset(new DateTime);
+        }
+
+        // sort timezone by offset
+        ksort($timezone_offsets);
+
+        $timezone_list = array();
+        foreach( $timezone_offsets as $timezone => $offset )
+        {
+            $offset_prefix = $offset < 0 ? '-' : '+';
+            $offset_formatted = gmdate( 'H:i', abs($offset) );
+
+            $pretty_offset = "UTC${offset_prefix}${offset_formatted}";
+
+            $timezone_list[$timezone] = "$timezone (${pretty_offset})";
+        }
+        return $timezone_list;
+    }
 }

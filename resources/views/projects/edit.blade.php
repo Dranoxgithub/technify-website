@@ -141,17 +141,20 @@
         <div class="col-md-6">
 
         
-        <select name="timezone">
-            <option selected="selected">Choose one</option>
-            <?php
-            
-            foreach($timezone_list as $item){
-                echo "<option value='$item'>$item</option>";
-            }
-            ?>
-
-            
-        </select>
+            <select id="timezone" type="text" class="form-control @error('country') is-invalid @enderror" name="timezone" value="{{ $project->timezone }}" required autocomplete="timezone" autofocus>
+                <option>Choose one</option>
+                <?php
+                
+                foreach($timezone_list as $item){
+                    $selectedValue = '';
+                    if(strcmp($item, $project->timezone) == 0) {
+                        $selectedValue = "selected";
+                    }
+                    echo "<option value='$item' $selectedValue>$item</option>";
+                    
+                }
+                ?>
+            </select>
 
             @error('timezone')
                 <span class="invalid-feedback" role="alert">

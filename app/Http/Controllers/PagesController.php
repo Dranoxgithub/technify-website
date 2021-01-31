@@ -23,7 +23,7 @@ class PagesController extends Controller
                 return view('students.show', ['student' => Auth::user()->student]);
             } else {
                 if (Auth::user()->ngo == null) {
-                    return view('students.register');
+                    return view('students.register', ['timezone_list' => $timezone_list]);
                 }
             }
             
@@ -32,7 +32,7 @@ class PagesController extends Controller
                 return view('ngos.show', ['ngo' => Auth::user()->ngo]);
             } else {
                 if (Auth::user()->student == null) {
-                    return view('ngos.register');
+                    return view('ngos.register', ['timezone_list' => $timezone_list]);
                 }
             }
         }

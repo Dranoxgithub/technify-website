@@ -3,6 +3,19 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:300,400|Pacifico";
 
 /*
+    Custom CSS
+*/
+
+.non-fixed-layout {
+    table-layout: inherit !important;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+
+/*
 	Intensify by TEMPLATED
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)

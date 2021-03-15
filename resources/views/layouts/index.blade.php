@@ -30,7 +30,7 @@
 						<!-- Right Side Of Navbar -->
 						<ul class="navbar-nav ml-autox">
 						@guest
-							<ul class="actions fit non-fixed-layout">
+							<ul class="actions">
 								@if (Request::is('register'))
 									<li><a href="/login" class="button alt">Log in</a></li>
 								@elseif (Request::is('login'))

@@ -5,11 +5,6 @@
 /*
     Custom CSS
 */
-
-.non-fixed-layout {
-    table-layout: inherit !important;
-}
-
 html {
     overflow-y: scroll;
 }

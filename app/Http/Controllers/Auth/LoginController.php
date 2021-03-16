@@ -31,7 +31,6 @@ class LoginController extends Controller
 
     protected function redirectTo()
     {
-        echo(Auth::user()->type);
         if (Auth::user()->type == 'student') {
             return '/student';
         } elseif (Auth::user()->type == 'NGO') {

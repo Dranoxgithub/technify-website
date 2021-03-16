@@ -68,6 +68,7 @@
                                 </button>
                             </div>
                         </div>
+                        <input type="hidden" name="type" value="{{ Request('type') }}">
                     </form>
                 </div>
             </div>

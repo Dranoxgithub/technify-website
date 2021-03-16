@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('pages.index');
 });
 
+Route::get('/register', 'Auth\RegisterController@show')->name('register');
 
 Route::get('/NGO_project_index', [
     'middleware' => 'auth',

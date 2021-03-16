@@ -17,7 +17,7 @@ class PagesController extends Controller
     }
     public function checkStudentOrNGO()
     {
-        
+        $timezone_list = app('App\Http\Controllers\ProjectsController')->generate_timezone_list();
         if (request()->is('student')) {
             if (Auth::user()->student != null) {
                 return view('students.show', ['student' => Auth::user()->student]);

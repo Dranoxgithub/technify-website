@@ -15,6 +15,14 @@ class StudentsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('user:student');
+        $this->middleware(function ($request, $next) {
+            if (Auth::user()->student) {
+                return $next($request);
+            } else {
+                return redirect('/student');
+            }
+        })->except(['store', 'show']);
     }
     public function store(Request $request)
     {
@@ -90,9 +98,9 @@ class StudentsController extends Controller
 
     public function show()
     {
-
         $student = Auth::user()->student;
         if ($student == null) {
+            $timezone_list = $this->generate_timezone_list();
             return view('students.register', ['timezone_list' => $timezone_list]);
         } else {
             return view('students.show', ['student' => $student]);
@@ -103,12 +111,7 @@ class StudentsController extends Controller
     {
         $student = Auth::user()->student;
         $timezone_list = $this->generate_timezone_list();
-        if ($student == null) {
-            return view('students.register', ['timezone_list' => $timezone_list]);
-        } else {
-            return view('students.edit', ['student' => $student, 'timezone_list' => $timezone_list]);
-        }
-
+        return view('students.edit', ['student' => $student, 'timezone_list' => $timezone_list]);
     }
 
 

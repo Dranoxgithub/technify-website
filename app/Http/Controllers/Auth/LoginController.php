@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -26,7 +27,18 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = '/join_us';
+
+    protected function redirectTo()
+    {
+        echo(Auth::user()->type);
+        if (Auth::user()->type == 'student') {
+            return '/student';
+        } elseif (Auth::user()->type == 'NGO') {
+            return '/NGO';
+        }
+        return '/';
+    }
 
 
 
@@ -43,14 +55,10 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         
-        if(!session()->has('url.intended'))
-        {
-            session(['url.intended' => url()->previous()]);
-        }
-        if (url()->previous() == "http://127.0.0.1:8000/join_us")
-        {
-            session(['url.intended' => "http://127.0.0.1:8000/portal"]);
-        }
+        // if(!session()->has('url.intended'))
+        // {
+        //     session(['url.intended' => url()->previous()]);
+        // }
         return view('auth.login');    
     }
 }

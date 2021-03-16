@@ -38,7 +38,7 @@ Route::patch('/projects/{id}','ProjectsController@update')->name('projects.updat
 Route::post('/NGO', 'NgosController@store');
 Route::get('/NGO/edit', 'NgosController@edit');
 Route::patch('/NGO', 'NgosController@update');
-Route::get('/NGO', 'PagesController@checkStudentOrNGO');
+Route::get('/NGO', 'NgosController@show');
 
 
     
@@ -46,7 +46,7 @@ Route::get('/student/edit', 'StudentsController@edit');
 Route::post('/student', 'StudentsController@store');
 Route::patch('/student', 'StudentsController@update');
 Route::get('/getResume', 'StudentsController@getResume');
-Route::get('/student', 'PagesController@checkStudentOrNGO');
+Route::get('/student', 'StudentsController@show');
 
 
 

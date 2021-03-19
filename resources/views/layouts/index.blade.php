@@ -30,8 +30,17 @@
 						<!-- Right Side Of Navbar -->
 						<ul class="navbar-nav ml-autox">
 						@guest
-                            
-								<a href="{{ route('login') }}" class="button alt">Log in</a>
+							<ul class="actions">
+								@if (Request::is('register'))
+									<li><a href="/login" class="button alt">Log in</a></li>
+								@elseif (Request::is('login'))
+									<li><a href="/register" class="button alt">Register</a></li>
+								@else
+									<!-- <a href="/" class="button alt">Home</a> -->
+									<li><a href="{{ route('login') }}" class="button alt">Log in</a></li>
+									<li><a href="{{ route('register') }}" class="button alt">Register</a></li>
+								@endif
+							</ul>
 								
 						@else
 							@if (Auth::user()->ngo != null)
@@ -99,8 +108,14 @@
 			</ul>
 			<ul class="actions vertical">
 			@guest
-				
-				<li><a href="/login" class="button fit">Log in</a></li>
+				@if (Request::is('register'))
+					<li><a href="/login" class="button fit">Log in</a></li>
+				@elseif (Request::is('login'))
+					<li><a href="/register" class="button fit">Register</a></li>
+				@else
+					<li><a href="/login" class="button fit">Log in</a></li>
+					<li><a href="/register" class="button fit">Register</a></li>
+				@endif
 				
 			@else
 				@if (Request::is('NGO_project_index'))

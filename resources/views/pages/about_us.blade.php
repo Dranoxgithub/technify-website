@@ -23,9 +23,9 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="https://media-exp1.licdn.com/dms/image/C5103AQFVJQWJdUNwig/profile-displayphoto-shrink_800_800/0/1578108557315?e=1615420800&v=beta&t=QJeuswEBNWvy6-5fws3b6lWQmpRC7SgiToKnVBzWc7Q" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src="storage/images/Khoo.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
-                        <h4 class="title mb-0">Khoo Qi Xuan</h4>
+                        <h4 class="title mb-0">Qi Xuan Khoo</h4>
                         <small class="text-muted">Co-Founder</small>
                         <p>Karsh Scholar at Duke studying Economics and Computer Science. A part-time musician, full-time foodie, and a dreamer who aspires to inspire before he expires.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
@@ -41,7 +41,7 @@
             
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src={{ asset('storage/images/anni_chen.jpeg') }} class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src={{ asset('storage/images/Anni.jpeg') }} class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Anni Chen</h4>
                         <small class="text-muted">Co-Founder, Tech Lead</small>
@@ -59,11 +59,84 @@
             
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="https://media-exp1.licdn.com/dms/image/C5603AQFDYJZUGRexAA/profile-displayphoto-shrink_800_800/0/1612036626207?e=1617235200&v=beta&t=3BtAoDovDFvxVqI8RwZjo_IgEJlAINrW3a-Rb-WCU_I" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src="storage/images/Raj.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Tharun Raj</h4>
-                        <small class="text-muted">Product Management Director</small>
+                        <small class="text-muted">Product Management Lead</small>
                         <p>Junior at Duke studying Computer Science and Statistics. A fan of all things tech, with a sprinkle of philosophy into the mix.</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="storage/images/Andrea.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Andrea Centeno</h4>
+                        <small class="text-muted">Treasurer</small>
+                        <p>Sophomore at Duke University studying Economics and Political Science for a career using innovative solutions to tackle global issues. International development optimist and committed to measurably improve lives. </p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="storage/images/Kyra.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Kyra Chan</h4>
+                        <small class="text-muted">Design Lead</small>
+                        <p>Junior at Duke double majoring in Electrical Computer Engineering and Computer Science, with a minor in Visual Media Studies. Things I love: my corgi, food, and everything design-related!</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="storage/images/Thuan.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Thuan Tran</h4>
+                        <small class="text-muted">Student Outreach Lead</small>
+                        <p>Studying political science and energy at Duke University. Interested in finding the intersection between business and sustainability - social, economic, or environmental. Please feel free to reach out to me.</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="storage/images/Rui.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0">Rui Xin</h4>
+                        <small class="text-muted">Software Engineer</small>
+                        <p>Sophomore at Duke majoring in Mathematics and Computer Science. Interested in how everything works. 
+</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

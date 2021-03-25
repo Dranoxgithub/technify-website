@@ -1,0 +1,59 @@
+.navbar-custom {
+    background-color: #9ECACC;
+}
+
+.navbar-text {
+    font-family: Apercu;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #26484A;
+}
+
+.navbar-brand {
+    float: left;
+    width: 150px;
+}
+
+#navbar-logo {
+    width: 140px;
+    height: 24px;
+    margin-right: 7px;
+}
+
+
+/* Footer */
+
+.footer-col-1 {
+    font-size: 14px;
+}
+
+.footer-col-2,
+.footer-col-4,
+.footer-col-5 {
+    font-size: 14px;
+}
+
+.footer-header {
+    font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .hor-vector {
+        display: none !important;
+    }
+
+    .footer {
+        justify-content: center !important;
+    }
+    .bottom-text {
+        line-height: 1.4 !important;
+    }
+    .footer-col-1,
+    .footer-col-1.img {
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+}

@@ -13,9 +13,14 @@
 }
 
 .navbar-brand {
-    position: relative;
-    background: url(../images/logo.png);
-    object-fit: cover;
+    float: left;
+    width: 150px;
+}
+
+#navbar-logo {
+    width: 140px;
+    height: 24px;
+    margin-right: 7px;
 }
 
 
@@ -35,7 +40,11 @@
     font-size: 20px;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+    .hor-vector {
+        display: none !important;
+    }
+
     .footer {
         justify-content: center !important;
     }

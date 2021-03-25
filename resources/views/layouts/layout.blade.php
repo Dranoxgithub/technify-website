@@ -8,38 +8,38 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse bg-inverse navbar-expand-lg navbar-custom static-top">
-    <div class="container">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container col-11 p-2 mx-auto">
+            <a class="navbar-brand" href="#">
+                <img id="navbar-logo" class="img-fluid" src="/images/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon navbar-light"></span>
             </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-            {{-- <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-                    <span class="sr-only">(current)</span>
-                </a>
-            </li> --}}
-            <li class="nav-item">
-                <a class="nav-link navbar-text" href="#">Who We Are</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link navbar-text" href="#">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link navbar-text" href="#">Our Team</a>
-            </li>
-            <li class="nav-item"><a class="nav-link navbar-text" href="#"> | </a></li>
-            <li class="nav-item">
-                <a class="nav-link navbar-text" href="">Log in</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link btn btn-outline-light navbar-text"href="">Sign Up</a>
-            </li>
-        </ul>
+
+            <div class="collapse navbar-collapse float-right" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link navbar-text float-right" href="#">Who We Are</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-text float-right" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-text float-right" href="#">Our Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-text float-right hor-vector" href="#"> | </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link navbar-text float-right" href="">Log in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light navbar-text float-right"href="">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
     </nav>
     
     @yield('content')
@@ -95,6 +95,9 @@
     <script src="assets/js/skel.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>

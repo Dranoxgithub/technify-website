@@ -27,7 +27,7 @@ class DropCommitment extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('students', function (Blueprint $table) {
             $table->integer('min_commitment')->nullable();
             $table->integer('max_commitment')->nullable();
         });    

@@ -60,7 +60,7 @@
 
 {{-- Featured Projects --}}
 
-<section class="container-fluid " style="background-color: #F4F4F4">
+<section id="Projects" class="container-fluid " style="background-color: #F4F4F4">
     <div class="row col-12 align-middle">
          <h2 class="m-4">Featured Projects</h2>
         <div class="d-flex flex-row flex-md-nowrap flex-wrap justify-content-around p-2">
@@ -124,10 +124,10 @@
         in Southeast Asia and change tens of thousands of lives!
     </p>
     <div class="d-flex col-md-8 flex-row flex-wrap flex-md-nowrap justify-content-around align-items-center mb-4">
-        <a class="btn btn-lg btn-primary mb-2" href="" style="background-color: #26484A">
+        <!-- <a class="btn btn-lg btn-primary mb-2" href="" style="background-color: #26484A">
             Apply as Non-Profit
-        </a>
-        <a class="btn btn-lg btn-primary" href="" style="background-color: #26484A">
+        </a> -->
+        <a class="btn btn-lg btn-primary" href="/register?type=student" style="background-color: #26484A">
             Apply as Volunteer
         </a>
     </div>

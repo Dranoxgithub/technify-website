@@ -10,7 +10,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
         <div class="container col-11 p-2 mx-auto">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img id="navbar-logo" class="img-fluid" src="/images/logo.png" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
@@ -19,24 +19,70 @@
 
             <div class="collapse navbar-collapse float-right" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <!-- <li class="nav-item active">
                         <a class="nav-link navbar-text float-right" href="#">Who We Are</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link navbar-text float-right" href="/#Projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link navbar-text float-right" href="#">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link navbar-text float-right" href="#">Our Team</a>
+                        <a class="nav-link navbar-text float-right" href="/about_us">Our Team</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link navbar-text float-right hor-vector" href="#"> | </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link navbar-text float-right" href="">Log in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light navbar-text float-right"href="">Sign Up</a>
-                    </li>
+                    @guest
+
+                        @if (Request::is('register'))
+                            <li class="nav-item">
+                                <a class="nav-link navbar-text float-right" href="/login">Log in</a>
+                            </li>                        
+                        @elseif (Request::is('login'))
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-outline-light navbar-text float-right" href="/register?type=student">Sign Up</a>
+                            </li>                        
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link navbar-text float-right" href="/login">Log in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-outline-light navbar-text float-right" href="/register?type=student">Sign Up</a>
+                            </li>
+                        @endif
+								
+						@else
+							<!-- @if (Auth::user()->ngo != null)
+								@if (Request::is('NGO_project_index') or Request::is('project_listing'))
+									<li class="button-wrapper">
+									<a href="/NGO_project_new" class="button">+ Add Project</a>
+									</li>
+								@endif
+							@endif -->
+							<li class="nav-item dropdown">
+								<a id="navbarDropdown" class="nav-link dropdown-toggle navbar-text" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+									{{ Auth::user()->name }} <span class="caret"></span>
+								</a>
+
+								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                    @if (Auth::user()->type == "student")
+                                        <a class="dropdown-item" id="log-out" href="/student">Profile</a>
+                                    @elseif (Auth::user()->type == "NGO")
+                                        <a class="dropdown-item" id="log-out" href="/NGO">Dashboard</a>
+                                    @endif  
+									<a class="dropdown-item" id="log-out" href="{{ route('logout') }}"
+									onclick="event.preventDefault();
+													document.getElementById('logout-form').submit();">
+										{{ __('Logout') }}
+									</a>
+
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+										@csrf
+									</form>
+								</div>
+							</li>
+							
+						@endguest
                 </ul>
             </div>
         </div>

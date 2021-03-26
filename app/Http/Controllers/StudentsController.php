@@ -33,8 +33,8 @@ class StudentsController extends Controller
         'country' => request('country'),
         'timezone' => request('timezone'),
         'language' => request('language'),
-        'min_commitment' => request('min_commitment'),
-        'max_commitment' => request('max_commitment')
+        // 'min_commitment' => request('min_commitment'),
+        // 'max_commitment' => request('max_commitment')
         ]);
         
         $resume = $request->file('resume');
@@ -65,8 +65,8 @@ class StudentsController extends Controller
         'country' => request('country'),
         'timezone' => request('timezone'),
         'language' => request('language'),
-        'min_commitment' => request('min_commitment'),
-        'max_commitment' => request('max_commitment')
+        // 'min_commitment' => request('min_commitment'),
+        // 'max_commitment' => request('max_commitment')
         ]);
         $resume = $request->file('resume');
         if ($resume != null) { // save new resume and delete old resume

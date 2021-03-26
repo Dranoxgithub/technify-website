@@ -1,4 +1,4 @@
-@extends ('layouts.index')
+@extends ('layouts.layout')
 @section ('content')
 
 
@@ -129,7 +129,7 @@
 				</div>
             </div>
 
-            <div class="form-group row">
+            <!-- <div class="form-group row">
 				<label for="commitment" class="col-md-4 col-form-label text-md-right">{{ __('Commitment') }}</label>
 
 				<div class="col-md-6 row" id="commitment-range">
@@ -147,7 +147,7 @@
 						</span>
 					@enderror
 				</div>
-			</div>
+			</div> -->
 
 			<div class="form-group row">
 				<label for="resume" class="col-md-4 col-form-label text-md-right">{{ __('Resume') }}</label>

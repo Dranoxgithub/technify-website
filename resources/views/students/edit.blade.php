@@ -1,4 +1,4 @@
-@extends ('layouts.index')
+@extends ('layouts.layout')
 @section ('content')
 
 
@@ -144,7 +144,7 @@
             </div>
         </div>
 
-        <div class="form-group row">
+        <!-- <div class="form-group row">
         <label for="commitment" class="col-md-4 col-form-label text-md-right">{{ __('Commitment') }}</label>
             <div class="col-md-6 row" id="commitment-range">
                 <input placeholder="h/week" id="min_commitment" type="number" class="form-control @error('min_commitment') is-invalid @enderror 6u 12u$(xsmall)" name="min_commitment" value="{{ $student->min_commitment }}" required autocomplete="min_commitment" autofocus>-
@@ -161,7 +161,7 @@
                     </span>
                 @enderror
             </div>
-        </div>
+        </div> -->
         
 
         

@@ -84,27 +84,32 @@
     
 
     
-    
-    <div class="align-center sm-hidden">
-        <embed
-        src="{{ action('StudentsController@getResume') }}"
-        style="width:600px; height:500px;"
-        frameborder="0"
-        alt="resume in pdf">
+    <div class="form-group row">
+		<label for="resume" class="col-md-4 col-form-label text-md-right">{{ __('Resume') }}</label>
+
+		<div class="col-md-6">
+            <embed
+            src="{{ action('StudentsController@getResume') }}"
+            style="width:600px; height:500px;"
+            frameborder="0"
+            alt="resume in pdf">
+		</div>
+				
     </div>
+
     
     
     
     
-    
+
 
     <div class="form-group row mb-0">
         <div class="col-md-6 offset-md-4">
             <a href="/student/edit" class="button">
                 {{ __('Edit info') }}
             </a>
-            <a href="/project_listing" class="button">
-                {{ __('Apply for projects') }}
+            <a href="{{ route('projects.temp_apply') }}" class="button">
+                {{ __('Submit your profile for application.') }}
             </a>
         </div>
     </div>

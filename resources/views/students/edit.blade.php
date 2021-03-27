@@ -53,8 +53,8 @@
 
 				<div class="col-md-6">
 					
-					<select id="position" name="position" value="{{ $student->position }}" autofocus required>
-  						<option value="Software Engineering">Software Engineering</option>
+					<select id="position" class="form-control @error('position') is-invalid @enderror" name="position" selected_value="{{ $student->position }}" autofocus required>
+                        <option value="Software Engineering">Software Engineering</option>
 						<option value="UI/UX Designer">UI/UX Designer</option>
 						<option value="Product Manager">Product Manager</option>
 					</select>
@@ -67,49 +67,42 @@
 			</div>
 
 
-        <div class="form-group row">
-            <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
+			<div class="form-group row">
+				<label for="position" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
-            <div class="col-md-6">
-                
-                <input id="country" list="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ $student->country }}" required autocomplete="country" autofocus>
-                <datalist id="country">
-					<option value="Brunei">
-					<option value="Cambodia">
-                    <option value="Indonesia">
-                    <option value="Laos">
-                    <option value="Malaysia">
-                    <option value="Myanmar">
-                    <option value="Phillipines">
-                    <option value="Singapore">
-                    <option value="Thailand">
-                    <option value="Vietnam">
-                    <option value="United States">												
-                </datalist>
-
-                @error('country')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-        </div>
+				<div class="col-md-6">
+					
+					<select id="country" class="form-control @error('country') is-invalid @enderror" name="country" selected_value="{{ $student->country }}" autofocus required>
+  						<option value="Brunei">Brunei</option>
+						<option value="Cambodia">Cambodia</option>
+						<option value="Indonesia">Indonesia</option>
+						<option value="Laos">Laos</option>
+						<option value="Malaysia">Malaysia</option>
+						<option value="Myanmar">Myanmar</option>
+						<option value="Phillipines">Phillipines</option>
+						<option value="Singapore">Singapore</option>
+						<option value="Thailand">Thailand</option>
+						<option value="Vietnam">Vietnam</option>
+						<option value="United States">United States</option>
+					</select>
+					@error('country')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong>
+						</span>
+					@enderror
+				</div>
+			</div>
 
 
         <div class="form-group row">
 				<label for="timezone" class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
 
 				<div class="col-md-6">
-					<select id="timezone" type="text" class="form-control @error('country') is-invalid @enderror" name="timezone" value="{{ $student->timezone }}" required autocomplete="timezone" autofocus>
-						<option>Choose one</option>
+					<select id="timezone" type="text" class="form-control @error('timezone') is-invalid @enderror" name="timezone" selected_value="{{ $student->timezone }}" required autocomplete="timezone" autofocus>
 						<?php
 						
 						foreach($timezone_list as $item){
-                            $selectedValue = '';
-                            if(strcmp($item, $student->timezone) == 0) {
-                                $selectedValue = "selected";
-                            }
-                            echo "<option value='$item' $selectedValue>$item</option>";
+                            echo "<option value='$item'>$item</option>";
                             
 						}
 						?>

@@ -45,6 +45,10 @@ class StudentsController extends Controller
             );
             // $path = $resume->store('files');
             $student->resume_url = $path;
+        } else {
+            $timezone_list = $this->generate_timezone_list();
+            return view('students.register', ['timezone_list' => $timezone_list]); 
+             
         }
 
         

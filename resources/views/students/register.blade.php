@@ -30,7 +30,7 @@
 				<label for="school" class="col-md-4 col-form-label text-md-right">{{ __('University') }}</label>
 
 				<div class="col-md-6">
-					<input id="school" type="text" class="form-control @error('school') is-invalid @enderror" name="school" value="{{ old('school') }}" autocomplete="school" autofocus>
+					<input id="school" type="text" class="form-control @error('school') is-invalid @enderror" name="school" value="{{ old('school') }}" autocomplete="school" required autofocus>
 
 					@error('school')
 						<span class="invalid-feedback" role="alert">
@@ -44,7 +44,8 @@
 
 				<div class="col-md-6">
 					
-					<select id="position" name="position" autofocus required>
+					<select id="position" class="form-control @error('timezone') is-invalid @enderror" selected_value="{{ old('position') }}" name="position" autofocus required>
+						<option selected="selected" value="" hidden>Choose one</option>
   						<option value="Software Engineering">Software Engineering</option>
 						<option value="UI/UX Designer">UI/UX Designer</option>
 						<option value="Product Manager">Product Manager</option>
@@ -57,48 +58,46 @@
 				</div>
 			</div>
 
-			
-
 			<div class="form-group row">
-				<label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
+				<label for="position" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
 				<div class="col-md-6">
-					<input list="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required>
-					<datalist id="country">
-						<option value="Brunei">
-						<option value="Cambodia">
-						<option value="Indonesia">
-						<option value="Laos">
-						<option value="Malaysia">
-						<option value="Myanmar">
-						<option value="Phillipines">
-						<option value="Singapore">
-						<option value="Thailand">
-						<option value="Vietnam">
-						<option value="United States">												
-					</datalist>
-
+					
+					<select id="country" class="form-control @error('timezone') is-invalid @enderror" selected_value="{{ old('country') }}" name="country" autofocus required>
+						<option selected="selected" value="" hidden>Choose one</option>
+  						<option value="Brunei">Brunei</option>
+						<option value="Cambodia">Cambodia</option>
+						<option value="Indonesia">Indonesia</option>
+						<option value="Laos">Laos</option>
+						<option value="Malaysia">Malaysia</option>
+						<option value="Myanmar">Myanmar</option>
+						<option value="Phillipines">Phillipines</option>
+						<option value="Singapore">Singapore</option>
+						<option value="Thailand">Thailand</option>
+						<option value="Vietnam">Vietnam</option>
+						<option value="United States">United States</option>
+					</select>
 					@error('country')
 						<span class="invalid-feedback" role="alert">
 							<strong>{{ $message }}</strong>
 						</span>
 					@enderror
 				</div>
-            </div>
+			</div>
+			
+
+			
             
             <div class="form-group row">
 				<label for="timezone" class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
 
 				<div class="col-md-6">
-					<select id="timezone" type="text" class="form-control @error('country') is-invalid @enderror" name="timezone" value="{{ old('timezone') }}" required autocomplete="timezone" autofocus>
-						<option selected="selected">Choose one</option>
+					<select id="timezone" type="text" class="form-control @error('timezone') is-invalid @enderror" name="timezone" selected_value="{{ old('timezone') }}" required autocomplete="timezone" autofocus>
+						<option selected="selected" value="" hidden>Choose one</option>
 						<?php
-						// A sample product array
 						
-						
-						// Iterating through the product array
 						foreach($timezone_list as $item){
-							echo "<option value='$item'>$item</option>";
+                            echo "<option value='$item'>$item</option>";
 						}
 						?>
 					</select>
@@ -153,7 +152,7 @@
 				<label for="resume" class="col-md-4 col-form-label text-md-right">{{ __('Resume') }}</label>
 
 				<div class="col-md-6">
-					<input id="resume" type="file" class="@error('resume') is-invalid @enderror" name="resume" value="{{ old('resume') }}" accept=".pdf" autocomplete="resume" autofocus>
+					<input id="resume" type="file" class="@error('resume') is-invalid @enderror" name="resume" value="{{ old('resume') }}" accept=".pdf" required autocomplete="resume" autofocus>
 				</div>
 				@error('resume')
                     <span class="invalid-feedback" role="alert">
@@ -164,7 +163,7 @@
 			
 			
             
-
+			<div class="col-md-6 offset-md-4">All fields are required for registration.</div>
 			<div class="form-group row mb-0">
 				<div class="col-md-6 offset-md-4">
 					<button type="submit" class="button">

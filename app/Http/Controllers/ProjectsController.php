@@ -40,7 +40,7 @@ class ProjectsController extends Controller
         $project->end_date = request('end_date');
         $project->timezone = request('timezone');
         $project->country = request('country');
-        $project->commitment = request('commitment');
+        // $project->commitment = request('commitment');
         $project->contact_name = request('contact_name');
         $project->contact_email = request('contact_email');
         $project->description = request('description');
@@ -88,7 +88,7 @@ class ProjectsController extends Controller
         $project->end_date = request('end_date');
         $project->timezone = request('timezone');
         $project->country = request('country');
-        $project->commitment = request('commitment');
+        // $project->commitment = request('commitment');
         $project->contact_name = request('contact_name');
         $project->contact_email = request('contact_email');
         $project->description = request('description');
@@ -105,7 +105,7 @@ class ProjectsController extends Controller
         ->orWhere ( 'start_date', 'ilike', '%' . $keyword . '%' )
         ->orWhere ( 'end_date', 'ilike', '%' . $keyword . '%' )
         ->orWhere ( 'timezone', 'ilike', '%' . $keyword . '%' )
-        ->orWhere ( 'commitment', 'ilike', '%' . $keyword . '%' )
+        // ->orWhere ( 'commitment', 'ilike', '%' . $keyword . '%' )
         ->orWhere ( 'contact_name', 'ilike', '%' . $keyword . '%' )
         ->orWhere ( 'contact_email', 'ilike', '%' . $keyword . '%' )
         ->orWhere ( 'description', 'ilike', '%' . $keyword . '%' )
@@ -125,18 +125,19 @@ class ProjectsController extends Controller
     }
 
     public function apply($id) {
-        $project = Project::find($id);
-        $to_name = $project->ngo->name;
-        // $to_email = $project->contact_email;
-        // $cc_email = Auth::user()->email;
-
-        $to_email = 'chenanni02@gmail.com';
-        $cc_email = 'anni.chen@duke.edu';
-
         $student = Auth::user()->student;
         if ($student == null) {
             abort(404);
         }
+        // $project = Project::find($id);
+        // $to_name = $project->ngo->name;
+        // $to_email = $project->contact_email;
+        // $cc_email = Auth::user()->email;
+        $project = "New Application from " . Auth::user()->name;
+        $to_name = "Technify";
+        $to_email = 'technifyinitiative@gmail.com';
+        $cc_email = Auth::user()->email;
+
         $resume_name = Auth::user()->name.".pdf";
         $resume_link = $student->resume_url;
 
@@ -158,6 +159,38 @@ class ProjectsController extends Controller
 
         Session::flash('message', 'Congrats! Applied successfully.');
         return view('projects.show',['project' => $project]);
+    }
+
+    public function temp_apply() {
+        $student = Auth::user()->student;
+        if ($student == null) {
+            abort(404);
+        }
+        $to_name = "Technify";
+        $to_email = 'technifyinitiative@gmail.com';
+        $cc_email = Auth::user()->email;
+
+        $resume_name = Auth::user()->name.".pdf";
+        $resume_link = $student->resume_url;
+
+        
+        
+        $data = array("student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
+        Mail::send("projects.temp_email_template", $data, function($message) use ($to_name, $to_email, $resume_link, $resume_name, $cc_email) {
+        $message->to($to_email, $to_name)
+        ->subject('New Application from '. Auth::user()->name .' 🎉-Technify')
+        ->from('technifyinitiative@gmail.com','Technify')
+        ->cc($cc_email);
+        if ($resume_link != null && Storage::disk('s3')->exists($resume_link)) {
+            $message->attach(Storage::disk('s3')->url($resume_link), array(
+                'as' => $resume_name,
+                'mime' => 'application/pdf'));
+        }
+        
+        });
+
+        Session::flash('message', 'Congrats! Applied successfully.');
+        return view('students.show', ['student' => $student]);
     }
 
     public function generate_timezone_list() {

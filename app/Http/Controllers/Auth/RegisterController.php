@@ -83,7 +83,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             // Hard-coding it here should be fine as we could only have two
             // types of accounts when registering 
-            'type' => ['required', 'string', Rule::In(['NGO', 'student'])],
+            'type' => ['required', 'string', Rule::In(['student'])], // 'NGO', 
         ]);
     }
 

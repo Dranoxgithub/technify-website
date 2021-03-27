@@ -53,7 +53,7 @@
 
 				<div class="col-md-6">
 					
-					<select id="position" class="form-control @error('position') is-invalid @enderror" name="position" selected_value="{{ $student->position }}" autofocus required>
+					<select id="position" class="form-control @error('position') is-invalid @enderror" name="position" value="{{ $student->position }}" autofocus required>
                         <option value="Software Engineering">Software Engineering</option>
 						<option value="UI/UX Designer">UI/UX Designer</option>
 						<option value="Product Manager">Product Manager</option>
@@ -72,7 +72,7 @@
 
 				<div class="col-md-6">
 					
-					<select id="country" class="form-control @error('country') is-invalid @enderror" name="country" selected_value="{{ $student->country }}" autofocus required>
+					<select id="country" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ $student->country }}" autofocus required>
   						<option value="Brunei">Brunei</option>
 						<option value="Cambodia">Cambodia</option>
 						<option value="Indonesia">Indonesia</option>
@@ -98,7 +98,7 @@
 				<label for="timezone" class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
 
 				<div class="col-md-6">
-					<select id="timezone" type="text" class="form-control @error('timezone') is-invalid @enderror" name="timezone" selected_value="{{ $student->timezone }}" required autocomplete="timezone" autofocus>
+					<select id="timezone" type="text" class="form-control @error('timezone') is-invalid @enderror" name="timezone" value="{{ $student->timezone }}" required autocomplete="timezone" autofocus>
 						<?php
 						
 						foreach($timezone_list as $item){

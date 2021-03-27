@@ -44,7 +44,7 @@
 
 				<div class="col-md-6">
 					
-					<select id="position" class="form-control @error('timezone') is-invalid @enderror" selected_value="{{ old('position') }}" name="position" autofocus required>
+					<select id="position" class="form-control @error('timezone') is-invalid @enderror" value="{{ old('position') }}" name="position" autofocus required>
 						<option selected="selected" value="" hidden>Choose one</option>
   						<option value="Software Engineering">Software Engineering</option>
 						<option value="UI/UX Designer">UI/UX Designer</option>
@@ -63,7 +63,7 @@
 
 				<div class="col-md-6">
 					
-					<select id="country" class="form-control @error('timezone') is-invalid @enderror" selected_value="{{ old('country') }}" name="country" autofocus required>
+					<select id="country" class="form-control @error('timezone') is-invalid @enderror" value="{{ old('country') }}" name="country" autofocus required>
 						<option selected="selected" value="" hidden>Choose one</option>
   						<option value="Brunei">Brunei</option>
 						<option value="Cambodia">Cambodia</option>
@@ -92,7 +92,7 @@
 				<label for="timezone" class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
 
 				<div class="col-md-6">
-					<select id="timezone" type="text" class="form-control @error('timezone') is-invalid @enderror" name="timezone" selected_value="{{ old('timezone') }}" required autocomplete="timezone" autofocus>
+					<select id="timezone" type="text" class="form-control @error('timezone') is-invalid @enderror" name="timezone" value="{{ old('timezone') }}" required autocomplete="timezone" autofocus>
 						<option selected="selected" value="" hidden>Choose one</option>
 						<?php
 						

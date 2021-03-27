@@ -108,9 +108,9 @@
             <a href="/student/edit" class="button">
                 {{ __('Edit info') }}
             </a>
-            <a href="{{ route('projects.temp_apply') }}" class="button">
+            <!-- <a href="{{-- route('projects.temp_apply') --}}" class="button">
                 {{ __('Submit your profile for application.') }}
-            </a>
+            </a> -->
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-@extends('layouts.index')
+@extends('layouts.layout')
 
 @section('content')
 <div class="container">
@@ -68,6 +68,7 @@
                                 </button>
                             </div>
                         </div>
+                        <input type="hidden" name="type" value="{{ Request('type') }}">
                     </form>
                 </div>
             </div>

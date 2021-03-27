@@ -8,6 +8,9 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class RegisterController extends Controller
 {
@@ -29,7 +32,17 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/join_us';
+    // protected $redirectTo = '/join_us';
+
+    protected function redirectTo()
+    {
+        if (Auth::user()->type == 'student') {
+            return '/student';
+        } elseif (Auth::user()->type == 'NGO') {
+            return '/NGO';
+        }
+        return '/';
+    }
 
     /**
      * Create a new controller instance.
@@ -39,6 +52,21 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    /**
+     * Display account selection page if it was not selected
+     * 
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function show()
+    {
+        $account_type = Request('type');
+        if ($account_type === 'NGO' || $account_type === 'student') {
+            return view('auth.register');
+        } else {
+            return view('auth.account_selection');
+        }
     }
 
     /**
@@ -53,6 +81,9 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            // Hard-coding it here should be fine as we could only have two
+            // types of accounts when registering 
+            'type' => ['required', 'string', Rule::In(['NGO', 'student'])],
         ]);
     }
 
@@ -68,6 +99,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'type' => $data['type'],
         ]);
     }
 

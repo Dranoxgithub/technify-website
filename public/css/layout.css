@@ -23,6 +23,10 @@
     margin-right: 7px;
 }
 
+.alert-wrapper {
+    padding: 5px;
+    z-index: 99;
+}
 
 /* Footer */
 

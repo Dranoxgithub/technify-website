@@ -1,18 +1,8 @@
-@extends ('layouts.index')
+@extends ('layouts.layout')
 @section ('content')
 
 
-
-
-
-@if (Session::has('message'))
-    <div class="alert alert-success alert-dismissible" role="alert">
-        <button class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        {{ Session::get('message') }}
-    </div>
-        
-@endif
-      
+    
            
 
 
@@ -82,40 +72,45 @@
         </div>
     </div>
 
-    <div class="form-group row">
+    <!-- <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Commitment') }}</label>
 
         <div class="col-md-6">
             <label class="col-md-4 col-form-label">{{ $student->min_commitment . ' - ' . $student->max_commitment . ' hours/ week'}}</label>
             
         </div>
-    </div>
+    </div> -->
     
     
 
     
-    
-    <div class="align-center sm-hidden">
-        <embed
-        src="{{ action('StudentsController@getResume') }}"
-        style="width:600px; height:500px;"
-        frameborder="0"
-        alt="resume in pdf">
+    <div class="form-group row">
+		<label for="resume" class="col-md-4 col-form-label text-md-right">{{ __('Resume') }}</label>
+
+		<div class="col-md-6">
+            <embed
+            src="{{ action('StudentsController@getResume') }}"
+            style="width:600px; height:500px;"
+            frameborder="0"
+            alt="resume in pdf">
+		</div>
+				
     </div>
+
     
     
     
     
-    
+
 
     <div class="form-group row mb-0">
         <div class="col-md-6 offset-md-4">
             <a href="/student/edit" class="button">
                 {{ __('Edit info') }}
             </a>
-            <a href="/project_listing" class="button">
-                {{ __('Apply for projects') }}
-            </a>
+            <!-- <a href="{{-- route('projects.temp_apply') --}}" class="button">
+                {{ __('Submit your profile for application.') }}
+            </a> -->
         </div>
     </div>
 

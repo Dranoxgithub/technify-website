@@ -204,7 +204,7 @@ class StudentsController extends Controller
         ->from('technifyinitiative@gmail.com','Technify')
         ->cc($cc_email);
         if ($resume_link != null && Storage::disk()->exists($resume_link)) {
-            $message->attach(Storage::disk()->path($resume_link), array(
+            $message->attach(Storage::disk()->url($resume_link), array(
                 'as' => $resume_name,
                 'mime' => 'application/pdf'));
         }

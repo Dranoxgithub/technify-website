@@ -52,7 +52,7 @@ class StudentsController extends Controller
         
         $student->save();
         Session::flash('message', 'Thank you for signing up! We will email you for more project info.');
-        $this->temp_apply();
+        // $this->temp_apply();
         return redirect('/');
         // return view('students.show', ['student' => $student]);
         

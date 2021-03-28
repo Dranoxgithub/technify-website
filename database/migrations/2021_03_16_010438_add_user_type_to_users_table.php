@@ -15,23 +15,8 @@ class AddUserTypeToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('type')->default('student');
+            $table->string('type');
         });
-        
-        $results = DB::table('users')->select('id')->get();
-        
-        foreach ($results as $result){
-            if (count(DB::table('ngos')->where('user_id', $result->id)->get())) {
-                $type = 'NGO';
-            } else {
-                $type = 'student';
-            }
-            DB::table('users')
-                ->where('id', $result->id)
-                ->update([
-                    "type" => $type
-            ]);
-        }
     }
 
     /**

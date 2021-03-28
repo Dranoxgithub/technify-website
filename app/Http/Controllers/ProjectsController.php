@@ -161,38 +161,6 @@ class ProjectsController extends Controller
         return view('projects.show',['project' => $project]);
     }
 
-    public function temp_apply() {
-        $student = Auth::user()->student;
-        if ($student == null) {
-            abort(404);
-        }
-        $to_name = "Technify";
-        $to_email = 'technifyinitiative@gmail.com';
-        $cc_email = Auth::user()->email;
-
-        $resume_name = Auth::user()->name.".pdf";
-        $resume_link = $student->resume_url;
-
-        
-        
-        $data = array("student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
-        Mail::send("projects.temp_email_template", $data, function($message) use ($to_name, $to_email, $resume_link, $resume_name, $cc_email) {
-        $message->to($to_email, $to_name)
-        ->subject('New Application from '. Auth::user()->name .' 🎉-Technify')
-        ->from('technifyinitiative@gmail.com','Technify')
-        ->cc($cc_email);
-        if ($resume_link != null && Storage::disk('s3')->exists($resume_link)) {
-            $message->attach(Storage::disk('s3')->url($resume_link), array(
-                'as' => $resume_name,
-                'mime' => 'application/pdf'));
-        }
-        
-        });
-
-        Session::flash('message', 'Congrats! Applied successfully.');
-        return view('students.show', ['student' => $student]);
-    }
-
     public function generate_timezone_list() {
         static $regions = array(
             DateTimeZone::AFRICA,

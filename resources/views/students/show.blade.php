@@ -2,17 +2,7 @@
 @section ('content')
 
 
-
-
-
-@if (Session::has('message'))
-    <div class="alert alert-success alert-dismissible" role="alert">
-        <button class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        {{ Session::get('message') }}
-    </div>
-        
-@endif
-      
+    
            
 
 
@@ -118,9 +108,9 @@
             <a href="/student/edit" class="button">
                 {{ __('Edit info') }}
             </a>
-            <a href="{{ route('projects.temp_apply') }}" class="button">
+            <!-- <a href="{{-- route('projects.temp_apply') --}}" class="button">
                 {{ __('Submit your profile for application.') }}
-            </a>
+            </a> -->
         </div>
     </div>
 

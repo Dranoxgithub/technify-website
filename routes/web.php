@@ -51,7 +51,7 @@ Route::get('/student', 'StudentsController@show');
 
 
 Route::post('/projects/{id}','ProjectsController@apply')->name('projects.apply');
-Route::get('/temp_apply','ProjectsController@temp_apply')->name('projects.temp_apply');
+Route::get('/temp_apply','StudentsController@temp_apply')->name('projects.temp_apply');
 
 Route::get('/search',['uses' => 'ProjectsController@search','as' => 'search']);
 

@@ -212,6 +212,6 @@ class StudentsController extends Controller
         });
 
         Session::flash('message', 'Congrats! Applied successfully.');
-        // return view('students.show', ['student' => $student]);
+        return view('students.show', ['student' => $student]);
     }
 }

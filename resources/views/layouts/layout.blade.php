@@ -140,14 +140,14 @@
 				</div>
 				<div class="col-md-2 p-2 footer-col-4 mt-4 text-center">
 					<p class="footer-header">About Us</p>
-					<a href="">Who We Are</a><br>
-					<a href="">Projects</a><br>
-					<a href="">Our Team</a><br>
+					<!-- <a href="">Who We Are</a><br> -->
+					<a href="/#Projects">Projects</a><br>
+					<a href="/about_us">Our Team</a><br>
 				</div>
 				<div class="col-md-2 p-2 footer-col-5 mt-4 mb-4 text-center">
 					<p class="footer-header">Partner With Us</p>
-					<a href="">Sign Up</a><br>
-					<a href="">Log In</a>
+					<a href="/register?type=student">Sign Up</a><br>
+					<a href="/login">Log In</a>
 				</div>
 			</div>
 		</div>

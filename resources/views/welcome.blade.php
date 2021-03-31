@@ -129,7 +129,7 @@
 <section class="mb-5">
     <div class="container">
         <div class="row text-center justify-content-center">
-            <h2><span class="p-2">We believe in tech, but we believe more in the humanity behind tech.</span></h2>
+            <h2>We believe in tech, but we believe more in the humanity behind tech.</h2>
             <p class="p-2">
                 Join us now to find out how you can help bridge the digital gap
                 in Southeast Asia and change tens of thousands of lives!

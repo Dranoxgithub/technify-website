@@ -90,7 +90,7 @@
             <div class="card grow p-0 shadow-sm mb-sm-5 ml-sm-5 bg-white rounded m-2 col-md-4">
                 <img class="card-img-top" src="/images/pertiwi_cover_card.png" alt="">
                 <div class="card-body p-2 m-4">
-                    <h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
+                    <h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
                     <p class="card-text">
                         A dynamic website with backend controls to manage operations
                         was built to create a stronger online presence for PSK, reach more

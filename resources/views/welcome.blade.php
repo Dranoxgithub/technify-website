@@ -128,7 +128,7 @@
 {{-- Join Us --}}
 <section>
     <div class="container mb-4">
-        <div class="row text-center">
+        <div class="row text-center justify-content-center">
             <h2><span class="p-2">We believe in tech, but we believe more in the humanity behind tech.</span></h2>
             <p class="p-2">
                 Join us now to find out how you can help bridge the digital gap

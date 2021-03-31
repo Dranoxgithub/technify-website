@@ -2,10 +2,12 @@
 
 @section ('content')
 
-<section id="banner">
-    <div class="content d-flex flex-column justify-content-center">
-        <h1>Meet our team</h1>
-        <h3>We are a group of students believing in tech for social good.</h3>
+<section class="container-fluid">
+    <div id="banner" class="row p-4 justify-content-center">
+        <div class="content d-flex flex-column justify-content-center text-center">
+            <h1 style="font-family: Apercu;">Meet our team</h1>
+            <h5 style="font-family: Apercu;">We are a group of students believing in tech for social good.</h5>
+        </div>
     </div>
 </section>
 
@@ -26,7 +28,7 @@
                     <img src="storage/images/Khoo.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Qi Xuan Khoo</h4>
-                        <small class="text-muted">Co-Founder</small>
+                        <small class="text-muted">Co-Founder, Executive Director</small>
                         <p>Karsh Scholar at Duke studying Economics and Computer Science. A part-time musician, full-time foodie, and a dreamer who aspires to inspire before he expires.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
@@ -44,7 +46,7 @@
                     <img src={{ asset('storage/images/Anni.jpeg') }} class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Anni Chen</h4>
-                        <small class="text-muted">Co-Founder, Tech Lead</small>
+                        <small class="text-muted">Co-Founder, Executive Director</small>
                         <p>Sophomore at Duke University majoring in Mathematics and Computer Science. Passionate about women in tech and tech for social good.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>

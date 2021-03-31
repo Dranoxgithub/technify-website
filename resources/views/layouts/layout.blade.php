@@ -13,7 +13,7 @@
 </head>
 <body>
 	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+	<nav class="navbar navbar-expand-lg navbar-custom sticky-top navbar-light">
 		<div class="container col-11 p-2 mx-auto">
 			<a class="navbar-brand" href="/">
 				<img id="navbar-logo" class="img-fluid" src="/images/logo.png" alt="">
@@ -25,33 +25,34 @@
 			<div class="collapse navbar-collapse float-right" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
 					<!-- <li class="nav-item active">
-						<a class="nav-link navbar-text float-right" href="#">Who We Are</a>
+						<a class="nav-link" href="#">Who We Are</a>
 					</li> -->
 					<li class="nav-item">
-						<a class="nav-link navbar-text float-right" href="/#Projects">Projects</a>
+						<a class="nav-link" href="/#Projects">Projects</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link navbar-text float-right" href="/about_us">Our Team</a>
+						<a class="nav-link" href="/about_us">Our Team</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link navbar-text float-right hor-vector" href="#"> | </a>
+					<li class="nav-item d-none d-lg-block mx-3">
+						<a class="navbar-text hor-vector"> | </a>
 					</li>
+					<hr class="w-100 d-lg-none">
 					@guest
 
 						@if (Request::is('register'))
 							<li class="nav-item">
-								<a class="nav-link navbar-text float-right" href="/login">Log in</a>
+								<a class="nav-link" href="/login">Log in</a>
 							</li>                        
 						@elseif (Request::is('login'))
 							<li class="nav-item">
-								<a class="nav-link btn btn-outline-light navbar-text float-right" href="/register?type=student">Sign Up</a>
+								<a class="nav-link btn btn-outline-light" href="/register?type=student">Sign Up</a>
 							</li>                        
 						@else
 							<li class="nav-item">
-								<a class="nav-link navbar-text float-right" href="/login">Log in</a>
+								<a class="nav-link" href="/login">Log in</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link btn btn-outline-light navbar-text float-right" href="/register?type=student">Sign Up</a>
+								<a class="nav-link btn btn-outline-light" href="/register?type=student">Sign Up</a>
 							</li>
 						@endif
 								
@@ -64,16 +65,16 @@
 								@endif
 							@endif -->
 							<li class="nav-item dropdown">
-								<a id="navbarDropdown" class="nav-link dropdown-toggle navbar-text" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+								<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 									{{ Auth::user()->name }} <span class="caret"></span>
 								</a>
 
 								<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
 									@if (Auth::user()->type == "student")
-										<a class="dropdown-item" id="log-out" href="/student">Profile</a>
+										<a class="dropdown-item" href="/student">Profile</a>
 									@elseif (Auth::user()->type == "NGO")
-										<a class="dropdown-item" id="log-out" href="/NGO">Dashboard</a>
+										<a class="dropdown-item" href="/NGO">Dashboard</a>
 									@endif  
 									<a class="dropdown-item" id="log-out" href="{{ route('logout') }}"
 									onclick="event.preventDefault();

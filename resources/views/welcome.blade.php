@@ -111,7 +111,7 @@
             <img src="/images/colab.png" alt="">
         </div>
     </div>
-    <div class="p-2 m-2">
+    <div class="p-2 m-2 overflow-hidden">
         <img src="/images/hor_vector.png" alt="">
     </div>
 </section>

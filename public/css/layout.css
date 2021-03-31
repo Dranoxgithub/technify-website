@@ -2,7 +2,7 @@
     background-color: #9ECACC;
 }
 
-.navbar-text {
+.navbar li>a {
     font-family: Apercu;
     font-size: 16px;
     font-style: normal;

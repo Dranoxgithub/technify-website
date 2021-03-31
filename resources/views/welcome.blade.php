@@ -99,9 +99,9 @@
 
 {{-- Sponsors --}}
 
-<section>
+<section class="my-4">
     <div class="container">
-        <div class="row justify-content-center my-4">
+        <div class="row justify-content-center">
             <h4>We are proudly sponsored by</h4>
         </div>
         <div class="row justify-content-around align-items-center">
@@ -118,7 +118,7 @@
                 <img src="/images/colab.png" alt="">
             </div>
         </div>
-        <hr class="my-4"/>
+        <hr />
         <!-- <div class="p-2 m-2 overflow-hidden">
             <img src="/images/hor_vector.png" alt="">
         </div> -->
@@ -126,8 +126,8 @@
 </section>
 
 {{-- Join Us --}}
-<section>
-    <div class="container mb-4">
+<section class="mb-5">
+    <div class="container">
         <div class="row text-center justify-content-center">
             <h2><span class="p-2">We believe in tech, but we believe more in the humanity behind tech.</span></h2>
             <p class="p-2">

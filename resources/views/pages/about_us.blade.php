@@ -25,7 +25,7 @@
         <div class="row">
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="storage/images/Khoo.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src="images/Khoo.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Qi Xuan Khoo</h4>
                         <small class="text-muted">Co-Founder, Executive Director</small>
@@ -43,7 +43,7 @@
             
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src={{ asset('storage/images/Anni.jpeg') }} class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src={{ asset('images/Anni.jpeg') }} class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Anni Chen</h4>
                         <small class="text-muted">Co-Founder, Executive Director</small>
@@ -61,7 +61,7 @@
             
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="storage/images/Raj.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src="images/Raj.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Tharun Raj</h4>
                         <small class="text-muted">Product Management Lead</small>
@@ -79,7 +79,7 @@
 
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="storage/images/Andrea.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src="images/Andrea.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Andrea Centeno</h4>
                         <small class="text-muted">Treasurer</small>
@@ -97,7 +97,7 @@
 
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="storage/images/Kyra.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src="images/Kyra.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Kyra Chan</h4>
                         <small class="text-muted">Design Lead</small>
@@ -115,7 +115,7 @@
 
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="storage/images/Thuan.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src="images/Thuan.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Thuan Tran</h4>
                         <small class="text-muted">Student Outreach Lead</small>
@@ -133,7 +133,7 @@
 
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="storage/images/Rui.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                    <img src="images/Rui.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Rui Xin</h4>
                         <small class="text-muted">Software Engineer</small>

@@ -34,7 +34,7 @@
     background-color: #9ECACC !important;
 }
 
-.navbar-text {
+.navbar li>a {
     font-family: Apercu;
     font-size: 18px;
     font-style: normal;
@@ -227,15 +227,15 @@ body>* {
 .profile-img,
 .match-img,
 .serve-img {
-    width: 15vw;
+    width: 75%;
     height: auto;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .profile-img,
     .match-img,
     .serve-img {
-        width: 60vw;
+        width: 185px;
         height: auto;
     }
 }

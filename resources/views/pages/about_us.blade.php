@@ -171,11 +171,13 @@
 
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="images/Jonathan.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <img src="images/Ignacio.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Ignacio Heeren</h4>
-                        <small class="text-muted">Student Outreach</small>
-                        <p></p>
+                        <small class="text-muted">Student Outreach Lead</small>
+                        <p>
+                            Sophomore at Duke University majoring in Philosophy and Political Science. Passionate about the intersection between science and humanities.
+                        </p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

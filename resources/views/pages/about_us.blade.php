@@ -1,3 +1,4 @@
+
 @extends ('layouts.layout')
 
 @section ('content')
@@ -168,25 +169,6 @@
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
-                <div class="team text-center rounded p-3 py-4">
-                    <img src="images/Shine.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
-                    <div class="content mt-3">
-                        <h4 class="title mb-0">Shine Wu</h4>
-                        <small class="text-muted">Student Outreach Lead</small>
-                        <p>Robertson Scholar at Duke studying Economics and Data Science. Lover of the outdoors, climate and frontier tech investor, and avid basketball fan.</p>
-                        <ul class="list-unstyled mt-3 social-icon social mb-0">
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
-                        </ul><!--end icon-->
-                    </div>
-                </div>
-            </div><!--end col-->
-
-
         </div><!--end row-->
     </div>
 
@@ -197,5 +179,3 @@
             
 
 @endsection
-
-

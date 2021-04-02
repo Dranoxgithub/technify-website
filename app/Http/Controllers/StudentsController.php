@@ -16,6 +16,7 @@ class StudentsController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('verified');
         $this->middleware('user:student');
         $this->middleware(function ($request, $next) {
             if (Auth::user()->student) {

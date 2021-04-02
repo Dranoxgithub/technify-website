@@ -171,7 +171,7 @@
 
             <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="images/Ignacio.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <img src="images/Ignacio.png" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0">Ignacio Heeren</h4>
                         <small class="text-muted">Student Outreach Lead</small>

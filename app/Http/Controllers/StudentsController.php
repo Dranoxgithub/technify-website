@@ -51,9 +51,8 @@ class StudentsController extends Controller
         }
         
         $student->save();
-        Session::flash('message', 'Thank you for signing up! We will email you for more project info.');
-        // $this->temp_apply();
-        return redirect('/');
+        Session::flash('message', 'Thank you for filling out your basic info! Please review your application and click on submit when you are ready.');
+        return redirect('/student');
         // return view('students.show', ['student' => $student]);
         
     }
@@ -211,7 +210,8 @@ class StudentsController extends Controller
         
         });
 
-        Session::flash('message', 'Congrats! Applied successfully.');
-        return view('students.show', ['student' => $student]);
+        Session::flash('message', 'Congrats! Application sent.');
+        return redirect('/student');
+        // return view('students.show', ['student' => $student]);
     }
 }

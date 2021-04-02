@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	@if (count(request()->segments()))
 		<title>{{ ucwords(str_replace('_', ' ', request()->segment(count(request()->segments())))) }} | Technify</title>
 	@else

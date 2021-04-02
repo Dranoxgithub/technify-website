@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="row">
-        <img id="intro-img" class="img-fluid mb-5" src="/images/intro.png" alt="">
+        <img id="intro-img" class="intro-img img-fluid mb-5" src="/images/intro.png" alt="">
     </div>
 </section>
 
@@ -77,7 +77,7 @@
         </div>
         <div class="d-flex flex-row flex-md-nowrap flex-wrap justify-content-center p-2">
             {{-- add blade logic for all featured projects --}}
-            <div class="card grow p-0 shadow mb-sm-5 mr-sm-5 m-2 col-lg-4 col-md-5">
+            <div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5">
                 <a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
                 <div class="card-body p-2 m-4">
                     <h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">The Lost Food Project</a></h5>
@@ -89,7 +89,7 @@
                     {{-- <a class="text-right" href="">See Details —></a> --}}
                 </div> 
             </div>
-            <div class="card grow p-0 shadow mb-sm-5 ml-sm-5 m-2 col-lg-4 col-md-5">
+            <div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5">
                 <a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
                 <div class="card-body p-2 m-4">
                     <h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>

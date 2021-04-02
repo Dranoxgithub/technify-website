@@ -4,7 +4,8 @@
 
 
 @if (Auth::check())
-		<div class="wrapper">
+		<div class="wrapper container my-4">
+			<h2 class="text-center">Complete Your Profile</h2>
 			<form method="POST" action="/student" enctype="multipart/form-data">
 
 			@csrf

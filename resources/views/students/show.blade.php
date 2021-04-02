@@ -9,8 +9,10 @@
 
 
 	
-<div class="wrapper">
-        
+<div class="wrapper container my-4">
+
+    <h2 class="text-center">Your Profile</h2>
+
         
         
     <div class="form-group row">
@@ -103,15 +105,20 @@
     
 
 
-    <div class="form-group row mb-0">
-        <div class="col-md-6 offset-md-4">
-            <a href="/student/edit" class="button">
+    <div class="form-group row justify-content-center">
+        <!-- <div class="col-md-3"> -->
+            <a href="/student/edit" class="btn btn-light">
                 {{ __('Edit info') }}
             </a>
-            <a href="{{ route('projects.temp_apply') }}" class="button">
-                {{ __('Submit your profile for application.') }}
+        <!-- </div> -->
+    </div>
+    <div class="form-group row justify-content-center">
+
+        <!-- <div class="col-md-3"> -->
+            <a href="{{ route('projects.temp_apply') }}" class="btn btn-info">
+                {{ __('Submit your profile for application') }}
             </a>
-        </div>
+        <!-- </div> -->
     </div>
 
 </div>	

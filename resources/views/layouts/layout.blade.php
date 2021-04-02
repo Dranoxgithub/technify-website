@@ -110,10 +110,10 @@
 
 	<!-- Footer -->
 
-	<footer style="background-color:#9ECACC">
+<footer style="background-color:#9ECACC">
 		<div class="container-fluid">
 			<div class="row flex-row flex-md-nowrap flex-wrap justify-content-between align-items-top my-5 mx-4">
-				<div class="col-lg-3 col-sm-2 d-none d-md-inline-flex footer-col-1 flex-row align-items-center">
+				<div class="col-lg-3 col-sm-2 d-none d-md-inline-flex footer-col-1 flex-row align-items-center ml-xl-5">
 					<img class="p-2 m-2" src="/images/Technify_logo_wordmark_small_dark.svg" alt="" style="width:70px; height:auto;">
 					<div class="col-md-9 bottom-text text-left"> 
 						Technify provides pro bono tech consulting and
@@ -122,7 +122,7 @@
 						of volunteers from U.S. colleges. 
 					</div>
 				</div>
-				<div class="col-md-3 p-2 footer-col-2 my-4 ml-2">
+				<div class="col-md-3 p-2 footer-col-2 my-4 mx-lg-4">
 					<p class="footer-header">Contact Us</p> 
 					<div class="d-flex flex-column flex-wrap">
 						<div>
@@ -155,7 +155,6 @@
 				</div>
 			</div>
 		</div>
-	</footer>
     {{-- <section class="container-fluid" style="">
         <div class="row footer" style="background-color:#9ECACC;">
             <div class="col-10 d-flex pl-sm-5 p-2 pb-5 pt-4 flex-row flex-md-nowrap flex-wrap justify-content-between align-items-top">

@@ -11,7 +11,7 @@
     src: url(../fonts/ApercuPro-Bold.woff) format('woff');
     font-weight: bold;
     font-style: normal;
-}
+}color: ;
 
 @font-face {
     font-family: "Apercu";
@@ -24,6 +24,7 @@
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
     box-shadow: none;
+    border-color: #9ECACC;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -34,11 +35,11 @@
     background-color: #9ECACC !important;
 }
 
-.navbar li>a {
+.nav-link {
     font-family: Apercu;
     font-size: 18px;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     letter-spacing: 0em;
     text-align: center;
     color: #26484A;
@@ -63,6 +64,9 @@
 @media screen and (max-width: 500px) {
     #ver-vector {
         display: none !important;
+    }
+    .sign-up {
+        margin-bottom: 10px !important;
     }
 }
 
@@ -227,30 +231,32 @@ body>* {
 .profile-img,
 .match-img,
 .serve-img {
-    width: 75%;
+    width: 15vw;
     height: auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
     .profile-img,
     .match-img,
     .serve-img {
-        width: 185px;
+        width: 60vw;
         height: auto;
     }
 }
 
 
 /* Featured Projects */
+.card {
+    border-radius: 15px !important;
+    overflow: hidden;
+}
 
 .card-body {
-    border-radius: 0px 0px 25px 25px;
     margin-bottom: 5px;
 }
 
 .card-img-top {
-    height: 40vh;
-    width: auto;
+    object-fit: contain;
 }
 
 .grow {
@@ -320,15 +326,35 @@ body>* {
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
-    color:#26484A;
+    color: #26484A;
 }
 
 .bottom-text {
     font-family: Apercu;
-    font-size: 14px;
+    font-size: 12px;
     color: #26484A;
     font-style: normal;
     font-weight: normal;
+}
+
+@media only screen and (max-width: 1050px) {
+    .footer-col-2>div>div,
+    .footer-col-2>div>div>a {
+        font-size: 12px !important;
+    }
+    .bottom-text {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    .footer-col-3,
+    .footer-col-3-img {
+        display: none !important;
+    }
+    .bottom-text {
+        display: none !important;
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -336,11 +362,7 @@ body>* {
         justify-content: center !important;
         bottom: 0;
     }
-    .bottom-text {
-        line-height: 1.4 !important;
-    }
     .footer-col-1,
-    .footer-col-3,
     .footer-col-4,
     .footer-col-5 {
         display: none !important;
@@ -349,3 +371,17 @@ body>* {
 
 
 /* Our Team Page */
+
+* {
+    font-family: Apercu;
+    color: #26484A;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 500px) {
+    .profile-pic {
+        width: 60vw;
+        height: auto;
+    }
+}

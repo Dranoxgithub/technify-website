@@ -15,7 +15,7 @@
         </div>
     </div>
     <div class="row">
-        <img id="intro-img" class="img-fluid mb-5" src="/images/intro.png" alt="">
+        <img id="intro-img" class="intro-img img-fluid mb-5" src="/images/intro.png" alt="">
     </div>
 </section>
 

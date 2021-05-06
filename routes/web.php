@@ -58,3 +58,6 @@ Route::get('/search',['uses' => 'ProjectsController@search','as' => 'search']);
 Route::get('/NGO_project_new', 'PagesController@NGO_project_new');
 Route::get('/{page}', 'PagesController@show');
 
+Route::get('/admin/NGO', 'AdminsController@test');
+Route::get('/admin/student', 'AdminsController@NGO_project_new');
+Route::get('/admin/blog', 'AdminsController@show');

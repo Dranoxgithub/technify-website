@@ -70,7 +70,7 @@
 
 {{-- Featured Projects --}}
 
-<section class="sec-3 container-fluid p-2 pt-sm-4 pb-sm-4" style="background-color: #F4F4F4">
+<section id="Projects" class="sec-3 container-fluid p-2 pt-sm-4 pb-sm-4" style="background-color: #F4F4F4">
     <div class="row justify-content-center">
         <div class="col-sm-9 m-3">
             <h2 class="">Featured Projects</h2>

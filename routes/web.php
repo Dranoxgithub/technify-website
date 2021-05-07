@@ -60,4 +60,10 @@ Route::get('/{page}', 'PagesController@show');
 
 Route::get('/admin/NGO', 'AdminsController@test');
 Route::get('/admin/student', 'AdminsController@NGO_project_new');
-Route::get('/admin/blog', 'AdminsController@show');
+Route::get('/admin/blog_create', 'AdminsController@createBlog');
+Route::get('/admin/blog_edit/{id}', 'AdminsController@editBlog')->name('admin.blog_edit');
+Route::get('/admin/blogs', 'AdminsController@indexBlog');
+Route::get('/admin/blogs/{id}', 'AdminsController@showBlog')->name('admin.blog_show');
+Route::patch('/admin/blog_edit/{id}','AdminsController@updateBlog')->name('admin.blog_update');
+Route::post('/admin/blog_create', 'BlogsController@store');
+Route::delete('/admin/blogs/{id}','BlogsController@destroy')->name('blogs.destroy');

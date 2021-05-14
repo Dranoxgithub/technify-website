@@ -67,146 +67,57 @@
 	
 </div> -->
 
-
 <div class="main-gallery js-flickity">
-	<div class="gallery-cell">
-		<div class="col-md-8  mx-auto">
-			<div class="card w-100" style="height:550px">
-				<img class="card-img-top" src="/images/technify_cover_card.png" style="height:250px">
-				<div class="card-body overflow-auto">
-					<h4 class="card-title"> <a href="https://www.thelostfoodproject.org/" target="blank">The Lost Food Project</a></h4>
-					<p class="card-text text-left">
-						<span style="font-weight:bold; color:#f6755e">Problem</span><br>
-						Confronted with a rising shortage of food donations since the pandemic, TLFP has been struggling to engage with more potential donors as the logistics of collecting food donations is a discouraging factor for neighborhood grocers. <br>
-						<br><span style="font-weight:bold;  color:#f6755e">Technify's Solution</span><br>
-						A team of students from Duke University was put together to help TLFP build a centralized donation application with the aims of reaching out to and onboarding more potential food donors.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="gallery-cell">
-		<div class="col-md-8  mx-auto">
-			<div class="card w-100" style="height:550px">
-				<img class="card-img-top" src="/images/technify_cover_card.png" style="height:250px">
-				<div class="card-body overflow-auto">
-					<h4 class="card-title"> <a href="https://www.thelostfoodproject.org/" target="blank">The Lost Food Project</a></h4>
-					<p class="card-text text-left">
-						<span style="font-weight:bold; color:#f6755e">Problem</span><br>
-						Confronted with a rising shortage of food donations since the pandemic, TLFP has been struggling to engage with more potential donors as the logistics of collecting food donations is a discouraging factor for neighborhood grocers. <br>
-						<br><span style="font-weight:bold;  color:#f6755e">Technify's Solution</span><br>
-						A team of students from Duke University was put together to help TLFP build a centralized donation application with the aims of reaching out to and onboarding more potential food donors.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="gallery-cell">
-		<div class="col-md-8  mx-auto">
-			<div class="card w-100" style="height:550px">
-				<img class="card-img-top" src="/images/technify_cover_card.png" style="height:250px">
-				<div class="card-body overflow-auto">
-					<h4 class="card-title"> <a href="https://www.thelostfoodproject.org/" target="blank">The Lost Food Project</a></h4>
-					<p class="card-text text-left">
-						<span style="font-weight:bold; color:#f6755e">Problem</span><br>
-						Confronted with a rising shortage of food donations since the pandemic, TLFP has been struggling to engage with more potential donors as the logistics of collecting food donations is a discouraging factor for neighborhood grocers. <br>
-						<br><span style="font-weight:bold;  color:#f6755e">Technify's Solution</span><br>
-						A team of students from Duke University was put together to help TLFP build a centralized donation application with the aims of reaching out to and onboarding more potential food donors.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
+<div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
+	<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
+	<div class="card-body p-2 m-4">
+		<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">The Lost Food Project</a></h5>
+		<p class="card-text">
+			A centralized donation application with the aims of onboarding and 
+			engaging with more potential food donors by streamlining the process
+			of collecting food donations for neighborhood grocers.
+		</p>
+		{{-- <a class="text-right" href="">See Details —></a> --}}
+	</div> 
+</div>
+<div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
+	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
+	<div class="card-body p-2 m-4">
+		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
+		<p class="card-text">
+			A dynamic website with backend controls to manage operations
+			was built to create a stronger online presence for PSK, reach more
+			beneficiaries, and digitalize the onboarding of volunteers.
+		</p>
+		{{-- <a href="">See Details —></a> --}}
+	</div> 
+</div>
+<div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
+	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
+	<div class="card-body p-2 m-4">
+		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
+		<p class="card-text">
+			A dynamic website with backend controls to manage operations
+			was built to create a stronger online presence for PSK, reach more
+			beneficiaries, and digitalize the onboarding of volunteers.
+		</p>
+		{{-- <a href="">See Details —></a> --}}
+	</div> 
+</div>
+<div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
+	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
+	<div class="card-body p-2 m-4">
+		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
+		<p class="card-text">
+			A dynamic website with backend controls to manage operations
+			was built to create a stronger online presence for PSK, reach more
+			beneficiaries, and digitalize the onboarding of volunteers.
+		</p>
+		{{-- <a href="">See Details —></a> --}}
+	</div> 
+</div>
 	
 
-	<!-- <div class="gallery-cell">
-		<div class="card-body">
-			<div class="card-title"><h5>lahlahlah frontend!</h5></div>
-			<div class="card-content">
-				<button class="tag alt">$project->ngo->cause</button>
-				<p>
-					$project->ngo->name }}<br>
-				
-				 date('d M, Y', strtotime($project->start_date)) }} -  date('d M, Y', strtotime($project->end_date)) }}<br>
-				 $project->commitment . "h/week"}}<br>
-				 $project->goal }}<br>
-				</p> 
-			</div>
-			<div class="card-button">
-				<a href="/projects/$project->id}}" class="button">Details</a>
-			</div>
-			
-			
-		</div>
-	</div>
-
-
-
-	<div class="gallery-cell">
-		<div class="card-body">
-			<div class="card-title"><h5>lahlahlah frontend!</h5></div>
-			<div class="card-content">
-				<button class="tag alt">$project->ngo->cause</button>
-				<p>
-					$project->ngo->name }}<br>
-				
-				 date('d M, Y', strtotime($project->start_date)) }} -  date('d M, Y', strtotime($project->end_date)) }}<br>
-				 $project->commitment . "h/week"}}<br>
-				 $project->goal }}<br>
-				</p> 
-			</div>
-			<div class="card-button">
-				<a href="/projects/$project->id}}" class="button">Details</a>
-			</div>
-			
-			
-		</div>
-	</div>
-
-
-	<div class="gallery-cell">
-		<div class="card-body">
-			<div class="card-title"><h5>lahlahlah frontend!</h5></div>
-			<div class="card-content">
-				<button class="tag alt">$project->ngo->cause</button>
-				<p>
-					$project->ngo->name }}<br>
-				
-				 date('d M, Y', strtotime($project->start_date)) }} -  date('d M, Y', strtotime($project->end_date)) }}<br>
-				 $project->commitment . "h/week"}}<br>
-				 $project->goal }}<br>
-				</p> 
-			</div>
-			<div class="card-button">
-				<a href="/projects/$project->id}}" class="button">Details</a>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="gallery-cell">
-		<div class="card-body">
-			<div class="card-title"><h5>lahlahlah frontend!</h5></div>
-			<div class="card-content">
-				<button class="tag alt">$project->ngo->cause</button>
-				<p>
-					$project->ngo->name }}<br>
-				
-				 date('d M, Y', strtotime($project->start_date)) }} -  date('d M, Y', strtotime($project->end_date)) }}<br>
-				 $project->commitment . "h/week"}}<br>
-				 $project->goal }}<br>
-				</p> 
-			</div>
-			<div class="card-button">
-				<a href="/projects/$project->id}}" class="button">Details</a>
-			</div>
-			
-			
-		</div>
-	</div> -->
 </div>
 
 
@@ -231,7 +142,7 @@
 		// autoPlay: true,
 		prevNextButtons: false,
 		pageDots: false, 
-		cellAlign: 'center'
+		cellAlign: 'left'
 		});
 	</script>
 	<style>
@@ -251,8 +162,7 @@
 		height: 200px;
 		margin-right: 10px;
 		background: #8C8; */
-		height: 550px;
-		width:40%;
+
 		counter-increment: gallery-cell;
 		margin-right: 10px;
 		}

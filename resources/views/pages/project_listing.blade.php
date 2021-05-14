@@ -37,11 +37,11 @@
 </form>
 
 
-
-<div class="row gallery">
+<!-- 
+<div class="main-gallery js-flickity">
 	
 	@foreach($projects as $project)
-	<div class="col-lg-3 col-md-4 col-sm-6 gallery-box card">
+	<div class="gallery-cell">
 		
 		<div class="card-body">
 			<div class="card-title"><h5>{{ $project->name }}</h5></div>
@@ -65,8 +65,208 @@
 		
 	@endforeach	
 	
+</div> -->
+
+
+<div class="main-gallery js-flickity">
+	<div class="gallery-cell">
+		<div class="col-md-8  mx-auto">
+			<div class="card w-100" style="height:550px">
+				<img class="card-img-top" src="/images/technify_cover_card.png" style="height:250px">
+				<div class="card-body overflow-auto">
+					<h4 class="card-title"> <a href="https://www.thelostfoodproject.org/" target="blank">The Lost Food Project</a></h4>
+					<p class="card-text text-left">
+						<span style="font-weight:bold; color:#f6755e">Problem</span><br>
+						Confronted with a rising shortage of food donations since the pandemic, TLFP has been struggling to engage with more potential donors as the logistics of collecting food donations is a discouraging factor for neighborhood grocers. <br>
+						<br><span style="font-weight:bold;  color:#f6755e">Technify's Solution</span><br>
+						A team of students from Duke University was put together to help TLFP build a centralized donation application with the aims of reaching out to and onboarding more potential food donors.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="gallery-cell">
+		<div class="col-md-8  mx-auto">
+			<div class="card w-100" style="height:550px">
+				<img class="card-img-top" src="/images/technify_cover_card.png" style="height:250px">
+				<div class="card-body overflow-auto">
+					<h4 class="card-title"> <a href="https://www.thelostfoodproject.org/" target="blank">The Lost Food Project</a></h4>
+					<p class="card-text text-left">
+						<span style="font-weight:bold; color:#f6755e">Problem</span><br>
+						Confronted with a rising shortage of food donations since the pandemic, TLFP has been struggling to engage with more potential donors as the logistics of collecting food donations is a discouraging factor for neighborhood grocers. <br>
+						<br><span style="font-weight:bold;  color:#f6755e">Technify's Solution</span><br>
+						A team of students from Duke University was put together to help TLFP build a centralized donation application with the aims of reaching out to and onboarding more potential food donors.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="gallery-cell">
+		<div class="col-md-8  mx-auto">
+			<div class="card w-100" style="height:550px">
+				<img class="card-img-top" src="/images/technify_cover_card.png" style="height:250px">
+				<div class="card-body overflow-auto">
+					<h4 class="card-title"> <a href="https://www.thelostfoodproject.org/" target="blank">The Lost Food Project</a></h4>
+					<p class="card-text text-left">
+						<span style="font-weight:bold; color:#f6755e">Problem</span><br>
+						Confronted with a rising shortage of food donations since the pandemic, TLFP has been struggling to engage with more potential donors as the logistics of collecting food donations is a discouraging factor for neighborhood grocers. <br>
+						<br><span style="font-weight:bold;  color:#f6755e">Technify's Solution</span><br>
+						A team of students from Duke University was put together to help TLFP build a centralized donation application with the aims of reaching out to and onboarding more potential food donors.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<!-- <div class="gallery-cell">
+		<div class="card-body">
+			<div class="card-title"><h5>lahlahlah frontend!</h5></div>
+			<div class="card-content">
+				<button class="tag alt">$project->ngo->cause</button>
+				<p>
+					$project->ngo->name }}<br>
+				
+				 date('d M, Y', strtotime($project->start_date)) }} -  date('d M, Y', strtotime($project->end_date)) }}<br>
+				 $project->commitment . "h/week"}}<br>
+				 $project->goal }}<br>
+				</p> 
+			</div>
+			<div class="card-button">
+				<a href="/projects/$project->id}}" class="button">Details</a>
+			</div>
+			
+			
+		</div>
+	</div>
+
+
+
+	<div class="gallery-cell">
+		<div class="card-body">
+			<div class="card-title"><h5>lahlahlah frontend!</h5></div>
+			<div class="card-content">
+				<button class="tag alt">$project->ngo->cause</button>
+				<p>
+					$project->ngo->name }}<br>
+				
+				 date('d M, Y', strtotime($project->start_date)) }} -  date('d M, Y', strtotime($project->end_date)) }}<br>
+				 $project->commitment . "h/week"}}<br>
+				 $project->goal }}<br>
+				</p> 
+			</div>
+			<div class="card-button">
+				<a href="/projects/$project->id}}" class="button">Details</a>
+			</div>
+			
+			
+		</div>
+	</div>
+
+
+	<div class="gallery-cell">
+		<div class="card-body">
+			<div class="card-title"><h5>lahlahlah frontend!</h5></div>
+			<div class="card-content">
+				<button class="tag alt">$project->ngo->cause</button>
+				<p>
+					$project->ngo->name }}<br>
+				
+				 date('d M, Y', strtotime($project->start_date)) }} -  date('d M, Y', strtotime($project->end_date)) }}<br>
+				 $project->commitment . "h/week"}}<br>
+				 $project->goal }}<br>
+				</p> 
+			</div>
+			<div class="card-button">
+				<a href="/projects/$project->id}}" class="button">Details</a>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="gallery-cell">
+		<div class="card-body">
+			<div class="card-title"><h5>lahlahlah frontend!</h5></div>
+			<div class="card-content">
+				<button class="tag alt">$project->ngo->cause</button>
+				<p>
+					$project->ngo->name }}<br>
+				
+				 date('d M, Y', strtotime($project->start_date)) }} -  date('d M, Y', strtotime($project->end_date)) }}<br>
+				 $project->commitment . "h/week"}}<br>
+				 $project->goal }}<br>
+				</p> 
+			</div>
+			<div class="card-button">
+				<a href="/projects/$project->id}}" class="button">Details</a>
+			</div>
+			
+			
+		</div>
+	</div> -->
 </div>
 
+
+						
+							
+							
+	
+					
+
+
+
+
+@endsection
+
+@section('scripts')
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+	<script>
+		$('.main-gallery').flickity({
+		// options
+		wrapAround: true,
+		// autoPlay: true,
+		prevNextButtons: false,
+		pageDots: false, 
+		cellAlign: 'center'
+		});
+	</script>
+	<style>
+		* {
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		}
+
+		body { font-family: sans-serif; }
+
+		.gallery {
+		background: #EEE;
+		}
+
+		.gallery-cell {
+		/* width: 28%;
+		height: 200px;
+		margin-right: 10px;
+		background: #8C8; */
+		height: 550px;
+		width:40%;
+		counter-increment: gallery-cell;
+		margin-right: 10px;
+		}
+
+
+
+
+		.flickity-button {
+  		display: none;
+		}
+		.flickity-page-dots {
+			display: none;
+		}
+	</style>
 @endsection
 
 

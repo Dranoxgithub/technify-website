@@ -68,6 +68,7 @@
 </div> -->
 
 <div class="main-gallery js-flickity">
+
 <div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
 	<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
 	<div class="card-body p-2 m-4">
@@ -77,9 +78,36 @@
 			engaging with more potential food donors by streamlining the process
 			of collecting food donations for neighborhood grocers.
 		</p>
-		{{-- <a class="text-right" href="">See Details —></a> --}}
+		<div>
+		<span>
+		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
+		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
+		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
+		</span>
+		</div>
+		<a class="text-right project-button float-right" href="">See Details -></a>
 	</div> 
 </div>
+
+<div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
+	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
+
+	<div class="card-body p-2 m-4">
+		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
+		<p class="card-text">
+			A dynamic website with backend controls to manage operations
+			was built to create a stronger online presence for PSK, reach more
+			beneficiaries, and digitalize the onboarding of volunteers.
+		</p>
+		<div>
+		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
+		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
+		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
+		<a class="text-right project-button muted" href="">See Details -></a>
+		</div>
+	</div> 
+</div>
+
 <div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
 	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
 	<div class="card-body p-2 m-4">
@@ -89,11 +117,19 @@
 			was built to create a stronger online presence for PSK, reach more
 			beneficiaries, and digitalize the onboarding of volunteers.
 		</p>
-		{{-- <a href="">See Details —></a> --}}
+		<div>
+		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
+		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
+		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
+		<a class="text-right project-button muted" href="">See Details -></a>
+		</div>
 	</div> 
 </div>
+
+
 <div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
 	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
+	
 	<div class="card-body p-2 m-4">
 		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
 		<p class="card-text">
@@ -101,11 +137,18 @@
 			was built to create a stronger online presence for PSK, reach more
 			beneficiaries, and digitalize the onboarding of volunteers.
 		</p>
-		{{-- <a href="">See Details —></a> --}}
+		<div>
+		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
+		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
+		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
+		<a class="text-right project-button muted" href="">See Details -></a>
+		</div>
 	</div> 
 </div>
+
 <div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
 	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
+	
 	<div class="card-body p-2 m-4">
 		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
 		<p class="card-text">
@@ -113,7 +156,12 @@
 			was built to create a stronger online presence for PSK, reach more
 			beneficiaries, and digitalize the onboarding of volunteers.
 		</p>
-		{{-- <a href="">See Details —></a> --}}
+		<div>
+		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
+		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
+		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
+		<a class="text-right project-button muted" href="">See Details -></a>
+		</div>
 	</div> 
 </div>
 	
@@ -140,9 +188,10 @@
 		// options
 		wrapAround: true,
 		// autoPlay: true,
+		groupCells: '80%',
 		prevNextButtons: false,
 		pageDots: false, 
-		cellAlign: 'left'
+		cellAlign: 'left',
 		});
 	</script>
 	<style>
@@ -156,19 +205,41 @@
 		.gallery {
 		background: #EEE;
 		}
+		.card-body {
+
+		}
 
 		.gallery-cell {
 		/* width: 28%;
 		height: 200px;
 		margin-right: 10px;
 		background: #8C8; */
-
+		width : 90%;
+		opacity: 50%;
 		counter-increment: gallery-cell;
 		margin-right: 10px;
 		}
+		.gallery-cell.is-selected {
+			opacity: 100%;
+		}
 
+		.project-button {
+			padding: .2rem .45rem;
+			font-size: .8rem;
+			border-radius: 9em;
+			border-color: white;
+		}
+		#btn-swe {
+			background-color: #9ecacc;
+		}
 
+		#btn-pm {
+			background-color: #ff8943;
+		}
 
+		#btn-d {
+			background-color: #ffdc83;
+		}
 
 		.flickity-button {
   		display: none;

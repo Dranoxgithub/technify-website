@@ -50,8 +50,8 @@
 			<p class="card-text">
 				{{ $project->goal }}
 			</p>
-			<div>
-				<span style="margin-left: -0.45rem;">
+			<div class="d-flex justify-content-between align-items-center flex-wrap">
+				<span style="margin-left: -0.45rem;" class="btns-talent">
 					@if ($project->swe_needed)
 					<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
 					@endif
@@ -212,7 +212,7 @@
 	
 
 	.project-button {
-		padding: .2rem .45rem;
+		/* padding: .2rem .45rem; */
 		font-size: 0.84rem;
 		border-radius: 9em;
 		border-color: white;
@@ -226,8 +226,11 @@
 
 	@media only screen and (max-width: 600px) {
 		.project-button {
-			padding: .2rem .5rem;
+			/* padding: .2rem .5rem; */
 			font-size: .71rem;
+		}
+		.btns-talent {
+			margin-bottom: 1rem;
 		}
 	}
 

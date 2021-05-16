@@ -209,12 +209,26 @@
 	.gallery-cell.is-selected {
 		opacity: 100%;
 	}
+	
 
 	.project-button {
 		padding: .2rem .45rem;
-		font-size: .71rem;
+		font-size: 0.84rem;
 		border-radius: 9em;
 		border-color: white;
+		
+	}
+
+	.project-button:hover {
+		background-color: #429993;
+		border-color: #9ecacc;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.project-button {
+			padding: .2rem .5rem;
+			font-size: .71rem;
+		}
 	}
 
 	.modal .row {
@@ -235,6 +249,10 @@
 
 	.see-details {
 		color: #26484a;
+	}
+	.see-details:hover {
+		background-color: white;
+		color: #429993;
 	}
 
 	.flickity-button {

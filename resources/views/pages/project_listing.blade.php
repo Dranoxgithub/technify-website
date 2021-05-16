@@ -3,13 +3,13 @@
 @section ('content')
 
 <section class="container-fluid my-4">
-    <div id="banner" class="row p-4 justify-content-center">
-        <div class="col-sm-6 content d-flex flex-column justify-content-center text-center">
-            <h1>Project Listing</h1>
-            <h5>Check out all of the projects currently available for new
-			student volunteers, as well as our portfolio of past works!</h5>
-        </div>
-    </div>
+	<div id="banner" class="row p-4 justify-content-center">
+		<div class="col-sm-6 content d-flex flex-column justify-content-center text-center">
+			<h1>Project Listing</h1>
+			<h5>Check out all of the projects currently available for new
+				student volunteers, as well as our portfolio of past works!</h5>
+		</div>
+	</div>
 </section>
 
 
@@ -41,26 +41,65 @@
 
 <h3 class="ml-4">Available Projects</h3>
 <div class="main-gallery js-flickity">
-@foreach($projects as $project)
-<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-	<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
-	<div class="card-body p-2 m-4">
-		<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
-		<p class="card-text">
-			{{ $project->goal }}
-		</p>
-		<div>
-		<span>
-		<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
-		<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
-		<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
-		</span>
-		<a class="text-right project-button float-right see-details" href="">See Details -></a>
+	@foreach($projects as $project)
+	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
+		<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
+		<div class="card-body p-2 m-4">
+			<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
+			<p class="card-text">
+				{{ $project->goal }}
+			</p>
+			<div>
+				<span>
+					<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
+					<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
+					<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
+				</span>
+				<a class="text-right project-button float-right see-details" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">See Details -></a>
+			</div>
 		</div>
-	</div> 
+	</div>
+	@endforeach
+	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
+		<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
+		<div class="card-body p-2 m-4">
+			<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;"> $project->name }}</a></h5>
+			<p class="card-text">
+				$project->goal }}
+			</p>
+			<div>
+				<span>
+					<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
+					<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
+					<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
+				</span>
+				<a class="text-right project-button float-right see-details" href="#" data-toggle="modal" data-target="#exampleModal">See Details -></a>
+			</div>
+		</div>
+	</div>
 </div>
-@endforeach	
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				...
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+			</div>
+		</div>
+	</div>
 </div>
+
+
 
 <!-- <div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
 	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
@@ -141,31 +180,31 @@
 
 <h3 class="ml-4">Past Works</h3>
 <div class="main-gallery js-flickity">
-@foreach($projects as $project)
-<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-	<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
-	<div class="card-body p-2 m-4">
-		<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
-		<p class="card-text">
-			{{ $project->goal }}
-		</p>
-		<div>
-		<span>
-		<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
-		<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
-		<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
-		</span>
-		<a class="text-right project-button float-right see-details" href="">See Details -></a>
+	@foreach($projects as $project)
+	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
+		<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
+		<div class="card-body p-2 m-4">
+			<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
+			<p class="card-text">
+				{{ $project->goal }}
+			</p>
+			<div>
+				<span>
+					<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
+					<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
+					<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
+				</span>
+				<a class="text-right project-button float-right see-details" href="">See Details -></a>
+			</div>
 		</div>
-	</div> 
+	</div>
+	@endforeach
 </div>
-@endforeach	
-</div>
-						
-							
-							
-	
-					
+
+
+
+
+
 
 
 
@@ -173,81 +212,81 @@
 @endsection
 
 @section('scripts')
-	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-	<script>
-		$(function() {
-			$('.main-gallery').flickity({
-		// options
-		// autoPlay: true,
-		wrapAround: true,
-		groupCells: '80%',
-		prevNextButtons: false,
-		pageDots: false, 
+<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+	$(function() {
+		$('.main-gallery').flickity({
+			// options
+			// autoPlay: true,
+			wrapAround: true,
+			groupCells: '80%',
+			prevNextButtons: false,
+			pageDots: false,
 		})
-		
-		});
-	</script>
-	<style>
-		* {
+
+	});
+</script>
+<style>
+	* {
 		-webkit-box-sizing: border-box;
 		box-sizing: border-box;
-		}
+	}
 
-		body { font-family: sans-serif; }
+	body {
+		font-family: sans-serif;
+	}
 
-		.gallery {
+	.gallery {
 		background: #EEE;
-		}
-		.card-body {
+	}
 
-		}
+	.card-body {}
 
-		.gallery-cell {
+	.gallery-cell {
 		/* width: 28%;
 		height: 200px;
 		margin-right: 10px;
 		background: #8C8; */
-		width : 90%;
+		width: 90%;
 		opacity: 50%;
 		counter-increment: gallery-cell;
 		margin-right: 10px;
-		}
-		.gallery-cell.is-selected {
-			opacity: 100%;
-		}
+	}
 
-		.project-button {
-			padding: .2rem .45rem;
-			font-size: .71rem;
-			border-radius: 9em;
-			border-color: white;
-		}
-		.btn-swe {
-			background-color: #9ecacc;
-		}
+	.gallery-cell.is-selected {
+		opacity: 100%;
+	}
 
-		.btn-pm {
-			background-color: #ff8943;
-		}
+	.project-button {
+		padding: .2rem .45rem;
+		font-size: .71rem;
+		border-radius: 9em;
+		border-color: white;
+	}
 
-		.btn-d {
-			background-color: #ffdc83;
-		}
-		.see-details {
-			font-color: #26484a;
-		}
-		.flickity-button {
-  		display: none;
-		}
-		.flickity-page-dots {
-			display: none;
-		}
+	.btn-swe {
+		background-color: #9ecacc;
+	}
 
-	</style>
+	.btn-pm {
+		background-color: #ff8943;
+	}
+
+	.btn-d {
+		background-color: #ffdc83;
+	}
+
+	.see-details {
+		font-color: #26484a;
+	}
+
+	.flickity-button {
+		display: none;
+	}
+
+	.flickity-page-dots {
+		display: none;
+	}
+</style>
 @endsection
-
-
-
-
-

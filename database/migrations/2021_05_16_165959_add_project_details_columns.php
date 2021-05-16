@@ -15,7 +15,10 @@ class AddProjectDetailsColumns extends Migration
     {
         Schema::table('projects', function (Blueprint $table) {
             $table->longText('reflection')->nullable();
-            $table->string('status');
+            $table->string('status')->default('recruiting');
+            $table->boolean('swe_needed')->default(false);
+            $table->boolean('pm_needed')->default(false);
+            $table->boolean('d_needed')->default(false);
         });
     }
 

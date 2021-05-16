@@ -42,6 +42,7 @@
 <h3 class="ml-4">Available Projects</h3>
 <div class="main-gallery js-flickity">
 	@foreach($projects as $project)
+	@if ($project->status == 'recruiting')
 	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
 		<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
 		<div class="card-body p-2 m-4">
@@ -50,137 +51,92 @@
 				{{ $project->goal }}
 			</p>
 			<div>
-				<span>
+				<span style="margin-left: -0.45rem;">
+					@if ($project->swe_needed)
 					<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
+					@endif
+					@if ($project->pm_needed)
 					<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
+					@endif
+					@if ($project->d_needed)
 					<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
+					@endif
 				</span>
-				<a class="text-right project-button float-right see-details" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">See Details -></a>
+				<a class="text-right project-button float-right see-details" href="#" data-toggle="modal" data-target="#project{{ $project->id }}">See Details -></a>
 			</div>
 		</div>
 	</div>
+	@endif
 	@endforeach
-	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-		<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
-		<div class="card-body p-2 m-4">
-			<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;"> $project->name }}</a></h5>
-			<p class="card-text">
-				$project->goal }}
-			</p>
-			<div>
-				<span>
-					<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
-					<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
-					<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
-				</span>
-				<a class="text-right project-button float-right see-details" href="#" data-toggle="modal" data-target="#exampleModal">See Details -></a>
-			</div>
-		</div>
-	</div>
 </div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+@foreach($projects as $project)
+@if ($project->status == 'recruiting')
+<div class="modal fade" id="project{{ $project->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+				<div class="mx-2">
+					<h5 class="modal-title" id="exampleModalLabel">{{ $project->name }}</h5>
+					<span style="margin-left: -0.45rem;">
+						@if ($project->swe_needed)
+						<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
+						@endif
+						@if ($project->pm_needed)
+						<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
+						@endif
+						@if ($project->d_needed)
+						<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
+						@endif
+					</span>
+				</div>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
 			<div class="modal-body">
-				...
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+				<div class="container-fluid">
+					<div class="row">
+						<span class="col-4">NGO</span>
+						<span class="col-8">{{ $project->Ngo->name }}, {{ $project->country }}</span>
+					</div>
+					<div class="row">
+						<span class="col-4">Duration</span>
+						<span class="col-8">{{ (new DateTime($project->start_date))->format('Y/m/d') }} - {{ (new DateTime($project->end_date))->format('Y/m/d') }}</span>
+					</div>
+					<div class="row">
+						<span class="col-4">Commitment</span>
+						<span class="col-8">{{ $project->commitment }}</span>
+					</div>
+					<div class="row">
+						<span class="col-4">Skills</span>
+						<span class="col-8">{{ $project->skill }}</span>
+					</div>
+					<div class="row">
+						<span class="col-4">Goal</span>
+						<span class="col-8">{{ $project->goal }}</span>
+					</div>
+					<div class="row">
+						<span class="col-4">Description</span>
+						<span class="col-8">{{ $project->description }}</span>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+@endif
+@endforeach
 
 
 
-<!-- <div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
-
-	<div class="card-body p-2 m-4">
-		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
-		<p class="card-text">
-			A dynamic website with backend controls to manage operations
-			was built to create a stronger online presence for PSK, reach more
-			beneficiaries, and digitalize the onboarding of volunteers.
-		</p>
-		<div>
-		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
-		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
-		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
-		<a class="text-right project-button muted" href="">See Details -></a>
-		</div>
-	</div> 
-</div>
-
-<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
-	<div class="card-body p-2 m-4">
-		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
-		<p class="card-text">
-			A dynamic website with backend controls to manage operations
-			was built to create a stronger online presence for PSK, reach more
-			beneficiaries, and digitalize the onboarding of volunteers.
-		</p>
-		<div>
-		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
-		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
-		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
-		<a class="text-right project-button muted" href="">See Details -></a>
-		</div>
-	</div> 
-</div>
 
 
-<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
-	
-	<div class="card-body p-2 m-4">
-		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
-		<p class="card-text">
-			A dynamic website with backend controls to manage operations
-			was built to create a stronger online presence for PSK, reach more
-			beneficiaries, and digitalize the onboarding of volunteers.
-		</p>
-		<div>
-		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
-		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
-		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
-		<a class="text-right project-button muted" href="">See Details -></a>
-		</div>
-	</div> 
-</div>
-
-<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
-	
-	<div class="card-body p-2 m-4">
-		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
-		<p class="card-text">
-			A dynamic website with backend controls to manage operations
-			was built to create a stronger online presence for PSK, reach more
-			beneficiaries, and digitalize the onboarding of volunteers.
-		</p>
-		<div>
-		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
-		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
-		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
-		<a class="text-right project-button muted" href="">See Details -></a>
-		</div>
-	</div> 
-</div>
-	 -->
 
 <h3 class="ml-4">Past Works</h3>
 <div class="main-gallery js-flickity">
 	@foreach($projects as $project)
+	@if ($project->status == 'finished')
 	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
 		<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
 		<div class="card-body p-2 m-4">
@@ -189,15 +145,11 @@
 				{{ $project->goal }}
 			</p>
 			<div>
-				<span>
-					<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
-					<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
-					<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
-				</span>
 				<a class="text-right project-button float-right see-details" href="">See Details -></a>
 			</div>
 		</div>
 	</div>
+	@endif
 	@endforeach
 </div>
 
@@ -265,6 +217,10 @@
 		border-color: white;
 	}
 
+	.modal .row {
+		margin-bottom: 0.4rem;
+	}
+
 	.btn-swe {
 		background-color: #9ecacc;
 	}
@@ -278,7 +234,7 @@
 	}
 
 	.see-details {
-		font-color: #26484a;
+		color: #26484a;
 	}
 
 	.flickity-button {

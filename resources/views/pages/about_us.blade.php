@@ -3,7 +3,7 @@
 
 @section ('content')
 
-<section class="container-fluid">
+<section class="container-fluid my-4">
     <div id="banner" class="row p-4 justify-content-center">
         <div class="content d-flex flex-column justify-content-center text-center">
             <h1>Meet our team</h1>
@@ -24,7 +24,7 @@
         </div> -->
 
         <div class="row">
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="col-lg-3 col-md-6 col-12  pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src="images/Khoo.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
@@ -42,7 +42,7 @@
                 </div>
             </div><!--end col-->
             
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src={{ asset('images/Anni.jpeg') }} class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
@@ -60,7 +60,7 @@
                 </div>
             </div><!--end col-->
             
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src="images/Raj.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
@@ -78,7 +78,7 @@
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src="images/Andrea.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
@@ -96,7 +96,7 @@
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src="images/Kyra.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
@@ -114,7 +114,7 @@
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src="images/Thuan.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
@@ -132,7 +132,7 @@
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="col-lg-3 col-md-6 col-12  pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src="images/Shine.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
@@ -150,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src="images/Rui.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
@@ -169,7 +169,7 @@
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src="images/Ignacio.png" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
@@ -189,7 +189,7 @@
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-3 col-md-6 col-12 mt-4 pt-2">
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src="images/Jonathan.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">

@@ -1,16 +1,19 @@
 @extends ('layouts.layout')
 
 @section ('content')
-<section id="main" class="wrapper">
-    <div class="inner">
-        <header class="align-center">
+
+<section class="container-fluid my-4">
+    <div id="banner" class="row p-4 justify-content-center">
+        <div class="col-sm-6 content d-flex flex-column justify-content-center text-center">
             <h1>Project Listing</h1>
-            
-        </header>
+            <h5>Check out all of the projects currently available for new
+			student volunteers, as well as our portfolio of past works!</h5>
+        </div>
     </div>
 </section>
 
-<form action="/search" method="POST" role="search" class="">
+
+<!-- <form action="/search" method="POST" role="search" class="">
 @csrf
 @method('GET')
 <div class="container">
@@ -34,62 +37,32 @@
   </div>
   
 </div>
-</form>
+</form> -->
 
-
-<!-- 
+<h3 class="ml-4">Available Projects</h3>
 <div class="main-gallery js-flickity">
-	
-	@foreach($projects as $project)
-	<div class="gallery-cell">
-		
-		<div class="card-body">
-			<div class="card-title"><h5>{{ $project->name }}</h5></div>
-			<div class="card-content">
-				<button class="tag alt">{{ $project->ngo->cause }}</button>
-				<p>
-					{{ $project->ngo->name }}<br>
-				
-				{{ date('d M, Y', strtotime($project->start_date)) }} - {{ date('d M, Y', strtotime($project->end_date)) }}<br>
-				{{ $project->commitment . "h/week"}}<br>
-				{{ $project->goal }}<br>
-				</p> 
-			</div>
-			<div class="card-button">
-				<a href="/projects/{{$project->id}}" class="button">Details</a>
-			</div>
-			
-			
-		</div>
-	</div>
-		
-	@endforeach	
-	
-</div> -->
-
-<div class="main-gallery js-flickity">
-
-<div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
+@foreach($projects as $project)
+<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
 	<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
 	<div class="card-body p-2 m-4">
-		<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">The Lost Food Project</a></h5>
+		<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
 		<p class="card-text">
-			A centralized donation application with the aims of onboarding and 
-			engaging with more potential food donors by streamlining the process
-			of collecting food donations for neighborhood grocers.
+			{{ $project->goal }}
 		</p>
 		<div>
 		<span>
-		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
-		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
-		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
+		<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
+		<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
+		<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
 		</span>
+		<a class="text-right project-button float-right see-details" href="">See Details -></a>
 		</div>
-		<a class="text-right project-button float-right" href="">See Details -></a>
 	</div> 
 </div>
+@endforeach	
+</div>
 
-<div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
+<!-- <div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
 	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
 
 	<div class="card-body p-2 m-4">
@@ -108,7 +81,7 @@
 	</div> 
 </div>
 
-<div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
+<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
 	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
 	<div class="card-body p-2 m-4">
 		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
@@ -127,26 +100,7 @@
 </div>
 
 
-<div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
-	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
-	
-	<div class="card-body p-2 m-4">
-		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
-		<p class="card-text">
-			A dynamic website with backend controls to manage operations
-			was built to create a stronger online presence for PSK, reach more
-			beneficiaries, and digitalize the onboarding of volunteers.
-		</p>
-		<div>
-		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
-		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
-		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
-		<a class="text-right project-button muted" href="">See Details -></a>
-		</div>
-	</div> 
-</div>
-
-<div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5 gallery-cell">
+<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
 	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
 	
 	<div class="card-body p-2 m-4">
@@ -164,11 +118,49 @@
 		</div>
 	</div> 
 </div>
+
+<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
+	<a href="https://pertiwi.org.my/" target="_blank"><img class="card-img-top" src="/images/pertiwi_cover_card.png" alt=""></a>
 	
-
+	<div class="card-body p-2 m-4">
+		<h5 class="card-title"><a href="https://pertiwi.org.my/" target="_blank" style="color:#26484A;">Pertiwi Soup Kitchen</a></h5>
+		<p class="card-text">
+			A dynamic website with backend controls to manage operations
+			was built to create a stronger online presence for PSK, reach more
+			beneficiaries, and digitalize the onboarding of volunteers.
+		</p>
+		<div>
+		<button id="btn-swe" class="btn btn-primary btn-sm project-button">Software Engineer</button>
+		<button id="btn-pm" class="btn btn-primary btn-sm project-button">Project Manager</button>
+		<button id="btn-d" class="btn btn-primary btn-sm project-button">Designer</button>
+		<a class="text-right project-button muted" href="">See Details -></a>
+		</div>
+	</div> 
 </div>
+	 -->
 
-
+<h3 class="ml-4">Past Works</h3>
+<div class="main-gallery js-flickity">
+@foreach($projects as $project)
+<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
+	<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
+	<div class="card-body p-2 m-4">
+		<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
+		<p class="card-text">
+			{{ $project->goal }}
+		</p>
+		<div>
+		<span>
+		<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
+		<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
+		<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
+		</span>
+		<a class="text-right project-button float-right see-details" href="">See Details -></a>
+		</div>
+	</div> 
+</div>
+@endforeach	
+</div>
 						
 							
 							
@@ -184,14 +176,16 @@
 	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	<script>
-		$('.main-gallery').flickity({
+		$(function() {
+			$('.main-gallery').flickity({
 		// options
-		wrapAround: true,
 		// autoPlay: true,
+		wrapAround: true,
 		groupCells: '80%',
 		prevNextButtons: false,
 		pageDots: false, 
-		cellAlign: 'left',
+		})
+		
 		});
 	</script>
 	<style>
@@ -225,28 +219,31 @@
 
 		.project-button {
 			padding: .2rem .45rem;
-			font-size: .8rem;
+			font-size: .71rem;
 			border-radius: 9em;
 			border-color: white;
 		}
-		#btn-swe {
+		.btn-swe {
 			background-color: #9ecacc;
 		}
 
-		#btn-pm {
+		.btn-pm {
 			background-color: #ff8943;
 		}
 
-		#btn-d {
+		.btn-d {
 			background-color: #ffdc83;
 		}
-
+		.see-details {
+			font-color: #26484a;
+		}
 		.flickity-button {
   		display: none;
 		}
 		.flickity-page-dots {
 			display: none;
 		}
+
 	</style>
 @endsection
 

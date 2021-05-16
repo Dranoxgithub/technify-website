@@ -59,7 +59,9 @@ Route::get('/NGO_project_new', 'PagesController@NGO_project_new');
 Route::get('/{page}', 'PagesController@show');
 
 Route::get('/admin/NGO', 'AdminsController@test');
-Route::get('/admin/student', 'AdminsController@NGO_project_new');
+Route::get('/admin/students', 'AdminsController@showStudents');
+Route::get('/admin/students_json', 'AdminsController@getStudentsJSON');
+Route::get('/admin/view_student_resume', 'AdminsController@getStudentsResume');
 Route::get('/admin/blog_create', 'AdminsController@createBlog');
 Route::get('/admin/blog_edit/{id}', 'AdminsController@editBlog')->name('admin.blog_edit');
 Route::get('/admin/blogs', 'AdminsController@indexBlog');

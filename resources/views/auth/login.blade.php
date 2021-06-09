@@ -4,10 +4,25 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+
+            <div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5">
+                    <a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
+                        <div class="card-body p-2 m-4">
+                            <h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">The Lost Food Project</a></h5>
+                            <p class="card-text">
+                                A centralized donation application with the aims of onboarding and 
+                                engaging with more potential food donors by streamlining the process
+                                of collecting food donations for neighborhood grocers.
+                            </p>
+                            {{-- <a class="text-right" href="">See Details —></a> --}}
+                        </div> 
+                    </div>
+
+            <div class="card shadow">
                 <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body p-2 m-4">
+                    <h5 class="card-title">Log in </h5>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

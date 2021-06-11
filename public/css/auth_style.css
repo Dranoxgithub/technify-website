@@ -32,16 +32,8 @@ select.form-control:focus {
     border-color: #3f938d;
 }
 
-.btn.btn-primary {
-    background-color: #3f938d;
-    border-color: transparent;
-}
-
-.btn.btn-primary:active {
-    background-color: #26484a !important;
-}
-
-.btn.btn-link {
+.btn.btn-link,
+#verify_resend {
     color: #429993;
 }
 

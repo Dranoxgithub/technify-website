@@ -115,7 +115,7 @@
     <div class="form-group row justify-content-center">
 
         <!-- <div class="col-md-3"> -->
-            <a href="{{ route('projects.temp_apply') }}" class="btn btn-info">
+            <a href="{{ route('projects.temp_apply') }}" class="btn btn-primary">
                 {{ __('Submit your profile for application') }}
             </a>
         <!-- </div> -->

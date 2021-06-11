@@ -54,7 +54,7 @@ class StudentsController extends Controller
         $student->save();
         Session::flash('message', 'Thank you for filling out your basic info! Please review your application and click on submit when you are ready.');
         return redirect('/student');
-        // return view('students.show', ['student' => $student]);
+        // return view('students.show_profile', ['student' => $student]);
         
     }
 
@@ -91,8 +91,8 @@ class StudentsController extends Controller
         $student->save();
         Session::flash('message', 'Successfully updated!');
         // $request->session()->flash('status', 'Task was successful!');
-        return view('students.show', ['student' => $student]);
-        // return view('students.show', ['student' => $student])->with('message', 'Updated successfully.');
+        return view('students.show_profile', ['student' => $student]);
+        // return view('students.show_profile', ['student' => $student])->with('message', 'Updated successfully.');
 
 
     }
@@ -102,9 +102,9 @@ class StudentsController extends Controller
         $student = Auth::user()->student;
         if ($student == null) {
             $timezone_list = $this->generate_timezone_list();
-            return view('students.register', ['timezone_list' => $timezone_list]);
+            return view('students.complete_profile', ['timezone_list' => $timezone_list]);
         } else {
-            return view('students.show', ['student' => $student]);
+            return view('students.show_profile', ['student' => $student]);
         }
 
     }
@@ -112,7 +112,7 @@ class StudentsController extends Controller
     {
         $student = Auth::user()->student;
         $timezone_list = $this->generate_timezone_list();
-        return view('students.edit', ['student' => $student, 'timezone_list' => $timezone_list]);
+        return view('students.edit_profile', ['student' => $student, 'timezone_list' => $timezone_list]);
     }
 
 
@@ -291,6 +291,6 @@ class StudentsController extends Controller
 
         Session::flash('message', 'Congrats! Application sent.');
         return redirect('/student');
-        // return view('students.show', ['student' => $student]);
+        // return view('students.show_profile', ['student' => $student]);
     }
 }

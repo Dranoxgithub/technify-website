@@ -17,7 +17,7 @@
                             </div>
 
                             <div class="col-6 pl-0">
-                                <input onclick="handleRadioClick('ngo')" type="radio" class="btn-check" name="type" value="ngo" id="type-ngo" autocomplete="off">
+                                <input onclick="handleRadioClick('ngo')" type="radio" class="btn-check" name="type" value="NGO" id="type-ngo" autocomplete="off">
                                 <label class="radio btn btn-secondary w-100" style="border-top-left-radius: 0; border-bottom-left-radius: 0;" for="type-ngo">NGO</label>
                             </div>
                         </div>

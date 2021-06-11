@@ -390,3 +390,19 @@ body>* {
         height: auto;
     }
 }
+
+/* Global primary button setting */
+.btn.btn-primary {
+    background-color: #3f938d;
+    border-color: transparent;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:active {
+    background-color: #26484a !important;
+}
+
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active {
+    background-color: #3f938d;
+}

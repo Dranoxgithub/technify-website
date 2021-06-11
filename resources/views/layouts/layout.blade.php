@@ -8,6 +8,7 @@
 	@else
 		<title>Technify</title>
 	@endif
+
 	<link rel="stylesheet" href="/assets/css/layout.css" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
@@ -18,7 +19,8 @@
 			<a class="navbar-brand" href="/">
 				<img id="navbar-logo" class="img-fluid" src="/images/Technify_logo_wordmark_long_dark.svg" alt="">
 			</a>
-			<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
+			<!-- <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation"> -->
+			<button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
@@ -45,14 +47,14 @@
 							</li>                        
 						@elseif (Request::is('login'))
 							<li class="nav-item">
-								<a class="nav-link btn btn-light" href="/register?type=student">Sign Up</a>
+								<a class="nav-link btn btn-light" href="/register">Sign Up</a>
 							</li>                        
 						@else
 							<li class="nav-item">
 								<a class="nav-link" href="/login">Log in</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link btn btn-light sign-up pb-1" href="/register?type=student">Sign Up</a>
+								<a class="nav-link btn btn-light sign-up pb-1" href="/register">Sign Up</a>
 							</li>
 						@endif
 								
@@ -65,7 +67,7 @@
 								@endif
 							@endif -->
 							<li class="nav-item dropdown">
-								<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+								<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
 									{{ Auth::user()->name }} <span class="caret"></span>
 								</a>
 
@@ -144,13 +146,12 @@
 				</div>
 				<div class="col-md-2 d-none d-md-block p-2 footer-col-4 mt-4">
 					<p class="footer-header">About Us</p>
-					<!-- <a href="">Who We Are</a><br> -->
 					<a href="/#Projects">Projects</a><br>
 					<a href="/about_us">Our Team</a><br>
 				</div>
 				<div class="col-md-3 d-none d-md-block p-2 footer-col-5 my-4">
 					<p class="footer-header">Partner With Us</p>
-					<a href="/register?type=student">Sign Up</a><br>
+					<a href="/register">Sign Up</a><br>
 					<a href="/login">Log In</a>
 				</div>
 			</div>
@@ -214,6 +215,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
 	@yield('scripts')
 </body>
 </html>

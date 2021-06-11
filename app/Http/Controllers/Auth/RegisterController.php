@@ -61,12 +61,7 @@ class RegisterController extends Controller
      */
     public function show()
     {
-        $account_type = Request('type');
-        if ($account_type === 'NGO' || $account_type === 'student') {
-            return view('auth.register');
-        } else {
-            return view('auth.account_selection');
-        }
+        return view('auth.register');
     }
 
     /**
@@ -83,7 +78,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             // Hard-coding it here should be fine as we could only have two
             // types of accounts when registering 
-            'type' => ['required', 'string', Rule::In(['student'])], // 'NGO', 
+            'type' => ['required', 'string', Rule::In(['student', 'NGO'])], 
         ]);
     }
 

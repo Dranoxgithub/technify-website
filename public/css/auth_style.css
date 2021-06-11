@@ -1,0 +1,64 @@
+.btn-check + .radio {
+    border-radius: 0.5rem;
+    background-color: white;
+    border-color: #e8e8e8;
+    color: #26484a;
+}
+.btn-check:checked + .radio {
+    background-color: #429993;
+    border-color: #377d79;
+    color: white;
+    box-shadow: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select.form-control {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #e5e5e5;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select.form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #3f938d;
+}
+
+.btn.btn-primary {
+    background-color: #3f938d;
+    border-color: transparent;
+}
+
+.btn.btn-primary:active {
+    background-color: #26484a !important;
+}
+
+.btn.btn-link {
+    color: #429993;
+}
+
+.btn.btn-link:visited {
+    color: #377d79;
+}
+
+.btn:focus,
+.btn:active {
+    box-shadow: none !important;
+}
+
+.col-form-label {
+    font-size: 1rem;
+}
+
+.form-check-input:checked {
+    background-color: #429993;
+    border-color: #377d79;
+}

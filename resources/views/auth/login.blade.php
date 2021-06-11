@@ -1,36 +1,20 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="container mt-5">
+<div class="container-fluid mt-5 mb-5">
     <div class="row justify-content-center">
-        <div class="col-md-8">
-
-            <div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5">
-                    <a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
-                        <div class="card-body p-2 m-4">
-                            <h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">The Lost Food Project</a></h5>
-                            <p class="card-text">
-                                A centralized donation application with the aims of onboarding and 
-                                engaging with more potential food donors by streamlining the process
-                                of collecting food donations for neighborhood grocers.
-                            </p>
-                            {{-- <a class="text-right" href="">See Details —></a> --}}
-                        </div> 
-                    </div>
-
-            <div class="card shadow">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body p-2 m-4">
-                    <h5 class="card-title">Log in </h5>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body p-5">
+                    <h4 class="card-title font-weight-bold pb-3">Login</h4>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                            <label for="email" class="col-form-label pt-4">{{ __('E-Mail Address') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <div>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror px-0" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -41,10 +25,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            <label for="password" class="col-form-label pt-4">{{ __('Password') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <div>
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror px-0" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -55,7 +39,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
+                            <div>
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -66,18 +50,18 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="button special">
+
+                        <div class="form-group row mb-0 justify-content-center pt-4">
+                            <div>
+                                <button type="submit" class="btn btn-primary w-100">
                                     {{ __('Login') }}
                                 </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
                             </div>
+                            @if (Route::has('password.request'))
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    {{ __('Forgot Your Password?') }}
+                                </a>
+                            @endif
                         </div>
                     </form>
                 </div>
@@ -85,4 +69,9 @@
         </div>
     </div>
 </div>
+@endsection
+
+
+@section('scripts')
+<link href="{{ asset('css/auth_style.css') }}" rel="stylesheet" type="text/css" >
 @endsection

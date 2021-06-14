@@ -7,3 +7,9 @@
     border: none;
     border-radius: 50px;
 }
+
+@media screen and (min-width: 768px) {
+    .w-md-auto {
+        width: auto !important;
+    }
+}

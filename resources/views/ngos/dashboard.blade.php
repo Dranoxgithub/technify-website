@@ -52,21 +52,15 @@
 		<!-- Project display -->
 		<div class="col-md-8 my-3">
 			<div class="card">
-				<div class="card-body p-4 display-flex justify-content-between">
-					<div class="card-title pb-3" style="margin-top:-.3125rem">
-							<h4 class="navbar-brand font-weight-bold mr-5" style="width:auto;">Projects</h4>
-							<form class="form-inline justify-content-between">
-								<input class="form-control mr-sm-2 search" type="search" placeholder="Search..." aria-label="Search">
-								<a href="#" class="btn btn-primary">
-										{{ __('Add Project') }}
-								</a>
-							</form>
-						<!-- <h4>
-							<span class="font-weight-bold">Login</span>
-							<form class="form-inline">
-								<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-							</form>
-						</h4> -->
+				<div class="card-body p-4">
+					<div class="card-title pb-3 d-flex justify-content-between flex-md-nowrap flex-wrap" style="margin-top:-.3125rem">
+						<span class="d-md-inline d-flex justify-content-between mb-3 w-100 w-md-auto">
+							<h4 class="navbar-brand font-weight-bold mr-5 w-auto pb-0 my-0">Projects</h4>
+							<input class="form-control mr-sm-2 search w-auto" type="search" placeholder="Search..." aria-label="Search">
+						</span>
+						<a href="#" class="btn btn-primary mb-3 w-100 w-md-auto">
+							{{ __('Add Project') }}
+						</a>
 
 					</div>
 

@@ -398,7 +398,8 @@ body>* {
 }
 
 .btn.btn-primary:hover,
-.btn.btn-primary:active {
+.btn.btn-primary:active,
+.btn.btn-primary:focus {
     background-color: #26484a !important;
 }
 

@@ -60,7 +60,7 @@ class NgosController extends Controller
         if ($ngo == null) {
             return view('ngos.register');
         } else {
-            return view('ngos.show', ['ngo' => $ngo]);
+            return view('ngos.dashboard', ['ngo' => $ngo]);
         }
     }
 }

@@ -13,33 +13,38 @@
 						@csrf
 
 						<div class="form-group row">
-							<label class="col-6 col-form-label">{{ __('Contact Person') }}</label>
-							<label class="col-6 col-form-label">{{ Auth::user()->name }}</label>
+							<label class="col-4 col-form-label">{{ __('Contact Name') }}</label>
+							<label class="col-8 col-form-label">{{ Auth::user()->name }}</label>
 						</div>
 
 						<div class="form-group row">
-							<label class="col-6 col-form-label">{{ __('Contact Email') }}</label>
-							<label class="col-6 col-form-label">{{ Auth::user()->email }}</label>
+							<label class="col-4 col-form-label">{{ __('Contact Email') }}</label>
+							<label class="col-8 col-form-label">{{ Auth::user()->email }}</label>
 						</div>
 
 						<div class="form-group row">
-							<label class="col-6 col-form-label">{{ __('NGO Name') }}</label>
-							<label class="col-6 col-form-label">{{ $ngo->name }}</label>
+							<label class="col-4 col-form-label">{{ __('NGO Name') }}</label>
+							<label class="col-8 col-form-label">{{ $ngo->name }}</label>
 						</div>
 
 						<div class="form-group row">
-							<label class="col-6 col-form-label">{{ __('NGO Website') }}</label>
-							<label class="col-6 col-form-label">{{ $ngo->website }}</label>
+							<label class="col-4 col-form-label">{{ __('NGO Website') }}</label>
+							<label class="col-8 col-form-label">{{ $ngo->website }}</label>
 						</div>
 
 						<div class="form-group row">
-							<label class="col-6 col-form-label">{{ __('Causes') }}</label>
-							<label class="col-6 col-form-label">{{ $ngo->cause }}</label>
+							<label class="col-4 col-form-label">{{ __('Causes') }}</label>
+							<label class="col-8 col-form-label">{{ $ngo->cause }}</label>
+						</div>
+
+						<div class="form-group row">
+							<label class="col-4 col-form-label">{{ __('Password') }}</label>
+							<a href="{{ route('password.request') }}" class="col-8 col-form-label link">Change Password</a>
 						</div>
 
 						<div class="form-group row mb-0 justify-content-center pt-4">
 							<div>
-								<a href="/logout" class="btn btn-primary w-100">
+								<a href="{{ route('logout') }}" class="btn btn-primary w-100">
 									{{ __('Logout') }}
 								</a>
 							</div>
@@ -74,6 +79,5 @@
 
 
 @section('scripts')
-<!-- <link href="{{ asset('css/auth_style.css') }}" rel="stylesheet" type="text/css"> -->
 <link href="{{ asset('css/ngo_dashboard_style.css') }}" rel="stylesheet" type="text/css">
 @endsection

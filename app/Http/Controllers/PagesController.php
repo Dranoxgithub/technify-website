@@ -15,5 +15,4 @@ class PagesController extends Controller
         $timezone_list = app('App\Http\Controllers\ProjectsController')->generate_timezone_list();
         return view('pages/NGO_project_new',['timezone_list' => $timezone_list]); 
     }
-    
 }

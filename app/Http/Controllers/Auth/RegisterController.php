@@ -32,7 +32,6 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    // protected $redirectTo = '/join_us';
 
     protected function redirectTo()
     {

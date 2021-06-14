@@ -13,13 +13,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes(['verify' => true]);
+Route::get('/register', 'Auth\RegisterController@show')->name('register');
+// redirect after verifying
+Route::get('/verified', function () {
+    if (Auth::user()->type == 'student') {
+        return redirect('/student');
+    } 
+    return redirect('/NGO');
+})->middleware('auth');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/register', 'Auth\RegisterController@show')->name('register');
 
 Route::get('/NGO_project_index', [
     'middleware' => 'auth',
@@ -47,7 +54,6 @@ Route::post('/student', 'StudentsController@store');
 Route::patch('/student', 'StudentsController@update');
 Route::get('/getResume', 'StudentsController@getResume');
 Route::get('/student', 'StudentsController@show');
-
 
 
 Route::post('/projects/{id}','ProjectsController@apply')->name('projects.apply');

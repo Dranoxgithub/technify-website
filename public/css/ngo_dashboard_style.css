@@ -7,6 +7,15 @@
     border: none;
     border-radius: 50px;
 }
+.link {
+    color: #429993;
+    text-decoration: none;
+}
+
+.link:hover,
+.link:visited {
+    color: #377d79;
+}
 
 @media screen and (min-width: 768px) {
     .w-md-auto {

@@ -14,6 +14,7 @@ class NgosController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('verified');
         $this->middleware('user:NGO');
         $this->middleware(function ($request, $next) {
             if (Auth::user()->ngo) {

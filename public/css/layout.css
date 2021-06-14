@@ -1,15 +1,15 @@
 .navbar-custom {
-    background-color: #9ECACC;
+    background-color: #9ecacc;
 }
 
-.navbar li>a {
+.navbar li > a {
     font-family: Apercu;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
     letter-spacing: 0em;
     text-align: center;
-    color: #26484A;
+    color: #26484a;
 }
 
 .navbar-brand {
@@ -28,7 +28,8 @@
     z-index: 99;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
     padding: 0;

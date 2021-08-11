@@ -204,28 +204,7 @@
 	}
 	
 
-	.project-button {
-		/* padding: .2rem .45rem; */
-		font-size: 0.84rem;
-		border-radius: 9em;
-		border-color: white;
-		
-	}
 
-	.project-button:hover {
-		background-color: #429993;
-		border-color: #9ecacc;
-	}
-
-	@media only screen and (max-width: 600px) {
-		.project-button {
-			/* padding: .2rem .5rem; */
-			font-size: .71rem;
-		}
-		.btns-talent {
-			margin-bottom: 1rem;
-		}
-	}
 
 	.modal .row {
 		margin-bottom: 0.4rem;

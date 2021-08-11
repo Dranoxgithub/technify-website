@@ -407,3 +407,7 @@ body>* {
 .dropdown-menu .dropdown-item:active {
     background-color: #3f938d;
 }
+
+.btn-edit {
+    background-color: #ffdc83;
+}

@@ -22,7 +22,22 @@ class ProjectsController extends Controller
         return view('pages.NGO_project_index');
     }
 
-    public function showAllProjects()
+    public function showAllAvailableProjects()
+    {
+        $projects = Project::all();
+        
+        return view('pages.available_projects', ['projects' => $projects]);
+    }
+
+
+    public function showAllPastProjects()
+    {
+        $projects = Project::all();
+        
+        return view('pages.project_listing', ['projects' => $projects]);
+    }
+
+    public function showProjectListing()
     {
         $projects = Project::all();
         

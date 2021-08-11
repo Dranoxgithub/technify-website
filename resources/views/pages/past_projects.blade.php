@@ -6,7 +6,7 @@
 <section class="container-fluid my-4">
 	<div id="banner" class="row p-4 justify-content-center">
 		<div class="col-sm-6 content d-flex flex-column justify-content-center text-center">
-			<h1>Available Projects</h1>
+			<h1>Past Projects</h1>
 			<h5></h5>
 		</div>
 	</div>
@@ -16,7 +16,7 @@
 
 
 <Section class="d-flex mx-4 my-3">
-	<h3>Available Projects</h3>
+	<h3>Past Projects</h3>
 	<span class="ml-auto pr-4">
 		<input id="searchBox" class="form-control" type="search" placeholder="Search..."> 
 	</span>

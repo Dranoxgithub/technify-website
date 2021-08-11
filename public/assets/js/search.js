@@ -2,10 +2,10 @@
 const element = document.querySelector('#shuffleEntryPoint');
 const shuffle = new window.Shuffle(element, {
         itemSelector: '.card',
-        // sizer: element.querySelector('.sizer'),
-        filterMode: Shuffle.FilterMode.ANY
+        filterMode: Shuffle.FilterMode.ANY,
+        isCentered: true,
+        gutterWidth: 5,
     });
-    //this.shuffle.items.push(element);
 document.getElementById('searchBox').addEventListener('keyup', handleSearchKeyup);
 
 function handleSearchKeyup(evt) {

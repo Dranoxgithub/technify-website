@@ -36,7 +36,7 @@ class ProjectsController extends Controller
         $past_projects = Project::all()->filter(function ($value, $key) {
             return $value['status'] == 'finished';
         });
-        return view('pages.project_listing', ['projects' => $past_projects]);
+        return view('pages.past_projects', ['projects' => $past_projects]);
     }
 
     public function showProjectListing()

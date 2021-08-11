@@ -71,32 +71,11 @@
 		font-family: sans-serif;
 	}
 
-	.project-button {
-		font-size: 0.84rem;
-		border-radius: 9em;
-		border-color: white;
-		
-	}
-
-	.project-button:hover {
-		background-color: #429993;
-		border-color: #9ecacc;
-	}
-
 	@media only screen and (min-width: 1200px) {
 		.col-lg-custom {
 			width: 30%;
 		}
 	}
-	@media only screen and (max-width: 600px) {
-		.project-button {
-			font-size: .71rem;
-		}
-		.btns-talent {
-			margin-bottom: 1rem;
-		}
-	}
-
 
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>

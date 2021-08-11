@@ -114,33 +114,6 @@ class ProjectsController extends Controller
         return view('projects.show',['project' => $project]);
     }
 
-    public function search() {
-        $keyword = request()->input('q');
-        $projects = Project::where ( 'name', 'ilike', '%' . $keyword . '%' )
-        ->orWhere ( 'goal', 'ilike', '%' . $keyword . '%' )
-        ->orWhere ( 'skill', 'ilike', '%' . $keyword . '%' )
-        ->orWhere ( 'start_date', 'ilike', '%' . $keyword . '%' )
-        ->orWhere ( 'end_date', 'ilike', '%' . $keyword . '%' )
-        ->orWhere ( 'timezone', 'ilike', '%' . $keyword . '%' )
-        // ->orWhere ( 'commitment', 'ilike', '%' . $keyword . '%' )
-        ->orWhere ( 'contact_name', 'ilike', '%' . $keyword . '%' )
-        ->orWhere ( 'contact_email', 'ilike', '%' . $keyword . '%' )
-        ->orWhere ( 'description', 'ilike', '%' . $keyword . '%' )
-        ->get();
-
-        $ngos = NGO::where ( 'name', 'ilike', '%' . $keyword . '%' )
-                        ->orWhere ( 'cause', 'ilike', '%' . $keyword . '%' )
-                        ->orWhere ( 'website', 'ilike', '%' . $keyword . '%' )
-                        ->get();
-
-        foreach ($ngos as $ngo)
-        {
-            $projects = $projects->merge($ngo->projects);
-        }
-        return view('pages.project_listing', ['projects' => $projects]);
-
-    }
-
     public function apply($id) {
         $student = Auth::user()->student;
         if ($student == null) {

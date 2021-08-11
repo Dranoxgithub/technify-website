@@ -65,8 +65,8 @@
 					<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
 					@endif
 				</span>
-				<a class="text-right project-button float-right see-details" href="/projects/{{ $project->id }}" data-toggle="modal" data-target="#project{{ $project->id }}">See Details -></a>
 			</div>
+			<a class="text-right project-button float-right see-details mt-2" href="/projects/{{ $project->id }}" data-toggle="modal" data-target="#project{{ $project->id }}">See Details -></a>
 		</div>
 	</div>
 	@endif
@@ -172,15 +172,14 @@
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script>
 	$(function() {
-		$('.main-gallery').flickity({
-			// options
-			// autoPlay: true,
-			wrapAround: true,
-			groupCells: '80%',
-			prevNextButtons: false,
-			pageDots: false,
-		})
-
+		$('.main-gallery').each(function() {
+			$(this).flickity({
+				wrapAround: true,
+				groupCells: '80%',
+				prevNextButtons: false,
+				pageDots: false,
+			})
+		});
 	});
 </script>
 <style>

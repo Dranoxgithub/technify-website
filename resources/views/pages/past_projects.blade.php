@@ -27,31 +27,15 @@
         <div id="shuffleEntryPoint" class="pt-4 d-flex col-sm-12 flex-row flex-md-nowrap flex-wrap justify-content-between">
 
 			@foreach($projects as $project)
-			@if ($project->status == 'recruiting')
 			<div class="card p-0 shadow mb-sm-5 col-lg-custom col-md-5 col-10">
-				<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
+				<a href="{{ $project->ngo->website }}" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
 				<div class="card-body p-2 m-4">
-					<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
+					<h5 class="card-title"><a href="/projects/{{ $project->id }}" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
 					<p class="card-text">
 						{{ $project->goal }}
 					</p>
-					<div class="d-flex justify-content-between align-items-center flex-wrap">
-						<span style="margin-left: -0.45rem;" class="btns-talent">
-							@if ($project->swe_needed)
-							<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
-							@endif
-							@if ($project->pm_needed)
-							<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
-							@endif
-							@if ($project->d_needed)
-							<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
-							@endif
-						</span>
-						<a class="text-right project-button float-right see-details" href="#" data-toggle="modal" data-target="#project{{ $project->id }}">See Details -></a>
-					</div>
 				</div>
 			</div>
-			@endif
 			@endforeach
 
 		</div>

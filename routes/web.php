@@ -36,7 +36,8 @@ Route::post('/NGO_project_index', [
     'middleware' => 'auth',
     'uses' => 'ProjectsController@store'
 ]);
-Route::get('/available_projects','ProjectsController@showAllAvailableProjects')->name('projects.showAllProjects');
+Route::get('/available_projects','ProjectsController@showAllAvailableProjects')->name('projects.showAllAvailableProjects');
+Route::get('/past_projects','ProjectsController@showAllPastProjects')->name('projects.showAllPastProjects');
 Route::get('/project_listing','ProjectsController@showProjectListing')->name('projects.showAllProjects');
 Route::get('/projects/{id}','ProjectsController@show')->name('projects.show');
 Route::delete('/projects/{id}','ProjectsController@destroy')->name('projects.destroy');
@@ -48,8 +49,6 @@ Route::get('/NGO/edit', 'NgosController@edit');
 Route::patch('/NGO', 'NgosController@update');
 Route::get('/NGO', 'NgosController@show');
 
-
-    
 Route::get('/student/edit', 'StudentsController@edit');
 Route::post('/student', 'StudentsController@store');
 Route::patch('/student', 'StudentsController@update');

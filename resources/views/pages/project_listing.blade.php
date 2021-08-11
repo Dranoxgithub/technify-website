@@ -39,7 +39,10 @@
 </div>
 </form> -->
 
-<h3 class="ml-4">Available Projects</h3>
+<Section class="d-flex mx-4">
+	<h3>Available Projects</h3>
+	<a class="ml-auto pr-4" href="/available_projects">See all</a>
+</Section>
 <div class="main-gallery js-flickity">
 	@foreach($projects as $project)
 	@if ($project->status == 'recruiting')
@@ -62,7 +65,7 @@
 					<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
 					@endif
 				</span>
-				<a class="text-right project-button float-right see-details" href="#" data-toggle="modal" data-target="#project{{ $project->id }}">See Details -></a>
+				<a class="text-right project-button float-right see-details" href="/projects/{{ $project->id }}" data-toggle="modal" data-target="#project{{ $project->id }}">See Details -></a>
 			</div>
 		</div>
 	</div>
@@ -131,9 +134,10 @@
 
 
 
-
-
-<h3 class="ml-4">Past Works</h3>
+<Section class="d-flex mx-4">
+	<h3>Past Works</h3>
+	<a class="ml-auto pr-4" href="/past_projects">See all</a>
+</Section>
 <div class="main-gallery js-flickity">
 	@foreach($projects as $project)
 	@if ($project->status == 'finished')
@@ -145,7 +149,7 @@
 				{{ $project->goal }}
 			</p>
 			<div>
-				<a class="text-right project-button float-right see-details" href="">See Details -></a>
+				<a class="text-right project-button float-right see-details" href="/projects/{{ $project->id }}">See Details -></a>
 			</div>
 		</div>
 	</div>

@@ -26,11 +26,8 @@
 
 			<div class="collapse navbar-collapse float-right" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<!-- <li class="nav-item active">
-						<a class="nav-link" href="#">Who We Are</a>
-					</li> -->
 					<li class="nav-item">
-						<a class="nav-link" href="/#Projects">Projects</a>
+						<a class="nav-link" href="/project_listing">Projects</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="/about_us">Our Team</a>

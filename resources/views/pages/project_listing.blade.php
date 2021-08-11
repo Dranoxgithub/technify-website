@@ -172,14 +172,12 @@
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script>
 	$(function() {
-		$('.main-gallery').each(function() {
-			$(this).flickity({
-				wrapAround: true,
-				groupCells: '80%',
-				prevNextButtons: false,
-				pageDots: false,
-			})
-		});
+		$('.main-gallery').flickity(
+			wrapAround: true,
+			groupCells: '80%',
+			prevNextButtons: false,
+			pageDots: false,
+		})
 	});
 </script>
 <style>

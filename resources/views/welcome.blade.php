@@ -72,9 +72,11 @@
 
 <section id="Projects" class="sec-3 container-fluid p-2 pt-sm-4 pb-sm-4" style="background-color: #F4F4F4">
     <div class="row justify-content-center">
-        <div class="col-sm-9 m-3">
+        <div class="col-sm-9 m-3 d-flex">
             <h2 class="">Featured Projects</h2>
+            <a class="ml-auto pr-4" href="/project_listing">See all</a>
         </div>
+        
         <div class="d-flex flex-row flex-md-nowrap flex-wrap justify-content-center p-2">
             {{-- add blade logic for all featured projects --}}
             <div class="card grow p-0 shadow mb-sm-5 mx-sm-5 m-2 col-lg-4 col-md-5">

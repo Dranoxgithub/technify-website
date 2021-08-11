@@ -24,17 +24,19 @@ class ProjectsController extends Controller
 
     public function showAllAvailableProjects()
     {
-        $projects = Project::all();
-        
-        return view('pages.available_projects', ['projects' => $projects]);
+        $available_projects = Project::all()->filter(function ($value, $key) {
+            return $value['status'] == 'recruiting';
+        });
+        return view('pages.available_projects', ['projects' => $available_projects]);
     }
 
 
     public function showAllPastProjects()
     {
-        $projects = Project::all();
-        
-        return view('pages.project_listing', ['projects' => $projects]);
+        $past_projects = Project::all()->filter(function ($value, $key) {
+            return $value['status'] == 'finished';
+        });
+        return view('pages.project_listing', ['projects' => $past_projects]);
     }
 
     public function showProjectListing()

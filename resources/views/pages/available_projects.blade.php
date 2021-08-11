@@ -6,9 +6,8 @@
 <section class="container-fluid my-4">
 	<div id="banner" class="row p-4 justify-content-center">
 		<div class="col-sm-6 content d-flex flex-column justify-content-center text-center">
-			<h1>Project Listing</h1>
-			<h5>Check out all of the projects currently available for new
-				student volunteers, as well as our portfolio of past works!</h5>
+			<h1>Available Projects</h1>
+			<h5></h5>
 		</div>
 	</div>
 </section>
@@ -172,37 +171,6 @@
 </div>
 @endif
 @endforeach
-
-
-
-
-
-
-<h3 class="ml-4">Past Works</h3>
-<div class="main-gallery js-flickity">
-	@foreach($projects as $project)
-	@if ($project->status == 'finished')
-	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-		<a href="https://www.thelostfoodproject.org/" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
-		<div class="card-body p-2 m-4">
-			<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
-			<p class="card-text">
-				{{ $project->goal }}
-			</p>
-			<div>
-				<a class="text-right project-button float-right see-details" href="">See Details -></a>
-			</div>
-		</div>
-	</div>
-	@endif
-	@endforeach
-</div>
-
-
-
-
-
-
 
 
 

@@ -56,13 +56,13 @@
 			<div class="d-flex justify-content-between align-items-center flex-wrap">
 				<span style="margin-left: -0.45rem;" class="btns-talent">
 					@if ($project->swe_needed)
-					<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
+					<button class="btn btn-sm project-button btn-swe">Software Engineer</button>
 					@endif
 					@if ($project->pm_needed)
-					<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
+					<button class="btn btn-sm project-button btn-pm">Project Manager</button>
 					@endif
 					@if ($project->d_needed)
-					<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
+					<button class="btn btn-sm project-button btn-d">Designer</button>
 					@endif
 				</span>
 			</div>
@@ -157,14 +157,6 @@
 	@endforeach
 </div>
 
-
-
-
-
-
-
-
-
 @endsection
 
 @section('scripts')
@@ -237,26 +229,6 @@
 
 	.modal .row {
 		margin-bottom: 0.4rem;
-	}
-
-	.btn-swe {
-		background-color: #9ecacc;
-	}
-
-	.btn-pm {
-		background-color: #ff8943;
-	}
-
-	.btn-d {
-		background-color: #ffdc83;
-	}
-
-	.see-details {
-		color: #26484a;
-	}
-	.see-details:hover {
-		background-color: white;
-		color: #429993;
 	}
 
 	.flickity-button {

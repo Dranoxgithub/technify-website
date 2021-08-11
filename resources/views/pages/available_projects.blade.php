@@ -97,25 +97,6 @@
 		}
 	}
 
-	.btn-swe {
-		background-color: #9ecacc;
-	}
-
-	.btn-pm {
-		background-color: #ff8943;
-	}
-
-	.btn-d {
-		background-color: #ffdc83;
-	}
-
-	.see-details {
-		color: #26484a;
-	}
-	.see-details:hover {
-		background-color: white;
-		color: #429993;
-	}
 
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>

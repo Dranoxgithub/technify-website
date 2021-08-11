@@ -1,14 +1,14 @@
 @font-face {
     font-family: "Apercu";
     /* src: url(../fonts/ApercuPro.woff) format('woff'), url(../fonts/ApercuPro.woff2) format('woff2'), url(../fonts/ApercuPro.ttf) format('truetype'); */
-    src: url(../fonts/ApercuPro.woff) format('woff');
+    src: url(../fonts/ApercuPro.woff) format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Apercu";
-    src: url(../fonts/ApercuPro-Bold.woff) format('woff');
+    src: url(../fonts/ApercuPro-Bold.woff) format("woff");
     font-weight: bold;
     font-style: normal;
 }
@@ -24,7 +24,7 @@
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
     box-shadow: none;
-    border-color: #9ECACC;
+    border-color: #9ecacc;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -32,7 +32,7 @@
 }
 
 .navbar-custom {
-    background-color: #9ECACC !important;
+    background-color: #9ecacc !important;
 }
 
 .nav-link {
@@ -42,7 +42,7 @@
     font-weight: bold;
     letter-spacing: 0em;
     text-align: center;
-    color: #26484A;
+    color: #26484a;
 }
 
 .navbar-brand {
@@ -84,7 +84,7 @@ body {
     flex-direction: column;
 }
 
-body>* {
+body > * {
     flex-shrink: 0;
     box-sizing: border-box;
 }
@@ -93,10 +93,9 @@ body>* {
     flex-grow: 1;
 }
 
-
 /* Landing Page Fonts */
 
-.sec-1>div>div>div>p {
+.sec-1 > div > div > div > p {
     font-family: Apercu;
     font-size: 20px;
     color: white;
@@ -104,7 +103,7 @@ body>* {
     font-style: normal;
 }
 
-.sec-1>div>div>div>h1 {
+.sec-1 > div > div > div > h1 {
     font-family: Apercu;
     font-size: 50px;
     font-weight: bold;
@@ -112,69 +111,69 @@ body>* {
     color: white;
 }
 
-.sec-2>div>div>h2 {
+.sec-2 > div > div > h2 {
     font-family: Apercu;
     font-size: 36px;
-    color: #26484A;
+    color: #26484a;
     font-weight: 700;
 }
 
-.sec-2>div>div>div>h5 {
+.sec-2 > div > div > div > h5 {
     font-family: Apercu;
     font-size: 24px;
-    color: #26484A;
+    color: #26484a;
     font-weight: 500;
 }
 
-.sec-2>div>div>div>div>p {
+.sec-2 > div > div > div > div > p {
     font-family: Apercu;
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
-    color: #26484A;
+    color: #26484a;
 }
 
-.sec-3>div>h2 {
+.sec-3 > div > h2 {
     font-family: Apercu;
     font-size: 36px;
     font-style: normal;
-    color: #26484A;
+    color: #26484a;
     font-weight: bold;
 }
 
-.sec-3>div>div>div>div>h5 {
+.sec-3 > div > div > div > div > h5 {
     font-family: Apercu;
     font-size: 24px;
-    color: #26484A;
+    color: #26484a;
     font-style: normal;
     font-weight: bold;
 }
 
-.sec-3>div>div>div>div>p {
+.sec-3 > div > div > div > div > p {
     font-family: Apercu;
     font-size: 16px;
-    color: #26484A;
+    color: #26484a;
     font-style: normal;
     font-weight: normal;
 }
 
-.sec-5>div>h2 {
+.sec-5 > div > h2 {
     font-family: Apercu;
     font-size: 36px;
-    color: #26484A;
+    color: #26484a;
     font-style: normal;
     font-weight: bold;
 }
 
-.sec-5>div>p {
+.sec-5 > div > p {
     font-family: Apercu;
     font-size: 24px;
-    color: #26484A;
+    color: #26484a;
     font-style: normal;
     font-weight: normal;
 }
 
-.sec-5>div>div>a {
+.sec-5 > div > div > a {
     font-family: Apercu;
     font-size: 24px;
     font-style: normal;
@@ -191,44 +190,43 @@ body>* {
         transform: scale(1.3) !important;
         -webkit-transform: scale(1.3) !important;
     }
-    .sec-1>div>div>div>h1 {
+    .sec-1 > div > div > div > h1 {
         font-size: 24px !important;
     }
-    .sec-1>div>div>div>p {
+    .sec-1 > div > div > div > p {
         font-size: 11px !important;
     }
-    .sec-2>div>div>h2 {
+    .sec-2 > div > div > h2 {
         font-size: 16px !important;
         padding-right: 0px !important;
     }
-    .sec-2>div>div>div>h5 {
+    .sec-2 > div > div > div > h5 {
         font-size: 14px !important;
     }
-    .sec-2>div>div>div>div>p {
+    .sec-2 > div > div > div > div > p {
         font-size: 11px !important;
         padding-right: 5px !important;
     }
-    .sec-3>div>h2 {
+    .sec-3 > div > h2 {
         font-size: 16px !important;
         margin-left: 1rem !important;
     }
-    .sec-3>div>div>div>div>h5 {
+    .sec-3 > div > div > div > div > h5 {
         font-size: 14px !important;
     }
-    .sec-3>div>div>div>div>p {
+    .sec-3 > div > div > div > div > p {
         font-size: 11px !important;
     }
-    .sec-5>div>h2 {
+    .sec-5 > div > h2 {
         font-size: 16px;
     }
-    .sec-5>div>p {
+    .sec-5 > div > p {
         font-size: 11px;
     }
-    .sec-5>div>div>a {
+    .sec-5 > div > div > a {
         font-size: 14px;
     }
 }
-
 
 /* How It Works */
 
@@ -248,7 +246,6 @@ body>* {
     }
 }
 
-
 /* Featured Projects */
 
 .card {
@@ -265,7 +262,7 @@ body>* {
 }
 
 .grow {
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .grow:hover {
@@ -278,7 +275,6 @@ body>* {
         width: 70vw;
     }
 }
-
 
 /* Sponsors */
 
@@ -301,11 +297,10 @@ body>* {
     }
 }
 
-
 /* Footer */
 
 .footer {
-    background-color: #9ECACC;
+    background-color: #9ecacc;
 }
 
 .footer-img {
@@ -325,26 +320,26 @@ body>* {
     font-weight: bold;
 }
 
-.footer-col-4>a,
-.footer-col-5>a {
+.footer-col-4 > a,
+.footer-col-5 > a {
     font-family: Apercu;
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
-    color: #26484A;
+    color: #26484a;
 }
 
 .bottom-text {
     font-family: Apercu;
     font-size: 12px;
-    color: #26484A;
+    color: #26484a;
     font-style: normal;
     font-weight: normal;
 }
 
 @media only screen and (max-width: 1050px) {
-    .footer-col-2>div>div,
-    .footer-col-2>div>div>a {
+    .footer-col-2 > div > div,
+    .footer-col-2 > div > div > a {
         font-size: 12px !important;
     }
     .bottom-text {
@@ -374,12 +369,11 @@ body>* {
     }
 }
 
-
 /* Our Team Page */
 
 * {
     font-family: Apercu;
-    color: #26484A;
+    color: #26484a;
     font-style: normal;
     font-weight: normal;
 }
@@ -410,4 +404,24 @@ body>* {
 
 .btn-edit {
     background-color: #ffdc83;
+}
+
+.btn-swe {
+    background-color: #9ecacc;
+}
+
+.btn-pm {
+    background-color: #ff8943;
+}
+
+.btn-d {
+    background-color: #ffdc83;
+}
+
+.see-details {
+    color: #26484a;
+}
+.see-details:hover {
+    background-color: white;
+    color: #429993;
 }

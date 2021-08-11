@@ -2,11 +2,11 @@
 @section('content')
 
 
-<div class="button-wrapper">
-    @if(Auth::user()->type == 'NGO')
-        <a class="button" href="/NGO_project_index">Return to Dashboard</a>
+<div class="container my-2">
+    @if(Auth::user() && Auth::user()->type == 'NGO')
+        <a class="btn btn-primary" href="/NGO_project_index">Return to Dashboard</a>
     @else 
-        <a class="button" href="{{ URL::previous() }}">Return</a>
+        <a class="btn btn-primary" href="{{ URL::previous() }}">Return</a>
     @endif
 </div>
 
@@ -117,21 +117,21 @@
     </div>
 
     @guest
-    <div class="button-wrapper">
-        <a class="button" href="/join_us">Apply</a>
+    <div class="form-group row justify-content-center my-2">
+        <a class="col-md-4 col-10 btn btn-primary" href="/register">Apply</a>
     </div>
+
     @else
         @if(Auth::user()->student != null)
             
-            <form  method="POST" action="/projects/{{$project->id}}">
+            <form class="row justify-content-center my-2" method="POST" action="/projects/{{$project->id}}">
                 @csrf
-                <div class="button-wrapper">
-                    <button type="submit" class="button" >
+                    <button type="submit" class="col-md-4 col-10 btn btn-primary" >
                         Apply
                     </button>
-                </div>
             </form>
         @endif
     @endguest
+    </div>
 </div>
 @endsection

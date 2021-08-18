@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use App\Ngo;
 
 use Illuminate\Http\Request;
@@ -61,7 +62,9 @@ class NgosController extends Controller
         if ($ngo == null) {
             return view('ngos.register');
         } else {
-            return view('ngos.dashboard', ['ngo' => $ngo]);
+            $projects = $ngo->projects()->get();
+
+            return view('ngos.dashboard', ['ngo' => $ngo, 'projects' => $projects]);
         }
     }
 }

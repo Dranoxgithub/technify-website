@@ -190,19 +190,21 @@
                 @enderror
         </div>
 
-        <div class="form-group row mb-0">
-            <div class="col-md-6 offset-md-4">
-                <button type="submit" class="button">
-                    {{ __('Update info') }}
-                </button>
-                <a  href="/student" class="button">
-                    {{ __('Cancel') }}
-                </a>
-            </div>
+        
+        <div class="form-group row justify-content-center justify-content-md-around">
+            <button type="submit" class="col-md-4 col-10 mb-2 btn btn-edit d-flex justify-content-center align-items-center">
+                <div>
+                    {{ __('Update Info') }}
+                </div>
+            </button>
+            <a href="/student" class="col-md-4 col-10 mb-2 btn btn-primary">
+                {{ __('Cancel') }}
+            </a>
         </div>
+
         </form>
     </div>	
-
+    
 
 
 @endsection

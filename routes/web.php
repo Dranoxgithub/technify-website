@@ -28,11 +28,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/NGO_project_index', [
+Route::get('/projects/create', [
     'middleware' => 'auth',
-    'uses' => 'ProjectsController@getNGOProjects'
+    'uses' => 'ProjectsController@create'
 ]);
-Route::post('/NGO_project_index', [
+Route::post('/projects/create', [
     'middleware' => 'auth',
     'uses' => 'ProjectsController@store'
 ]);

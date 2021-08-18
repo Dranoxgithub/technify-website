@@ -1,10 +1,9 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="wrapper">
-    <h2 class="align-center">New Project</h2>
-    <?php $ngo = Auth::user()->ngo ?>
-    <form method="POST" action="/NGO_project_index">
+<div class="wrapper container my-4">
+    <h2 class="text-center">New Project</h2>
+    <form method="POST">
     @csrf
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('NGO Full Name') }}</label>
@@ -234,7 +233,7 @@
 
     <div class="form-group row mb-0">
         <div class="col-md-6 offset-md-4">
-            <button type="submit" class="button">
+            <button type="submit" class="btn btn-primary">
                 {{ __('Submit this project') }}
             </button>
         </div>

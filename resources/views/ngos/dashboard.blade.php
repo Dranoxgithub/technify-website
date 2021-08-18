@@ -63,7 +63,7 @@
 							<h4 class="navbar-brand font-weight-bold mr-5 w-auto pb-0 my-0">Projects</h4>
 							<input id="searchBox" class="form-control mr-sm-2 search w-auto" type="search" placeholder="Search..." aria-label="Search">
 						</span>
-						<a href="#" class="btn btn-primary mb-3 w-100 w-md-auto">
+						<a href="/projects/create" class="btn btn-primary mb-3 w-100 w-md-auto">
 							{{ __('Add Project') }}
 						</a>
 

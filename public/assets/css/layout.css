@@ -460,3 +460,7 @@ body > * {
     color: #3f938d;
     text-decoration: underline;
 }
+
+.btn:focus {
+    box-shadow: none !important;
+}

@@ -57,7 +57,7 @@ class ProjectsController extends Controller
         $project->end_date = request('end_date');
         $project->timezone = request('timezone');
         $project->country = request('country');
-        // $project->commitment = request('commitment');
+        $project->commitment = request('commitment');
         $project->contact_name = request('contact_name');
         $project->contact_email = request('contact_email');
         $project->description = request('description');
@@ -66,9 +66,16 @@ class ProjectsController extends Controller
         $ngo = $ngo->projects()->save($project);
         
         
-        return view('pages.NGO_project_index');
+        return redirect('/NGO');
     }
 
+    public function create() 
+    {
+        $ngo = Auth::user()->ngo;
+        $timezone_list = $this->generate_timezone_list();
+        return view('projects.create',['ngo' => $ngo, 'timezone_list' => $timezone_list]);
+
+    }
     public function show($id) 
     {
         $project = Project::find($id);

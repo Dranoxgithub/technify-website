@@ -164,12 +164,13 @@
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script>
 	$(function() {
-		$('.main-gallery').flickity(
+		$('.main-gallery').flickity({
 			wrapAround: true,
 			groupCells: '80%',
 			prevNextButtons: false,
 			pageDots: false,
-		})
+			imagesLoaded: true,
+		});
 	});
 </script>
 <style>
@@ -218,4 +219,5 @@
 		display: none;
 	}
 </style>
+
 @endsection

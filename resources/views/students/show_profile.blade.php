@@ -107,12 +107,12 @@
 
     <div class="form-group row justify-content-center justify-content-md-around">
         <!-- <div class="col-md-3"> -->
-            <a href="/student/edit" class="col-md-4 col-12 mb-2 btn btn-edit d-flex justify-content-center align-items-center">
+            <a href="/student/edit" class="col-md-4 col-10 mb-2 btn btn-edit d-flex justify-content-center align-items-center">
                 <div>
                     {{ __('Edit info') }}
                 </div>
             </a>
-            <a href="{{ route('projects.temp_apply') }}" class="col-md-4 col-12 mb-2 btn btn-primary">
+            <a href="{{ route('projects.temp_apply') }}" class="col-md-4 col-10 mb-2 btn btn-primary">
                 {{ __('Submit your profile for application') }}
             </a>
         <!-- </div> -->

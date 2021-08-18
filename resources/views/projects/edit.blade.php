@@ -1,8 +1,8 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="wrapper">
-    <h2 class="align-center">Edit Project</h2>
+<div class="wrapper container my-4">
+    <h2 class="text-center">Edit Project</h2>
     <?php $ngo = Auth::user()->ngo ?>
 
     <form method="POST" action="/projects/{{$project->id}}" >
@@ -111,7 +111,8 @@
         <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
         <div class="col-md-6">
-            <input list="country" type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required>
+            <input type="text" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ $project->country }}" required>
+            <!-- list="country"  -->
             <datalist id="country">
                 <option value="Brunei">
                 <option value="Cambodia">
@@ -225,17 +226,17 @@
 
    
 
-    <div class="form-group row mb-0">
-        <div class="col-md-6 offset-md-4">
-            <button type="submit" class="button">
-                {{ __('Update this project') }}
+    
+    <div class="form-group row justify-content-center justify-content-md-around">
+            <button type="submit" class="col-md-4 col-10 mb-2 btn btn-edit d-flex justify-content-center align-items-center">
+                <div>
+                    {{ __('Update') }}
+                </div>
             </button>
-            <a href="/NGO_project_index" class="button">
+            <a href="/projects/{{ $project->id }}" class="col-md-4 col-10 mb-2 btn btn-primary">
                 {{ __('Cancel') }}
             </a>
         </div>
-        
-    </div>
     
     </form>
 </div>	

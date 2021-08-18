@@ -3,7 +3,8 @@
    
 
 @if (Auth::check())
-<div class="wrapper">
+<div class="wrapper container my-4">
+    <h2 class="text-center">Complete NGO Profile</h2>
 			<form method="POST" action="/NGO">
 
 			@csrf
@@ -86,7 +87,7 @@
 
 			<div class="form-group row mb-0">
 				<div class="col-md-6 offset-md-4">
-					<button type="submit" class="button">
+					<button type="submit" class="btn btn-primary">
 						{{ __('Register as an NGO') }}
 					</button>
 				</div>

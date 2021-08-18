@@ -64,7 +64,7 @@
 							<input id="searchBox" class="form-control mr-sm-2 search w-auto" type="search" placeholder="Search..." aria-label="Search">
 						</span>
 						<a href="/projects/create" class="btn btn-primary mb-3 w-100 w-md-auto">
-							{{ __('Add Project') }}
+							{{ __('Create a Project') }}
 						</a>
 
 					</div>

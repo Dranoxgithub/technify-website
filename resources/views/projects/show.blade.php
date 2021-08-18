@@ -3,8 +3,20 @@
 
 
 <div class="container my-2">
-    @if(Auth::user() && Auth::user()->type == 'NGO')
-        <a class="btn btn-primary" href="/NGO">Return to Dashboard</a>
+    @if(Auth::user() && Auth::user()->type == 'NGO' && $project->ngo->id == Auth::user()->ngo->id)
+        <div class="d-flex justify-content-between flex-md-nowrap flex-wrap">
+            <a class="mb-2 btn btn-primary" href="/NGO">Return to Dashboard</a>
+            <form id="project-delete-form" class="justify-content-center justify-content-md-around" method="post">
+                @method('DELETE')
+                @csrf
+                <a href="/projects/{{ $project->id }}/edit" class="btn btn-primary">
+                    Edit
+                </a>
+                <a href="#" onclick="if(confirm('Are you sure you want to delete this project?')) document.querySelector('#project-delete-form').submit();" class="btn btn-primary">
+                    Delete
+                </a>
+            </form>
+        </div>
     @else 
         <a class="btn btn-primary" href="{{ URL::previous() }}">Return</a>
     @endif

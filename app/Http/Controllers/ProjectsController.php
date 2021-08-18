@@ -87,15 +87,23 @@ class ProjectsController extends Controller
     {
         $project = Project::find($id);
 
+        if ($project->ngo->id != Auth::user()->ngo->id) {
+            return redirect('/NGO');
+        }
+
         if($project){
             $project->delete();
         }
     
-        return redirect('/NGO_project_index')->with('success', 'Contact deleted!');
+        return redirect('/NGO')->with('success', 'Contact deleted!');
     }
     public function edit($id)
     {
         $project = Project::find($id);
+        if ($project->ngo->id != Auth::user()->ngo->id) {
+            return redirect('/NGO');
+        }
+
         $timezone_list = $this->generate_timezone_list();
         return view('projects.edit',['project' => $project, 'timezone_list' => $timezone_list]);
     }
@@ -105,6 +113,9 @@ class ProjectsController extends Controller
     public function update(Request $request, $id)
     {   
         $project = Project::find($id);
+        if ($project->ngo->id != Auth::user()->ngo->id) {
+            return redirect('/NGO');
+        }
         $project->name = request('name');
         $project->goal = request('goal');
         $project->skill = request('skill');
@@ -112,7 +123,7 @@ class ProjectsController extends Controller
         $project->end_date = request('end_date');
         $project->timezone = request('timezone');
         $project->country = request('country');
-        // $project->commitment = request('commitment');
+        $project->commitment = request('commitment');
         $project->contact_name = request('contact_name');
         $project->contact_email = request('contact_email');
         $project->description = request('description');

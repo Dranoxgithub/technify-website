@@ -418,14 +418,6 @@ body > * {
     background-color: #ffdc83;
 }
 
-.see-details {
-    color: #26484a;
-}
-.see-details:hover {
-    background-color: white;
-    color: #429993;
-}
-
 .project-button {
     font-size: 0.84rem;
     border-radius: 9em;
@@ -437,6 +429,14 @@ body > * {
     border-color: #9ecacc;
 }
 
+.see-details {
+    color: #26484a;
+}
+.see-details:hover {
+    background-color: white;
+    color: #429993;
+}
+
 @media only screen and (max-width: 600px) {
     .project-button {
         /* padding: .2rem .5rem; */
@@ -445,4 +445,18 @@ body > * {
     .btns-talent {
         margin-bottom: 1rem;
     }
+}
+
+.see-all:link {
+    color: #429993;
+    text-decoration: none;
+}
+
+.see-all:visited {
+    color: #26484a;
+}
+
+.see-all:hover {
+    color: #3f938d;
+    text-decoration: underline;
 }

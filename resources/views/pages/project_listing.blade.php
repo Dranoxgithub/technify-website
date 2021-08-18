@@ -41,7 +41,7 @@
 
 <Section class="d-flex mx-4">
 	<h3>Available Projects</h3>
-	<a class="ml-auto pr-4" href="/available_projects">See all</a>
+	<a class="ml-auto pr-4 see-all" href="/available_projects">See all</a>
 </Section>
 <div class="main-gallery js-flickity">
 	@foreach($projects as $project)
@@ -136,7 +136,7 @@
 
 <Section class="d-flex mx-4">
 	<h3>Past Works</h3>
-	<a class="ml-auto pr-4" href="/past_projects">See all</a>
+	<a class="ml-auto pr-4 see-all" href="/past_projects">See all</a>
 </Section>
 <div class="main-gallery js-flickity">
 	@foreach($projects as $project)

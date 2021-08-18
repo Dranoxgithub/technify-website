@@ -4,7 +4,7 @@
 
 <div class="container my-2">
     @if(Auth::user() && Auth::user()->type == 'NGO')
-        <a class="btn btn-primary" href="/NGO_project_index">Return to Dashboard</a>
+        <a class="btn btn-primary" href="/NGO">Return to Dashboard</a>
     @else 
         <a class="btn btn-primary" href="{{ URL::previous() }}">Return</a>
     @endif

@@ -447,17 +447,16 @@ body > * {
     }
 }
 
-/* Global change to a tag */
-a:link {
+.see-all:link {
     color: #429993;
     text-decoration: none;
 }
 
-a:visited {
+.see-all:visited {
     color: #26484a;
 }
 
-a:hover {
+.see-all:hover {
     color: #3f938d;
     text-decoration: underline;
 }

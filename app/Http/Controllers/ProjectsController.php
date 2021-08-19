@@ -46,13 +46,26 @@ class ProjectsController extends Controller
         return view('pages.project_listing', ['projects' => $projects]);
     }
 
-    public function store()
-    {
-        
+    public function store() {
         $project = new Project();
         $project->name = request('name');
         $project->goal = request('goal');
         $project->skill = request('skill');
+        if (in_array('swe', request('role_group'))) {
+            $project->swe_needed = true;
+        } else {
+            $project->swe_needed = false;
+        }
+        if (in_array('pm', request('role_group'))) {
+            $project->pm_needed = true;
+        } else {
+            $project->pm_needed = false;
+        }
+        if (in_array('d', $request->get('role_group'))) {
+            $project->d_needed = true;
+        } else {
+            $project->d_needed = false;
+        }
         $project->start_date = request('start_date');
         $project->end_date = request('end_date');
         $project->timezone = request('timezone');
@@ -64,7 +77,6 @@ class ProjectsController extends Controller
 
         $ngo = Auth::user()->ngo;
         $ngo = $ngo->projects()->save($project);
-        
         
         return redirect('/NGO');
     }
@@ -119,6 +131,21 @@ class ProjectsController extends Controller
         $project->name = request('name');
         $project->goal = request('goal');
         $project->skill = request('skill');
+        if (in_array('swe', request('role_group'))) {
+            $project->swe_needed = true;
+        } else {
+            $project->swe_needed = false;
+        }
+        if (in_array('pm', request('role_group'))) {
+            $project->pm_needed = true;
+        } else {
+            $project->pm_needed = false;
+        }
+        if (in_array('d', $request->get('role_group'))) {
+            $project->d_needed = true;
+        } else {
+            $project->d_needed = false;
+        }
         $project->start_date = request('start_date');
         $project->end_date = request('end_date');
         $project->timezone = request('timezone');

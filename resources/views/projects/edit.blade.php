@@ -195,6 +195,18 @@
     </div>
 
     <div class="form-group row">
+        <label class="col-md-4 col-form-label text-md-right">{{ __('Roles needed') }}</label>
+        <div class="col-md-6">
+            <input for="swe" type="checkbox" name="role_group[]" id="swe" value="swe" {{ $project->swe_needed?'checked':''}}>
+            <label>Software Engineer</label>
+            <input for="pm" type="checkbox" name="role_group[]" id="pm" value="pm" {{ $project->pm_needed?'checked':''}}>
+            <label>Product Manager</label>
+            <input for="d" type="checkbox" name="role_group[]" id="d" value="d" {{ $project->d_needed?'checked':''}}>  
+            <label>Designer</label>
+        </div>
+    </div>
+
+    <div class="form-group row">
         <label for="contact_name" class="col-md-4 col-form-label text-md-right">{{ __('Project Contact Person') }}</label>
 
         <div class="col-md-6">

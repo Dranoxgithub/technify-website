@@ -61,7 +61,7 @@ class ProjectsController extends Controller
         } else {
             $project->pm_needed = false;
         }
-        if (in_array('d', $request->get('role_group'))) {
+        if (in_array('d', request('role_group'))) {
             $project->d_needed = true;
         } else {
             $project->d_needed = false;
@@ -145,7 +145,7 @@ class ProjectsController extends Controller
             } else {
                 $project->pm_needed = false;
             }
-            if (in_array('d', $request->get('role_group'))) {
+            if (in_array('d', request('role_group'))) {
                 $project->d_needed = true;
             } else {
                 $project->d_needed = false;

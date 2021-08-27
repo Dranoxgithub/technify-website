@@ -129,26 +129,6 @@
 				</div>
             </div>
 
-            <!-- <div class="form-group row">
-				<label for="commitment" class="col-md-4 col-form-label text-md-right">{{ __('Commitment') }}</label>
-
-				<div class="col-md-6 row" id="commitment-range">
-                    <input placeholder="h/week" id="min_commitment" type="number" class="form-control @error('min_commitment') is-invalid @enderror 6u 12u$(xsmall)" name="min_commitment" value="{{ old('min_commitment') }}" required autocomplete="min_commitment" autofocus>-
-                    <input placeholder="h/week" id="max_commitment" type="number" class="form-control @error('max_commitment') is-invalid @enderror 6u$ 12u$(xsmall)" name="max_commitment" value="{{ old('max_commitment') }}" required autocomplete="max_commitment" autofocus>
-
-					@error('min_commitment')
-						<span class="invalid-feedback" role="alert">
-							<strong>{{ $message }}</strong>
-						</span>
-                    @enderror
-                    @error('max_commitment')
-						<span class="invalid-feedback" role="alert">
-							<strong>{{ $message }}</strong>
-						</span>
-					@enderror
-				</div>
-			</div> -->
-
 			<div class="form-group row">
 				<label for="resume" class="col-md-4 col-form-label text-md-right">{{ __('Resume') }}</label>
 

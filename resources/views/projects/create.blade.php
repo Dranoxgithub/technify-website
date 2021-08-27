@@ -62,20 +62,6 @@
     </div>
 
     <div class="form-group row">
-        <label for="commitment" class="col-md-4 col-form-label text-md-right">{{ __('Weekly Commitment') }}</label>
-
-        <div class="col-md-6">
-            <input placeholder="Hours" id="commitment" type="number" class="form-control @error('commitment') is-invalid @enderror" name="commitment" value="{{ old('commitment') }}" required autocomplete="commitment">
-    
-            @error('commitment')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-            @enderror
-        </div>
-    </div>
-
-    <div class="form-group row">
         <label for="start_date" class="col-md-4 col-form-label text-md-right">{{ __('Project Start Date') }}</label>
 
         <div class="col-md-6">

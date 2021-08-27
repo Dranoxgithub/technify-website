@@ -85,13 +85,13 @@
 					<div class="d-flex justify-content-between align-items-center flex-wrap">
 						<span style="margin-left: -0.45rem;" class="btns-talent">
 							@if ($project->swe_needed)
-							<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
+							<button class="btn btn-sm project-button btn-swe">Software Engineer</button>
 							@endif
 							@if ($project->pm_needed)
-							<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
+							<button class="btn btn-sm project-button btn-pm">Project Manager</button>
 							@endif
 							@if ($project->d_needed)
-							<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
+							<button class="btn btn-sm project-button btn-d">Designer</button>
 							@endif
 						</span>
 					</div>

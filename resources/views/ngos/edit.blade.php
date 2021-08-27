@@ -7,7 +7,7 @@
 			@csrf
             @method('PATCH')
 			<div class="form-group row">
-				<label class="col-md-4 col-form-label text-md-right">{{ __('Contact Person Name') }}</label>
+				<label class="col-md-4 col-form-label text-md-right">{{ __('Contact Person') }}</label>
 
 				<div class="col-md-6">
 					<label class="col-md-4 col-form-label">{{ Auth::user()->name }}</label>

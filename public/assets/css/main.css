@@ -3445,26 +3445,6 @@ body.is-loading #banner .content {
 }
 
 
-/* student */
-
-#commitment-range {
-    padding-right: 0;
-}
-
-#min_commitment {
-    margin-left: 15px;
-    margin-right: auto;
-    width: 42%;
-    display: flex;
-}
-
-#max_commitment {
-    margin-left: auto;
-    margin-right: 0px;
-    width: 42%;
-    display: flex;
-}
-
 
 /* general */
 

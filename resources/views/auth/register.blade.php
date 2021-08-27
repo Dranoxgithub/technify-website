@@ -97,7 +97,7 @@
         if (value == 'student') {
             nameElement.innerText = 'Full Name';
         } else {
-            nameElement.innerText = 'Organization Name';
+            nameElement.innerText = 'Contact Person';
         }
     }
 </script>

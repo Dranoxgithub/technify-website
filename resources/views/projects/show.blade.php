@@ -68,13 +68,6 @@
         </div>
     </div>
     <div class="form-group row">
-        <label class="col-md-4 col-form-label text-md-right">{{ __('Weekly Commitment') }}</label>
-
-        <div class="col-md-6">
-            <label class="col-form-label form-max-width">{{ $project->commitment }}</label>
-        </div>
-    </div>
-    <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Project Start Date') }}</label>
 
         <div class="col-md-6">

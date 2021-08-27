@@ -61,7 +61,7 @@ class ProjectsController extends Controller
         } else {
             $project->pm_needed = false;
         }
-        if (in_array('d', $request->get('role_group'))) {
+        if (in_array('d', request('role_group'))) {
             $project->d_needed = true;
         } else {
             $project->d_needed = false;
@@ -70,7 +70,6 @@ class ProjectsController extends Controller
         $project->end_date = request('end_date');
         $project->timezone = request('timezone');
         $project->country = request('country');
-        $project->commitment = request('commitment');
         $project->contact_name = request('contact_name');
         $project->contact_email = request('contact_email');
         $project->description = request('description');
@@ -141,7 +140,7 @@ class ProjectsController extends Controller
         } else {
             $project->pm_needed = false;
         }
-        if (in_array('d', $request->get('role_group'))) {
+        if (in_array('d', request('role_group'))) {
             $project->d_needed = true;
         } else {
             $project->d_needed = false;
@@ -150,7 +149,6 @@ class ProjectsController extends Controller
         $project->end_date = request('end_date');
         $project->timezone = request('timezone');
         $project->country = request('country');
-        $project->commitment = request('commitment');
         $project->contact_name = request('contact_name');
         $project->contact_email = request('contact_email');
         $project->description = request('description');

@@ -108,10 +108,6 @@
 						<span class="col-8">{{ (new DateTime($project->start_date))->format('Y/m/d') }} - {{ (new DateTime($project->end_date))->format('Y/m/d') }}</span>
 					</div>
 					<div class="row">
-						<span class="col-4">Commitment</span>
-						<span class="col-8">{{ $project->commitment }}</span>
-					</div>
-					<div class="row">
 						<span class="col-4">Skills</span>
 						<span class="col-8">{{ $project->skill }}</span>
 					</div>

@@ -78,6 +78,11 @@
 			<div class="card p-0 shadow mb-sm-5 col-lg-custom col-md-5 col-10">
 				<a href="{{ $project->ngo->website }}" target="_blank"><img class="card-img-top" src="/images/technify_cover_card.png" alt=""></a>
 				<div class="card-body p-2 m-4">
+					@if ($project->status == 'finished')
+					<div style="margin-left: -0.45rem;" class="mb-2">
+						<button class="btn btn-primary btn-sm project-button">Completed</button>
+					</div>
+					@endif
 					<h5 class="card-title"><a href="projects/{{ $project->id }}" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
 					<p class="card-text">
 						{{ $project->goal }}

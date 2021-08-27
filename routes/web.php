@@ -43,6 +43,7 @@ Route::get('/project_listing','ProjectsController@showProjectListing')->name('pr
 Route::get('/projects/{id}','ProjectsController@show')->name('projects.show');
 Route::delete('/projects/{id}','ProjectsController@destroy')->name('projects.destroy');
 Route::get('/projects/{id}/edit','ProjectsController@edit')->name('projects.edit');
+// Route::get('/projects/{id}/toggleStatus','ProjectsController@toggleStatus')->name('projects.toggleStatus');
 Route::patch('/projects/{id}','ProjectsController@update')->name('projects.update');
 
 Route::post('/NGO', 'NgosController@store');

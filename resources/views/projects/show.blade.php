@@ -7,7 +7,14 @@
         <div class="d-flex justify-content-between flex-md-nowrap flex-wrap">
             <a class="mb-2 btn btn-primary" href="/NGO">Return to Dashboard</a>
             <div class="justify-content-center justify-content-md-around">
-                @csrf
+                <a href="#" onclick="document.querySelector('#toggle_completion-form').submit();" class="btn btn-primary">
+                    Mark as {{ $project->status == 'recruiting' ? 'Completed' : 'Recruiting' }}
+                </a>
+                <form id="toggle_completion-form" method="POST" style="display: none;">
+                    @method('PATCH')
+                    @csrf
+                    <input type="hidden" name="toggle_completion" value="true">
+                </form>
                 <a href="/projects/{{ $project->id }}/edit" class="btn btn-primary">
                     Edit
                 </a>
@@ -28,6 +35,9 @@
 <div class="wrapper container my-4">
     <?php $ngo = $project->ngo ?>
     <h2 class="text-center">{{ $project->name }}</h2>
+    <div class="d-flex justify-content-center align-items-center flex-wrap">
+        <button class="btn btn-primary btn-sm project-button">{{ $project->status == 'recruiting' ? 'Recruiting' : 'Completed' }}</button>
+    </div>
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('NGO Full Name') }}</label>
 

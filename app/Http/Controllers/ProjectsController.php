@@ -127,31 +127,37 @@ class ProjectsController extends Controller
         if ($project->ngo->id != Auth::user()->ngo->id) {
             return redirect('/NGO');
         }
-        $project->name = request('name');
-        $project->goal = request('goal');
-        $project->skill = request('skill');
-        if (in_array('swe', request('role_group'))) {
-            $project->swe_needed = true;
+        if (request('toggle_completion')) {
+            $project->status = $project->status == 'recruiting' ? 'finished' : 'recruiting';
+
         } else {
-            $project->swe_needed = false;
+            $project->name = request('name');
+            $project->goal = request('goal');
+            $project->skill = request('skill');
+            if (in_array('swe', request('role_group'))) {
+                $project->swe_needed = true;
+            } else {
+                $project->swe_needed = false;
+            }
+            if (in_array('pm', request('role_group'))) {
+                $project->pm_needed = true;
+            } else {
+                $project->pm_needed = false;
+            }
+            if (in_array('d', request('role_group'))) {
+                $project->d_needed = true;
+            } else {
+                $project->d_needed = false;
+            }
+            $project->start_date = request('start_date');
+            $project->end_date = request('end_date');
+            $project->timezone = request('timezone');
+            $project->country = request('country');
+            $project->contact_name = request('contact_name');
+            $project->contact_email = request('contact_email');
+            $project->description = request('description');
+            
         }
-        if (in_array('pm', request('role_group'))) {
-            $project->pm_needed = true;
-        } else {
-            $project->pm_needed = false;
-        }
-        if (in_array('d', request('role_group'))) {
-            $project->d_needed = true;
-        } else {
-            $project->d_needed = false;
-        }
-        $project->start_date = request('start_date');
-        $project->end_date = request('end_date');
-        $project->timezone = request('timezone');
-        $project->country = request('country');
-        $project->contact_name = request('contact_name');
-        $project->contact_email = request('contact_email');
-        $project->description = request('description');
         $project->save();
 
         return view('projects.show',['project' => $project]);

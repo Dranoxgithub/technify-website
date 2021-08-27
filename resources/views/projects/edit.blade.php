@@ -181,15 +181,12 @@
         </div>
     </div>
 
-    <div class="form-group row">
+    <div class="form-group row role_checkboxes">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Roles needed') }}</label>
         <div class="col-md-6">
-            <input for="swe" type="checkbox" name="role_group[]" id="swe" value="swe" {{ $project->swe_needed?'checked':''}}>
-            <label>Software Engineer</label>
-            <input for="pm" type="checkbox" name="role_group[]" id="pm" value="pm" {{ $project->pm_needed?'checked':''}}>
-            <label>Product Manager</label>
-            <input for="d" type="checkbox" name="role_group[]" id="d" value="d" {{ $project->d_needed?'checked':''}}>  
-            <label>Designer</label>
+            <label><input for="swe" type="checkbox" name="role_group[]" id="swe" value="swe" {{ $project->swe_needed?'checked':''}} required> Software Engineer</label>
+            <label><input for="pm" type="checkbox" name="role_group[]" id="pm" value="pm" {{ $project->pm_needed?'checked':''}} required> Product Manager</label>
+            <label><input for="d" type="checkbox" name="role_group[]" id="d" value="d" {{ $project->d_needed?'checked':''}} required> Designer</label>
         </div>
     </div>
 
@@ -239,4 +236,21 @@
     
     </form>
 </div>	
+@endsection
+
+@section('scripts')
+<script>
+$(function(){
+    var requiredCheckboxes = $('.role_checkboxes :checkbox[required]');
+    function checkCheckBoxCompeletion(){
+        if(requiredCheckboxes.is(':checked')) {
+            requiredCheckboxes.removeAttr('required');
+        } else {
+            requiredCheckboxes.attr('required', 'required');
+        }
+    }
+    requiredCheckboxes.change(checkCheckBoxCompeletion);
+    checkCheckBoxCompeletion();
+});
+</script>
 @endsection

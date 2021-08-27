@@ -81,7 +81,7 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Project Start Date') }}</label>
 
         <div class="col-md-6">
-            <label class="ccol-form-label form-max-width">{{ date('d M, Y', strtotime($project->start_date)) }}</label>
+            <label class="col-form-label form-max-width">{{ date('d M, Y', strtotime($project->start_date)) }}</label>
         </div>
     </div>
     <div class="form-group row">
@@ -116,23 +116,29 @@
         <label class="col-md-4 col-form-label text-md-right">{{ __('Skills Preferred') }}</label>
 
         <div class="col-md-6">
-            <label class="col-md-4 col-form-label form-max-width">{{ $project->skill }}</label>
+            <label class="col-form-label form-max-width">{{ $project->skill }}</label>
         </div>
     </div>
+    <div class="form-group row">
+        <label class="col-md-4 col-form-label text-md-right">{{ __('Roles Needed') }}</label>
 
-    <div class="d-flex justify-content-center align-items-center flex-wrap">
-        <span class="btns-talent">
-            @if ($project->swe_needed)
-            <button class="btn btn-sm project-button btn-swe">Software Engineer</button>
-            @endif
-            @if ($project->pm_needed)
-            <button class="btn btn-sm project-button btn-pm">Project Manager</button>
-            @endif
-            @if ($project->d_needed)
-            <button class="btn btn-sm project-button btn-d">Designer</button>
-            @endif
-        </span>
+        <div class="col-md-6 d-flex justify-content-start align-items-center flex-wrap">
+            
+            <span class="btns-talent" style="margin-left: -0.45rem;">
+                @if ($project->swe_needed)
+                <button class="btn btn-sm project-button btn-swe">Software Engineer</button>
+                @endif
+                @if ($project->pm_needed)
+                <button class="btn btn-sm project-button btn-pm">Project Manager</button>
+                @endif
+                @if ($project->d_needed)
+                <button class="btn btn-sm project-button btn-d">Designer</button>
+                @endif
+            </span>
+            
+        </div>
     </div>
+    
 
     @guest
     <div class="form-group row justify-content-center my-2">
@@ -152,4 +158,8 @@
     @endguest
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>document.title = "{{ $project->name }} | Technify"</script>
 @endsection

@@ -161,7 +161,7 @@
         <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Project Description') }}</label>
 
         <div class="col-md-6">
-            <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" required autocomplete="description" autofocus>
+            <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus>{{ old('description') }}</textarea>
 
             @error('description')
                 <span class="invalid-feedback" role="alert">
@@ -187,10 +187,10 @@
 
     <div class="form-group row role_checkboxes">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Roles needed') }}</label>
-        <div class="col-md-6">
-            <label><input for="swe" type="checkbox" name="role_group[]" id="swe" value="swe" required> Software Engineer</label>
-            <label><input for="pm" type="checkbox" name="role_group[]" id="pm" value="pm"  required> Product Manager</label>
-            <label><input for="d" type="checkbox" name="role_group[]" id="d" value="d"  required> Designer</label>
+        <div class="col-md-6 d-flex justify-content-start align-items-center">
+            <label class="my-auto mr-3"><input for="swe" type="checkbox" name="role_group[]" id="swe" value="swe" required> Software Engineer</label>
+            <label class="my-auto mr-3"><input for="pm" type="checkbox" name="role_group[]" id="pm" value="pm"  required> Product Manager</label>
+            <label class="my-auto mr-3"><input for="d" type="checkbox" name="role_group[]" id="d" value="d"  required> Designer</label>
         </div>
     </div>
 

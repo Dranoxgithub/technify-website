@@ -173,14 +173,13 @@
 
         
         <div class="form-group row justify-content-center justify-content-md-around">
-            <button type="submit" class="col-md-4 col-10 mb-2 btn btn-edit d-flex justify-content-center align-items-center">
-                <div>
-                    {{ __('Update Info') }}
-                </div>
-            </button>
-            <a href="/student" class="col-md-4 col-10 mb-2 btn btn-primary">
+            
+            <a href="/student" class="col-md-4 col-10 mb-2 btn btn-light">
                 {{ __('Cancel') }}
             </a>
+            <button type="submit" class="col-md-4 col-10 mb-2 btn btn-primary d-flex justify-content-center align-items-center">
+                {{ __('Update Info') }}
+            </button>
         </div>
 
         </form>

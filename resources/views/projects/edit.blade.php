@@ -157,7 +157,7 @@
         <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Project Description') }}</label>
 
         <div class="col-md-6">
-            <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ $project->description }}" required autocomplete="description" autofocus>
+            <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus>{{ $project->description }}</textarea>
 
             @error('description')
                 <span class="invalid-feedback" role="alert">
@@ -183,10 +183,10 @@
 
     <div class="form-group row role_checkboxes">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Roles needed') }}</label>
-        <div class="col-md-6">
-            <label><input for="swe" type="checkbox" name="role_group[]" id="swe" value="swe" {{ $project->swe_needed?'checked':''}} required> Software Engineer</label>
-            <label><input for="pm" type="checkbox" name="role_group[]" id="pm" value="pm" {{ $project->pm_needed?'checked':''}} required> Product Manager</label>
-            <label><input for="d" type="checkbox" name="role_group[]" id="d" value="d" {{ $project->d_needed?'checked':''}} required> Designer</label>
+        <div class="col-md-6 d-flex justify-content-start align-items-center">
+            <label class="my-auto mr-3"><input for="swe" type="checkbox" name="role_group[]" id="swe" value="swe" {{ $project->swe_needed?'checked':''}} required> Software Engineer</label>
+            <label class="my-auto mr-3"><input for="pm" type="checkbox" name="role_group[]" id="pm" value="pm" {{ $project->pm_needed?'checked':''}} required> Product Manager</label>
+            <label class="my-auto mr-3"><input for="d" type="checkbox" name="role_group[]" id="d" value="d" {{ $project->d_needed?'checked':''}} required> Designer</label>
         </div>
     </div>
 
@@ -224,14 +224,12 @@
 
     
     <div class="form-group row justify-content-center justify-content-md-around">
-            <button type="submit" class="col-md-4 col-10 mb-2 btn btn-edit d-flex justify-content-center align-items-center">
-                <div>
-                    {{ __('Update') }}
-                </div>
-            </button>
-            <a href="/projects/{{ $project->id }}" class="col-md-4 col-10 mb-2 btn btn-primary">
+            <a href="/projects/{{ $project->id }}" class="col-md-4 col-10 mb-2 btn btn-light">
                 {{ __('Cancel') }}
             </a>
+            <button type="submit" class="col-md-4 col-10 mb-2 btn btn-primary d-flex justify-content-center align-items-center">
+                {{ __('Update') }}
+            </button>
         </div>
     
     </form>

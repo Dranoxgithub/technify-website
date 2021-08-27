@@ -1,10 +1,8 @@
 $(function() {
     const element = document.querySelector('#shuffleEntryPoint');
     const shuffle = new window.Shuffle(element, {
-            itemSelector: '.card',
+            itemSelector: '.card-container',
             filterMode: Shuffle.FilterMode.ANY,
-            // isCentered: true,
-            gutterWidth: 5,
         });
     document.getElementById('searchBox').addEventListener('keyup', handleSearchKeyup);
 

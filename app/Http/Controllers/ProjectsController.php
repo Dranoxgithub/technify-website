@@ -159,7 +159,10 @@ class ProjectsController extends Controller
             $project->contact_email = request('contact_email');
             $project->description = request('description');
 
-            if ($request->hasFile('image')) {
+            if (request('fileChange')) {
+                if (Storage::exists('projects_image/'. $project->id)) {
+                    Storage::delete('projects_image/'. $project->id);
+                }
                 Storage::move('temp/'.Auth::user()->ngo->id, 'projects_image/'. $project->id);
             }
             
@@ -211,6 +214,10 @@ class ProjectsController extends Controller
         $image_type_aux = explode("image/", $image_parts[0]);
         $image_type = $image_type_aux[1];
         $image_base64 = base64_decode($image_parts[1]);
+
+        if (Storage::exists('temp/' . Auth::user()->ngo->id)) {
+            Storage::delete('temp/' . Auth::user()->ngo->id);
+        }
 
         Storage::disk()->put('temp/' . Auth::user()->ngo->id, $image_base64, 'public');
         return response()->json(['filePath' => Storage::url('temp/' . Auth::user()->ngo->id)]);

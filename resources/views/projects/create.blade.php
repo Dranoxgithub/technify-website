@@ -227,7 +227,7 @@
         <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
         
         <div class="col-md-6">
-            <input id="upload" type="file" class="@error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" accept="image/*" required>
+            <input id="upload" type="file" class="@error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" accept="image/*">
             <img id="preview-cropped-image" src style="height:300px;display: none;" ></img>
         </div>
         @error('image')
@@ -252,7 +252,7 @@
                 <div class="img-container">
                     <div class="row">
                         <div class="col-md-8">
-                            <img id="image" src="">
+                            <img id="image" style="width:100%" src="">
                         </div>
                         <div class="col-md-4">
                             <div class="preview"></div>
@@ -359,8 +359,8 @@ $("document").ready(function(){
                     success: function(data){
                         console.log(data);
                         $modal.modal('hide');
-                        cropped_image = document.getElementById("preview-cropped-image").src;
-                        cropped_image = data.filePath;
+                        cropped_image = document.getElementById("preview-cropped-image");
+                        cropped_image.src = data.filePath+ "?time=" + new Date().getTime();
                         cropped_image.style.display = 'initial';
                     }
                 });

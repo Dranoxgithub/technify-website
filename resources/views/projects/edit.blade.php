@@ -223,8 +223,9 @@
         <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
         
         <div class="col-md-6">
-            <input id="upload" type="file" class="@error('image') is-invalid @enderror" name="image" value="" accept="image/*" required>
-            <img id="preview-cropped-image" src="{{Storage::url('projects_image/'. $project->id)}}" style="height:300px;" ></img>
+            <input id="fileChange" name="fileChange" type="hidden"></input>
+            <input id="upload" type="file" class="@error('image') is-invalid @enderror" name="image" value="" accept="image/*">
+            <img id="preview-cropped-image" src="{{ Storage::disk()->exists("projects_image/" . $project->id) ? Storage::url('projects_image/'. $project->id) : ""}}" style="height:300px;" ></img>
         </div>
         @error('image')
             <span class="invalid-feedback" role="alert">
@@ -246,7 +247,7 @@
                 <div class="img-container">
                     <div class="row">
                         <div class="col-md-8">
-                            <img id="image" src="">
+                            <img id="image" style="width:100%" src="">
                         </div>
                         <div class="col-md-4">
                             <div class="preview"></div>
@@ -262,6 +263,7 @@
         </div>
     </div>
     
+    
     <div class="form-group row justify-content-center justify-content-md-around">
             <a href="/projects/{{ $project->id }}" class="col-md-4 col-10 mb-2 btn btn-light">
                 {{ __('Cancel') }}
@@ -276,6 +278,8 @@
 @endsection
 
 @section('scripts')
+<script src="/assets/js/cropper.js"></script>
+<link rel="stylesheet" href="/assets/css/cropper.css" />
 <script>
 $(function(){
     var requiredCheckboxes = $('.role_checkboxes :checkbox[required]');
@@ -350,7 +354,9 @@ $("document").ready(function(){
                     success: function(data){
                         console.log(data);
                         $modal.modal('hide');
-                        document.getElementById("preview-cropped-image").src = data.filePath;
+                        document.getElementById("preview-cropped-image").src = data.filePath + "?time=" + new Date().getTime();;
+                        document.getElementById("fileChange").value = true;
+                        document.getElementById("upload").value = null;
                     }
                 });
             }

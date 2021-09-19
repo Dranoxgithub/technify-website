@@ -352,9 +352,10 @@ $("document").ready(function(){
                     url: "/projects/upload_image_buffer",
                     data: {image: base64data, "_token": "{{ csrf_token() }}"},
                     success: function(data){
-                        console.log(data);
                         $modal.modal('hide');
-                        document.getElementById("preview-cropped-image").src = data.filePath + "?time=" + new Date().getTime();;
+                        cropped_image = document.getElementById("preview-cropped-image");
+                        cropped_image.src = data.filePath+ "?time=" + new Date().getTime();
+                        cropped_image.style.display = 'initial';
                         document.getElementById("fileChange").value = true;
                         document.getElementById("upload").value = null;
                     }

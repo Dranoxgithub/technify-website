@@ -77,7 +77,12 @@ class ProjectsController extends Controller
         $ngo = Auth::user()->ngo;
         $ngo = $ngo->projects()->save($project);
 
-        Storage::move('temp/'.Auth::user()->ngo->id, 'projects_image/'. $project->id);
+        if (request('fileChange')) {
+            if (Storage::exists('projects_image/'. $project->id)) {
+                Storage::delete('projects_image/'. $project->id);
+            }
+            Storage::move('temp/'.Auth::user()->ngo->id, 'projects_image/'. $project->id);
+        }
         
         return redirect('/NGO');
     }

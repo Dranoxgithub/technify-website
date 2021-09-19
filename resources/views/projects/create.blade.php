@@ -227,6 +227,7 @@
         <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
         
         <div class="col-md-6">
+            <input id="fileChange" name="fileChange" type="hidden"></input>
             <input id="upload" type="file" class="@error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" accept="image/*">
             <img id="preview-cropped-image" src style="height:300px;display: none;" ></img>
         </div>
@@ -357,11 +358,12 @@ $("document").ready(function(){
                     url: "/projects/upload_image_buffer",
                     data: {image: base64data, "_token": "{{ csrf_token() }}"},
                     success: function(data){
-                        console.log(data);
                         $modal.modal('hide');
                         cropped_image = document.getElementById("preview-cropped-image");
                         cropped_image.src = data.filePath+ "?time=" + new Date().getTime();
                         cropped_image.style.display = 'initial';
+                        document.getElementById("fileChange").value = true;
+                        document.getElementById("upload").value = null;
                     }
                 });
             }

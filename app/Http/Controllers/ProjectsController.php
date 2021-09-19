@@ -76,6 +76,8 @@ class ProjectsController extends Controller
 
         $ngo = Auth::user()->ngo;
         $ngo = $ngo->projects()->save($project);
+
+        Storage::move('temp/'.Auth::user()->ngo->id, 'projects_image/'. $project->id);
         
         return redirect('/NGO');
     }
@@ -198,6 +200,16 @@ class ProjectsController extends Controller
 
         Session::flash('message', 'Congrats! Applied successfully.');
         return view('projects.show',['project' => $project]);
+    }
+
+    public function uploadImageToS3Buffer() {
+        $image_parts = explode(";base64,", $_POST['image']);
+        $image_type_aux = explode("image/", $image_parts[0]);
+        $image_type = $image_type_aux[1];
+        $image_base64 = base64_decode($image_parts[1]);
+
+        Storage::disk()->put('temp/' . Auth::user()->ngo->id, $image_base64, 'public');
+        return response()->json(['filePath' => Storage::url('temp/' . Auth::user()->ngo->id)]);
     }
 
     public function generate_timezone_list() {

@@ -45,6 +45,7 @@ Route::delete('/projects/{id}','ProjectsController@destroy')->name('projects.des
 Route::get('/projects/{id}/edit','ProjectsController@edit')->name('projects.edit');
 // Route::get('/projects/{id}/toggleStatus','ProjectsController@toggleStatus')->name('projects.toggleStatus');
 Route::patch('/projects/{id}','ProjectsController@update')->name('projects.update');
+Route::post('/projects/upload_image_buffer','ProjectsController@uploadImageToS3Buffer')->name('projects.uploadImageBuffer');
 
 Route::post('/NGO', 'NgosController@store');
 Route::get('/NGO/edit', 'NgosController@edit');

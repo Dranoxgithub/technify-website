@@ -44,7 +44,7 @@
             
             <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src={{ asset('images/Anni.jpeg') }} class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <img src="images/Anni.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/anni-chen-02/" target="blank" style="color:#26484A">Anni Chen</a></h4>
                         <small class="text-muted">Co-Founder, Executive Director</small>
@@ -197,6 +197,26 @@
                         <small class="text-muted">Student / Partner Outreach</small>
                         <p>Jonathan Griffin is a sophomore from Alexandria, Virginia studying Economics, Political Science, and Chinese language. While not a CompSci student himself, Jonathan looks forward to contributing to Technify's 
                             mission by helping match capable students with partner organizations. 
+</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="images/Lily.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Lily Li</a></h4>
+                        <small class="text-muted">Partner Outreach Lead</small>
+                        <p>Undergraduate student at Duke University studying Statistics and Psychology. Passionate about data-driven impactful work that connects and empowers. 
+                            An enthusiast of musicals, nature, and FRIENDS! 
 </p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>

@@ -190,8 +190,8 @@ class ProjectsController extends Controller
         ->subject('New Application for '. $project->name .' 🎉-Technify')
         ->from('technifyinitiative@gmail.com','Technify')
         ->cc($cc_email);
-        if ($resume_link != null && Storage::disk('s3')->exists($resume_link)) {
-            $message->attach(Storage::disk('s3')->url($resume_link), array(
+        if ($resume_link != null && Storage::disk()->exists($resume_link)) {
+            $message->attach(Storage::disk()->url($resume_link), array(
                 'as' => $resume_name,
                 'mime' => 'application/pdf'));
         }

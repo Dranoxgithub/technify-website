@@ -228,7 +228,7 @@
         
         <div class="col-md-6">
             <input id="upload" type="file" class="@error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" accept="image/*" required>
-            <img id="preview-cropped-image" src style="height:300px;" ></img>
+            <img id="preview-cropped-image" src style="height:300px;display: none;" ></img>
         </div>
         @error('image')
             <span class="invalid-feedback" role="alert">
@@ -252,7 +252,7 @@
                 <div class="img-container">
                     <div class="row">
                         <div class="col-md-8">
-                            <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
+                            <img id="image" src="">
                         </div>
                         <div class="col-md-4">
                             <div class="preview"></div>
@@ -359,7 +359,9 @@ $("document").ready(function(){
                     success: function(data){
                         console.log(data);
                         $modal.modal('hide');
-                        document.getElementById("preview-cropped-image").src = data.filePath;
+                        cropped_image = document.getElementById("preview-cropped-image").src;
+                        cropped_image = data.filePath;
+                        cropped_image.style.display = 'initial';
                     }
                 });
             }

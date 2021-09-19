@@ -158,6 +158,10 @@ class ProjectsController extends Controller
             $project->contact_name = request('contact_name');
             $project->contact_email = request('contact_email');
             $project->description = request('description');
+
+            if ($request->hasFile('image')) {
+                Storage::move('temp/'.Auth::user()->ngo->id, 'projects_image/'. $project->id);
+            }
             
         }
         $project->save();

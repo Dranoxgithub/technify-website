@@ -25,7 +25,7 @@ class ProjectsController extends Controller
     public function showAllAvailableProjects()
     {
         $available_projects = Project::all()->filter(function ($value, $key) {
-            return $value['status'] == 'recruiting';
+            return $value['status'] == 'recruiting' && $value['verified'];
         });
         return view('pages.available_projects', ['projects' => $available_projects]);
     }
@@ -34,16 +34,17 @@ class ProjectsController extends Controller
     public function showAllPastProjects()
     {
         $past_projects = Project::all()->filter(function ($value, $key) {
-            return $value['status'] == 'finished';
+            return $value['status'] == 'finished' && $value['verified'];
         });
         return view('pages.past_projects', ['projects' => $past_projects]);
     }
 
     public function showProjectListing()
     {
-        $projects = Project::all();
-        
-        return view('pages.project_listing', ['projects' => $projects]);
+        $verified_projects = Project::all()->filter(function ($value, $key) {
+            return $value['verified'];
+        });
+        return view('pages.project_listing', ['projects' => $verified_projects]);
     }
 
     public function store() {

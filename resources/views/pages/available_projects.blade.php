@@ -79,6 +79,27 @@
 
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"></script>
-<script src="/assets/js/search.js"></script>
+<script>
+	$(function() {
+    const element = document.querySelector('#shuffleEntryPoint');
+    const shuffle = new window.Shuffle(element, {
+            itemSelector: '.card',
+			isCentered: true,
+            filterMode: Shuffle.FilterMode.ANY,
+        });
+    document.getElementById('searchBox').addEventListener('keyup', handleSearchKeyup);
+
+    function handleSearchKeyup(evt) {
+        const searchText = evt.target.value.toLowerCase();
+        shuffle.filter(element => {
+            console.log('filtering...');
+            
+            const titleText = element.querySelector('.card-title').textContent.toLowerCase().trim();
+            return titleText.indexOf(searchText) !== -1;
+        });
+    }
+})
+</script>
+<!-- <script src="/assets/js/search.js"></script> -->
 @endsection
     

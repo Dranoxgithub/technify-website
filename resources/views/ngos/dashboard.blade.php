@@ -77,13 +77,11 @@
 										@foreach($projects as $project)
 										<div class="card-container col-md-6">
 											<div class="card dashboard-card p-0 shadow mb-5 col-12">
-												<a href="{{ $project->ngo->website }}" target="_blank">
-													@if (Storage::disk()->exists("projects_image/" . $project->id))
-													<img class="card-img-top" src="{{ Storage::url("projects_image/" . $project->id) }}" alt="">
-													@else
-													<img class="card-img-top" src="/images/cover1.png" alt="">
-													@endif
-												</a>
+												@if (Storage::disk()->exists("projects_image/" . $project->id))
+												<img class="card-img-top" src="{{ Storage::url("projects_image/" . $project->id) }}" alt="">
+												@else
+												<img class="card-img-top" src="/images/cover1.png" alt="">
+												@endif
 												<div class="card-body p-2 m-4">
 													<h5 class="card-title"><a href="projects/{{ $project->id }}" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
 													@if ($project->status == 'finished')

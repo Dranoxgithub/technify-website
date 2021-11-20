@@ -77,13 +77,34 @@ class ProjectsController extends Controller
 
         $ngo = Auth::user()->ngo;
         $ngo = $ngo->projects()->save($project);
+        $project_image_path = null;
 
         if (request('fileChange')) {
+            $project_image_path = 'projects_image/'. $project->id;
             if (Storage::exists('projects_image/'. $project->id)) {
                 Storage::delete('projects_image/'. $project->id);
             }
-            Storage::move('temp/'.Auth::user()->ngo->id, 'projects_image/'. $project->id);
+            Storage::move('temp/'.Auth::user()->ngo->id, $project_image_path);
         }
+
+        $to_name = "Technify";
+        $to_email = 'technifyinitiative@gmail.com';
+        $cc_email = Auth::user()->email;
+        
+        $data = array("ngo_name" => Auth::user()->name, "ngo_email" => Auth::user()->email,"project" => $project);
+        Mail::send("projects.project_email_template", $data, function($message) use ($to_name, $to_email, $project_image_path, $ngo, $cc_email) {
+            $message->to($to_email, $to_name)
+                ->subject('New Project from '. $ngo->name .' 🎉-Technify')
+                ->from('technifyinitiative@gmail.com','Technify')
+                ->cc($cc_email);
+            
+            if (request('fileChange')) {
+                $message->attach(Storage::disk()->url($project_image_path), array(
+                    'as' => 'logo.png',
+                    'mime' => 'image/png'));
+            }
+        });
+
         
         return redirect('/NGO');
     }

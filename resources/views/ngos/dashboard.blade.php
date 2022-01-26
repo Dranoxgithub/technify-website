@@ -87,6 +87,9 @@
 													@if ($project->status == 'finished')
 													<h6 class="card-subtitle mb-3 text-muted">Completed</h6>
 													@endif
+													@if (!$project->verified)
+													<h6 class="card-subtitle mb-3 text-muted">Unverified</h6>
+													@endif
 													<p class="card-text">
 														{{ $project->goal }}
 													</p>

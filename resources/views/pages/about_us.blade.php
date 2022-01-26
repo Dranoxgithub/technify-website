@@ -29,7 +29,7 @@
                     <img src="images/Khoo.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/qi-xuan-khoo-767239168/" target="blank" style="color: #26484A;">Qi Xuan Khoo</a></h4>
-                        <small class="text-muted">Co-Founder, Executive Director</small>
+                        <small class="text-muted">Co-Founder, Co-director</small>
                         <p>Karsh Scholar at Duke studying Economics and Computer Science. A part-time musician, full-time foodie, and a dreamer who aspires to inspire before he expires.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
@@ -47,7 +47,7 @@
                     <img src="images/Anni.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/anni-chen-02/" target="blank" style="color:#26484A">Anni Chen</a></h4>
-                        <small class="text-muted">Co-Founder, Executive Director</small>
+                        <small class="text-muted">Co-Founder, Co-director</small>
                         <p>Sophomore at Duke University majoring in Mathematics and Computer Science. Passionate about women in tech and tech for social good.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
@@ -59,6 +59,24 @@
                     </div>
                 </div>
             </div><!--end col-->
+
+            <div class="col-lg-3 col-md-6 col-12  pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="images/Shine.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/shinezwu/" target="blank" style="color:#26484A">Shine Wu</a></h4>
+                        <small class="text-muted">Co-director</small>
+                        <p>Robertson Scholar at Duke studying Economics and Data Science. Lover of the outdoors, climate and frontier tech investor, and avid basketball fan.</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div>
             
             <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
@@ -132,24 +150,6 @@
                 </div>
             </div><!--end col-->
 
-            <div class="col-lg-3 col-md-6 col-12  pt-2">
-                <div class="team text-center rounded p-3 py-4">
-                    <img src="images/Shine.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
-                    <div class="content mt-3">
-                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/shinezwu/" target="blank" style="color:#26484A">Shine Wu</a></h4>
-                        <small class="text-muted">Project Director</small>
-                        <p>Robertson Scholar at Duke studying Economics and Data Science. Lover of the outdoors, climate and frontier tech investor, and avid basketball fan.</p>
-                        <ul class="list-unstyled mt-3 social-icon social mb-0">
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
-                        </ul><!--end icon-->
-                    </div>
-                </div>
-            </div>
-
             <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
                     <img src="images/Rui.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
@@ -158,26 +158,6 @@
                         <small class="text-muted">Software Engineer</small>
                         <p>Sophomore at Duke majoring in Mathematics and Computer Science. Interested in how everything works. 
 </p>
-                        <ul class="list-unstyled mt-3 social-icon social mb-0">
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
-                        </ul><!--end icon-->
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-3 col-md-6 col-12 pt-2">
-                <div class="team text-center rounded p-3 py-4">
-                    <img src="images/Ignacio.png" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
-                    <div class="content mt-3">
-                        <h4 class="title mb-0">Ignacio Heeren</h4>
-                        <small class="text-muted">Student Outreach Lead</small>
-                        <p>
-                            Sophomore at Duke University majoring in Philosophy and Political Science. Passionate about the intersection between science and humanities.
-                        </p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
@@ -211,13 +191,67 @@
 
             <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
+                    <img src="images/Nancy.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/jonathan-griffin-b112bb195" target="blank" style="color:#26484A">Nancy Phan</a></h4>
+                        <small class="text-muted">Student Outreach</small>
+                        <p>Undergrad at Duke Kunshan University studying Computation and Design, with concentration in Urban Planning Social Policy. Passionate about sustainable development and urban transportation systems.</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+
+
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
+                <div class="team text-center rounded p-3 py-4">
                     <img src="images/Lily.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Lily Li</a></h4>
                         <small class="text-muted">Partner Outreach Lead</small>
                         <p>Undergraduate student at Duke University studying Statistics and Psychology. Passionate about data-driven impactful work that connects and empowers. 
-                            An enthusiast of musicals, nature, and FRIENDS! 
-</p>
+                            An enthusiast of musicals, nature, and FRIENDS! </p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="images/Harry.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Harry Liu</a></h4>
+                        <small class="text-muted">Product Management</small>
+                        <p>Undergraduate at Duke studying Computer Science and Economics. Interested in venture capital, entrepreneurship, photojournalism, and baking cheesecake.</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="images/Ruhan.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Ruhan Desai</a></h4>
+                        <small class="text-muted">Student Outreach</small>
+                        <p>Undergrad from Surat, india majoring in Political Science and Economics. Passionate about the intersections of Politics + Business  and Social Impact Investing.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

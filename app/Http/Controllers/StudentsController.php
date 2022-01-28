@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 use App\Student; 
-use App\Mail\StudentAppEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;

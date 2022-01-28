@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Student;
+use App\Student; 
+use App\Mail\StudentAppEmail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -263,19 +264,17 @@ class StudentsController extends Controller
             abort(404);
         }
         $to_name = "Technify";
-        $to_email = 'technifyinitiative@gmail.com';
+        $to_email = 'technify.studentoutreach@gmail.com';
         $cc_email = Auth::user()->email;
 
         $resume_name = Auth::user()->name.".pdf";
         $resume_link = $student->resume_url;
 
-        
-        
         $data = array("student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
         Mail::send("projects.temp_email_template", $data, function($message) use ($to_name, $to_email, $resume_link, $resume_name, $cc_email) {
         $message->to($to_email, $to_name)
         ->subject('New Application from '. Auth::user()->name .' 🎉-Technify')
-        ->from('technifyinitiative@gmail.com','Technify')
+        ->from('technify.studentoutreach@gmail.com','Technify')
         ->cc($cc_email);
         if ($resume_link != null && Storage::disk()->exists($resume_link)) {
             $message->attach(Storage::disk()->url($resume_link), array(

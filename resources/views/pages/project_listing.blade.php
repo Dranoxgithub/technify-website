@@ -45,7 +45,7 @@
 </Section>
 <div class="main-gallery js-flickity">
 	@foreach($projects as $project)
-	@if ($project->status == 'recruiting')
+	@if ($project->status != 'finished')
 	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
 		<a href="https://www.thelostfoodproject.org/" target="_blank">
 			@if (Storage::disk()->exists("projects_image/" . $project->id))
@@ -80,7 +80,7 @@
 </div>
 
 @foreach($projects as $project)
-@if ($project->status == 'recruiting')
+@if ($project->status != 'finished')
 <div class="modal fade" id="project{{ $project->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
 		<div class="modal-content">

@@ -7,14 +7,14 @@
         <div class="d-flex justify-content-between flex-md-nowrap flex-wrap">
             <a class="mb-2 btn btn-primary" href="/NGO">Return to Dashboard</a>
             <div class="justify-content-center justify-content-md-around">
-                <a href="#" onclick="document.querySelector('#toggle_completion-form').submit();" class="btn btn-primary">
-                    Mark as {{ $project->status == 'recruiting' ? 'Completed' : 'Recruiting' }}
+                <!-- <a href="#" onclick="document.querySelector('#toggle_completion-form').submit();" class="btn btn-primary">
+                    Mark as {{ $project->status == 'recruiting' ? 'Recruiting Ended' : 'Recruiting' }}
                 </a>
                 <form id="toggle_completion-form" method="POST" style="display: none;">
                     @method('PATCH')
                     @csrf
                     <input type="hidden" name="toggle_completion" value="true">
-                </form>
+                </form> -->
                 <a href="/projects/{{ $project->id }}/edit" class="btn btn-primary">
                     Edit
                 </a>
@@ -36,7 +36,14 @@
     <?php $ngo = $project->ngo ?>
     <h2 class="text-center">{{ $project->name }}</h2>
     <div class="d-flex justify-content-center align-items-center flex-wrap">
-        <button class="btn btn-primary btn-sm project-button">{{ $project->status == 'recruiting' ? 'Recruiting' : 'Completed' }}</button>
+        @if($project->status =='recruiting')   
+            <button class="btn btn-primary btn-sm project-button">Recruiting</button>      
+        @elseif($project->status =='recruited') 
+            <button class="btn btn-primary btn-sm project-button">Recruiting Ended</button>  
+        @else
+            <button class="btn btn-primary btn-sm project-button">Finished</button>  
+        @endif
+        
     </div>
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('NGO Full Name') }}</label>
@@ -138,8 +145,8 @@
             
         </div>
     </div>
-    
 
+    @if($project->status == 'recruiting')
     @guest
     <div class="form-group row justify-content-center my-2">
         <a class="col-md-4 col-10 btn btn-primary" href="/register">Apply</a>
@@ -156,6 +163,7 @@
             </form>
         @endif
     @endguest
+    @endif
     </div>
 </div>
 @endsection

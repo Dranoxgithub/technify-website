@@ -25,7 +25,7 @@ class ProjectsController extends Controller
     public function showAllAvailableProjects()
     {
         $available_projects = Project::all()->filter(function ($value, $key) {
-            return $value['status'] == 'recruiting' && $value['verified'];
+            return $value['status'] != 'finished' && $value['verified'];
         });
         return view('pages.available_projects', ['projects' => $available_projects]);
     }
@@ -136,7 +136,7 @@ class ProjectsController extends Controller
             return redirect('/NGO');
         }
         if (request('toggle_completion')) {
-            $project->status = $project->status == 'recruiting' ? 'finished' : 'recruiting';
+            $project->status = $project->status == 'recruiting' ? 'recruited' : 'recruiting';
 
         } else {
             $project->name = request('name');

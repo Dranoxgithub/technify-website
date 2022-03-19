@@ -53,6 +53,7 @@
         </div>
     </div>
 
+    @if($project->status !='finished')
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('NGO Website') }}</label>
 
@@ -60,6 +61,7 @@
             <label class="col-form-label form-max-width">{{ $ngo->website }}</label>
         </div>
     </div>
+    @endif
 
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Causes') }}</label>
@@ -84,7 +86,8 @@
             <label class="col-form-label form-max-width">{{ $project->goal }}</label>
         </div>
     </div>
-    <div class="form-group row">
+
+    <!-- <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Project Start Date') }}</label>
 
         <div class="col-md-6">
@@ -97,7 +100,8 @@
         <div class="col-md-6">
             <label class="col-form-label form-max-width">{{ date('d M, Y', strtotime($project->end_date)) }}</label>
         </div>
-    </div>
+    </div> -->
+
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Country') }}</label>
 
@@ -105,6 +109,8 @@
             <label class="col-form-label form-max-width">{{ $project->country }}</label>
         </div>
     </div>
+    
+    @if($project->status !='finished')  
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Timezone') }}</label>
 
@@ -112,6 +118,8 @@
             <label class="col-form-label form-max-width">{{ $project->timezone }}</label>
         </div>
     </div>
+    @endif
+
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
 
@@ -119,6 +127,8 @@
             <label class="col-form-label form-max-width">{{ $project->description }}</label>
         </div>
     </div>
+
+    @if($project->status !='finished')
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Skills Preferred') }}</label>
 
@@ -126,6 +136,9 @@
             <label class="col-form-label form-max-width">{{ $project->skill }}</label>
         </div>
     </div>
+    @endif
+
+    @if($project->status !='finished')
     <div class="form-group row">
         <label class="col-md-4 col-form-label text-md-right">{{ __('Roles Needed') }}</label>
 
@@ -145,6 +158,23 @@
             
         </div>
     </div>
+    @endif
+
+    @if($project->status =='finished')
+    <div class="form-group row">
+        <label class="col-md-4 col-form-label text-md-right">{{ __('The Team') }}</label>
+
+        <div class="col-md-6">
+            <label class="col-form-label form-max-width">{{ $project->team }}</label>
+        </div>
+    </div>
+    @endif
+
+    @if($project->status =='finished')
+    <div class="form-group row justify-content-center my-2">
+        <a class="col-md-4 col-10 btn btn-primary" href="{{$project->url}}">See more details</a>
+    </div>
+    @endif
 
     @if($project->status == 'recruiting')
     @guest

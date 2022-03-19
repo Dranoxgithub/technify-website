@@ -61,7 +61,7 @@
         </div>
     </div>
 
-    <div class="form-group row">
+    <!-- <div class="form-group row">
         <label for="start_date" class="col-md-4 col-form-label text-md-right">{{ __('Project Start Date') }}</label>
 
         <div class="col-md-6">
@@ -87,7 +87,7 @@
                 </span>
             @enderror
         </div>
-    </div>
+    </div> -->
 
 
     <div class="form-group row">
@@ -268,7 +268,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="form-group row">
         <label for="contact_email" class="col-md-4 col-form-label text-md-right"></label>
 

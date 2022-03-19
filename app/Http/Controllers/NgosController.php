@@ -25,7 +25,7 @@ class NgosController extends Controller
             }
         })->except(['store', 'show']);
     }
-    public function store() 
+    public function store(Request $request) 
     {   
         
         $ngo = new Ngo();
@@ -33,6 +33,14 @@ class NgosController extends Controller
         $ngo->name = request('name');
         $ngo->website = request('website');
         $ngo->cause = request('cause');
+
+        $proof = $request->file('proof');
+
+        if ($proof != null) {
+            $path = $proof->store('proofs/'.$ngo->user_id);
+            $ngo->proof = $path;
+        }
+
         $ngo->save();
         
         return redirect()->back();

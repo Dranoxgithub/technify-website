@@ -5,7 +5,7 @@
 @if (Auth::check())
 <div class="wrapper container my-4">
     <h2 class="text-center">Complete NGO Profile</h2>
-			<form method="POST" action="/NGO">
+			<form method="POST" action="/NGO" enctype="multipart/form-data">
 
 			@csrf
 			<div class="form-group row">
@@ -83,6 +83,19 @@
 						</span>
 					@enderror
 				</div>
+			</div>
+			
+			<div class="form-group row">
+				<label for="proof" class="col-md-4 col-form-label text-md-right">{{ __('Proof of NGO Status') }}</label>
+
+				<div class="col-md-6">
+					<input id="proof" type="file" class="@error('proof') is-invalid @enderror" name="proof" value="{{ old('proof') }}" accept=".pdf" autocomplete="proof" autofocus>
+				</div>
+				@error('proof')
+					<span class="invalid-feedback" role="alert">
+						<strong>{{ $message }}</strong>
+					</span>
+				@enderror
 			</div>
 
 			<div class="form-group row mb-0">

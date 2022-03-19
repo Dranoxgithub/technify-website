@@ -51,7 +51,7 @@
         <label for="goal" class="col-md-4 col-form-label text-md-right">{{ __('Project Goal') }}</label>
 
         <div class="col-md-6">
-            <input id="goal" type="text" class="form-control @error('goal') is-invalid @enderror" name="goal" value="{{ old('goal') }}" required autocomplete="goal" autofocus>
+            <input id="goal" type="text" class="form-control @error('goal') is-invalid @enderror" name="goal" value="{{ old('goal') }}" placeholder="In 1 sentence please ;)" required autocomplete="goal" autofocus>
 
             @error('goal')
                 <span class="invalid-feedback" role="alert">
@@ -161,7 +161,7 @@
         <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Project Description') }}</label>
 
         <div class="col-md-6">
-            <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" required autocomplete="description" autofocus>{{ old('description') }}</textarea>
+            <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" placeholder="In 2 - 3 sentences please ;)" required autocomplete="description" autofocus>{{ old('description') }}</textarea>
 
             @error('description')
                 <span class="invalid-feedback" role="alert">

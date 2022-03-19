@@ -263,6 +263,15 @@
         </div>
     </div>
     
+    <div class="form-group row">
+        <label for="contact_email" class="col-md-4 col-form-label text-md-right"></label>
+
+        <div class="col-md-6">
+            <input type="checkbox" checked disabled>
+            <label for=""> I consent to Technify’s use of the materials above for marketing purposes.</label><br>
+
+        </div>
+    </div>
     
     <div class="form-group row justify-content-center justify-content-md-around">
             <a href="/projects/{{ $project->id }}" class="col-md-4 col-10 mb-2 btn btn-light">

@@ -47,7 +47,7 @@
 	@foreach($projects as $project)
 	@if ($project->status != 'finished')
 	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-		<a href="https://www.thelostfoodproject.org/" target="_blank">
+		<a href="{{ $project->Ngo->website }}" target="_blank">
 			@if (Storage::disk()->exists("projects_image/" . $project->id))
 			<img class="card-img-top" src="{{ Storage::url("projects_image/" . $project->id) }}" alt="">
 			@else
@@ -55,7 +55,7 @@
 			@endif
 		</a>
 		<div class="card-body p-2 m-4">
-			<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
+			<h5 class="card-title"><a href="{{ $project->Ngo->website }}" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
 			<p class="card-text">
 				{{ $project->goal }}
 			</p>
@@ -144,7 +144,7 @@
 	@foreach($projects as $project)
 	@if ($project->status == 'finished')
 	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-		<a href="https://www.thelostfoodproject.org/" target="_blank">
+		<a href="{{ $project->Ngo->website }}" target="_blank">
 			@if (Storage::disk()->exists("projects_image/" . $project->id))
 			<img class="card-img-top" src="{{ Storage::url("projects_image/" . $project->id) }}" alt="">
 			@else
@@ -152,7 +152,7 @@
 			@endif
 		</a>
 		<div class="card-body p-2 m-4">
-			<h5 class="card-title"><a href="https://www.thelostfoodproject.org/" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
+			<h5 class="card-title"><a href="{{ $project->Ngo->website }}" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
 			<p class="card-text">
 				{{ $project->goal }}
 			</p>

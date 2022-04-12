@@ -57,10 +57,11 @@ Route::post('/student', 'StudentsController@store');
 Route::patch('/student', 'StudentsController@update');
 Route::get('/getResume', 'StudentsController@getResume');
 Route::get('/student', 'StudentsController@show');
+Route::get('/student/select_project', 'StudentsController@showProjectSelection');
 
 
 Route::post('/projects/{id}','ProjectsController@apply')->name('projects.apply');
-Route::get('/temp_apply','StudentsController@temp_apply')->name('projects.temp_apply');
+Route::post('/temp_apply','StudentsController@temp_apply')->name('projects.temp_apply');
 
 Route::get('/search',['uses' => 'ProjectsController@search','as' => 'search']);
 

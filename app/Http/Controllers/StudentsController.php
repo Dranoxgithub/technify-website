@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Student; 
+use App\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -102,8 +103,16 @@ class StudentsController extends Controller
         } else {
             return view('students.show_profile', ['student' => $student]);
         }
-
     }
+
+    public function showProjectSelection()
+    {
+        $verified_projects = Project::all()->filter(function ($value, $key) {
+            return $value['verified'] && $value->status != 'finished';
+        });
+        return view('students.select_project', ['projects' => $verified_projects]);
+    }
+
     public function edit()
     {
         $student = Auth::user()->student;
@@ -257,7 +266,7 @@ class StudentsController extends Controller
         return $timezone_list;
     }
     
-    public function temp_apply() {
+    public function temp_apply(Request $request) {
         $student = Auth::user()->student;
         if ($student == null) {
             abort(404);
@@ -269,7 +278,11 @@ class StudentsController extends Controller
         $resume_name = Auth::user()->name.".pdf";
         $resume_link = $student->resume_url;
 
-        $data = array("student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student);
+        $data = array("student_name" => Auth::user()->name, "student_email" => Auth::user()->email,"student" => $student,"comments"=>request("comments"),
+            "choice_1"=>request("project-choice-1"),
+            "choice_2"=>request("project-choice-2"),
+            "choice_3"=>request("project-choice-3"),
+        );
         Mail::send("projects.temp_email_template", $data, function($message) use ($to_name, $to_email, $resume_link, $resume_name, $cc_email) {
         $message->to($to_email, $to_name)
         ->subject('New Application from '. Auth::user()->name .' 🎉-Technify')

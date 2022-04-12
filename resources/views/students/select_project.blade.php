@@ -50,7 +50,7 @@
         
         <div class="form-group row justify-content-center justify-content-md-around">
             
-            <a href="/student" class="col-md-4 col-10 mb-2 btn btn-light">
+            <a href="/student" class="col-md-4 col-10 mb-2 btn btn-edit d-flex justify-content-center align-items-center">
                 {{ __('Back') }}
             </a>
             <button type="submit" class="col-md-4 col-10 mb-2 btn btn-primary d-flex justify-content-center align-items-center">

@@ -102,8 +102,10 @@
                     {{ __('Edit info') }}
                 </div>
             </a>
-            <a href="/student/select_project" class="col-md-4 col-10 mb-2 btn btn-primary">
-                {{ __('Select your preferred projects') }}
+            <a href="{{ route('projects.temp_apply') }}" class="col-md-4 col-10 mb-2 btn btn-primary">
+                {{ __('Submit your profile for application') }}
+            <!-- <a href="/student/select_project" class="col-md-4 col-10 mb-2 btn btn-primary">
+                {{ __('Select your preferred projects') }} -->
             </a>
         <!-- </div> -->
     </div>

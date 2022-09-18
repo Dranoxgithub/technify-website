@@ -13,157 +13,97 @@
 </section>
 
 
-<!-- <form action="/search" method="POST" role="search" class="">
-@csrf
-@method('GET')
-<div class="container">
-  <div class="row">
-  	<div class="col-lg-7 col-md-4 col-sm-1 col-xs-1">		
-	</div>
-    <div class="col-lg-3 col-md-4 col-sm-7 col-xs-7">		
-		<input class="" type="text" placeholder="Search" aria-label="Search" name="q">	
-	</div>
-    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2">
-		<button type="submit" class="button special" id="search-button">
-			Search
-		</button>
-		
-	</div>
-	<div class="col-lg-1 col-md-2 col-sm-1 col-xs-2">
-		<a href="/project_listing" class="button alt" id="cancel-button">
-			Cancel
-		</a>
-	</div>
-  </div>
-  
-</div>
-</form> -->
-
-<Section class="d-flex mx-4">
-	<h3>Available Projects</h3>
-	<!-- <a class="ml-auto pr-4 see-all" href="/available_projects">See all</a> -->
-</Section>
-<div class="main-gallery js-flickity">
-	@foreach($projects as $project)
-	@if ($project->status != 'finished')
-	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-		<a href="{{ $project->Ngo->website }}" target="_blank">
-			@if (Storage::disk()->exists("projects_image/" . $project->id))
-			<img class="card-img-top" src="{{ Storage::url("projects_image/" . $project->id) }}" alt="">
-			@else
-			<img class="card-img-top" src="/images/cover1.png" alt="">
-			@endif
-		</a>
-		<div class="card-body p-2 m-4">
-			<h5 class="card-title"><a href="{{ $project->Ngo->website }}" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
-			<p class="card-text">
-				{{ $project->goal }}
-			</p>
-			<div class="d-flex justify-content-between align-items-center flex-wrap">
-				<span style="margin-left: -0.45rem;" class="btns-talent">
-					@if ($project->swe_needed)
-					<button class="btn btn-sm project-button btn-swe">Software Engineer</button>
-					@endif
-					@if ($project->pm_needed)
-					<button class="btn btn-sm project-button btn-pm">Project Manager</button>
-					@endif
-					@if ($project->d_needed)
-					<button class="btn btn-sm project-button btn-d">Designer</button>
-					@endif
-				</span>
+<div class="container bootdey">
+	<div class="row">
+		<div class="col-12">
+			<div class="section-title mb-4 pb-2">
+				<h2 class="title mb-4">Ongoing Projects</h2>
 			</div>
-			<a class="text-right project-button float-right see-details mt-2" href="/projects/{{ $project->id }}" data-toggle="modal" data-target="#project{{ $project->id }}">See Details -></a>
 		</div>
 	</div>
-	@endif
-	@endforeach
-</div>
 
-@foreach($projects as $project)
-@if ($project->status != 'finished')
-<div class="modal fade" id="project{{ $project->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
-		<div class="modal-content">
-			<div class="modal-header">
-				<div class="mx-2">
-					<h5 class="modal-title" id="exampleModalLabel">{{ $project->name }}</h5>
-					<span style="margin-left: -0.45rem;">
-						@if ($project->swe_needed)
-						<button class="btn btn-primary btn-sm project-button btn-swe">Software Engineer</button>
-						@endif
-						@if ($project->pm_needed)
-						<button class="btn btn-primary btn-sm project-button btn-pm">Project Manager</button>
-						@endif
-						@if ($project->d_needed)
-						<button class="btn btn-primary btn-sm project-button btn-d">Designer</button>
-						@endif
-					</span>
-				</div>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="container-fluid">
-					<div class="row">
-						<span class="col-4">NGO</span>
-						<span class="col-8">{{ $project->Ngo->name }}, {{ $project->country }}</span>
+	<div class="row">
+		@foreach($projects as $project)
+		@if ($project->status != 'finished')
+
+		<div class="col-lg-4 col-md-6 col-12  pt-2">
+			<div class="team text-center p-3 py-4">
+				<a href="{{ $project->Ngo->website }}" target="_blank">
+					@if (Storage::disk()->exists("projects_image/" . $project->id))
+					<img class="img-fluid avatar avatar-medium shadow profile-pic rounded" src="{{ Storage::url("projects_image/" . $project->id) }}" alt="">
+					@else
+					<img class="img-fluid avatar avatar-medium shadow profile-pic rounded" src="/images/cover1.png" alt="">
+					@endif
+				</a>
+				<!-- <img src="images/Khoo.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt=""> -->
+				<div class="content mt-3">
+					<h4 class="title mb-0"><a href="{{ $project->Ngo->website }}" target="blank" style="color: #26484A;">{{ $project->name }}</a></h4>
+					<small class="text-muted">{{ $project->ngo->name }}</small>
+					<p>{{ $project->goal }}</p>
+					<div class="d-flex justify-content-between align-items-center flex-wrap">
+						<span style="margin-left: -0.45rem;" class="btns-talent">
+							@if ($project->swe_needed)
+							<button class="btn btn-sm project-button btn-swe">Software Engineer</button>
+							@endif
+							@if ($project->pm_needed)
+							<button class="btn btn-sm project-button btn-pm">Project Manager</button>
+							@endif
+							@if ($project->d_needed)
+							<button class="btn btn-sm project-button btn-d">Designer</button>
+							@endif
+						</span>
 					</div>
-					<div class="row">
-						<span class="col-4">Duration</span>
-						<span class="col-8">{{ (new DateTime($project->start_date))->format('Y/m/d') }} - {{ (new DateTime($project->end_date))->format('Y/m/d') }}</span>
-					</div>
-					<div class="row">
-						<span class="col-4">Skills</span>
-						<span class="col-8">{{ $project->skill }}</span>
-					</div>
-					<div class="row">
-						<span class="col-4">Goal</span>
-						<span class="col-8">{{ $project->goal }}</span>
-					</div>
-					<div class="row">
-						<span class="col-4">Description</span>
-						<span class="col-8">{{ $project->description }}</span>
-					</div>
+					<!--end icon-->
 				</div>
 			</div>
 		</div>
+
+		@endif
+		@endforeach
+		<!--end col-->
 	</div>
 </div>
-@endif
-@endforeach
+</div>
 
 
-
-
-<Section class="d-flex mx-4">
-	<h3>Past Works</h3>
-	<!-- <a class="ml-auto pr-4 see-all" href="/past_projects">See all</a> -->
-</Section>
-<div class="main-gallery js-flickity">
-	@foreach($projects as $project)
-	@if ($project->status == 'finished')
-	<div class="card p-0 shadow mb-sm-5 mx-sm-4 m-2 col-lg-4 col-md-5 gallery-cell">
-		<a href="{{ $project->Ngo->website }}" target="_blank">
-			@if (Storage::disk()->exists("projects_image/" . $project->id))
-			<img class="card-img-top" src="{{ Storage::url("projects_image/" . $project->id) }}" alt="">
-			@else
-			<img class="card-img-top" src="/images/cover1.png" alt="">
-			@endif
-		</a>
-		<div class="card-body p-2 m-4">
-			<h5 class="card-title"><a href="{{ $project->Ngo->website }}" target="_blank" style="color:#26484A;">{{ $project->name }}</a></h5>
-			<p class="card-text">
-				{{ $project->goal }}
-			</p>
-			<div>
-				<a class="text-right project-button float-right see-details" href="/projects/{{ $project->id }}">See Details -></a>
+<div class="container bootdey">
+	<div class="row">
+		<div class="col-12">
+			<div class="section-title mb-4 pb-2">
+				<h2 class="title mb-4">Other Project Highlights</h2>
 			</div>
 		</div>
 	</div>
-	@endif
-	@endforeach
+
+	<div class="row">
+		@foreach($projects as $project)
+		@if ($project->status == 'finished')
+		<div class="col-lg-4 col-md-6 col-12  pt-2">
+			<div class="team text-center p-3 py-4">
+				<a href="{{ $project->Ngo->website }}" target="_blank">
+					@if (Storage::disk()->exists("projects_image/" . $project->id))
+					<img class="img-fluid avatar avatar-medium shadow profile-pic rounded" src="{{ Storage::url("projects_image/" . $project->id) }}" alt="">
+					@else
+					<img class="img-fluid avatar avatar-medium shadow profile-pic rounded" src="/images/cover1.png" alt="">
+					@endif
+				</a>
+				<!-- <img src="images/Khoo.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt=""> -->
+				<div class="content mt-3">
+					<h4 class="title mb-0"><a href="{{ $project->Ngo->website }}" target="blank" style="color: #26484A;">{{ $project->name }}</a></h4>
+					<small class="text-muted">{{ $project->ngo->name }}</small>
+					<p>{{ $project->goal }}</p>
+					<!--end icon-->
+				</div>
+			</div>
+		</div>
+
+		@endif
+		@endforeach
+		<!--end col-->
+	</div>
 </div>
+</div>
+
 
 @endsection
 
@@ -211,7 +151,7 @@
 	.gallery-cell.is-selected {
 		opacity: 100%;
 	}
-	
+
 
 
 

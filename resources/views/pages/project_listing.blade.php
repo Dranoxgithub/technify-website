@@ -16,8 +16,8 @@
 <div class="container bootdey">
 	<div class="row">
 		<div class="col-12">
-			<div class="section-title mb-4 pb-2">
-				<h2 class="title mb-4">Ongoing Projects</h2>
+			<div class="section-title mt-4">
+				<h2 class="title">Ongoing Projects</h2>
 			</div>
 		</div>
 	</div>
@@ -69,8 +69,8 @@
 <div class="container bootdey">
 	<div class="row">
 		<div class="col-12">
-			<div class="section-title mb-4 pb-2">
-				<h2 class="title mb-4">Other Project Highlights</h2>
+			<div class="section-title mt-4">
+				<h2 class="title">Other Project Highlights</h2>
 			</div>
 		</div>
 	</div>

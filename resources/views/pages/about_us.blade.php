@@ -80,25 +80,6 @@
 
             <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="images/Rui.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
-                    <div class="content mt-3">
-                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/rui-xin-8070181b9/" target="blank" style="color:#26484A">Rui Xin</a></h4>
-                        <small class="text-muted">Tech Lead</small>
-                        <p>Senior at Duke majoring in Mathematics and Computer Science. Interested in how everything works. 
-</p>
-                        <ul class="list-unstyled mt-3 social-icon social mb-0">
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
-                        </ul><!--end icon-->
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-3 col-md-6 col-12 pt-2">
-                <div class="team text-center rounded p-3 py-4">
                     <img src="images/Lily.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Lily Li</a></h4>
@@ -124,6 +105,25 @@
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/jonathan-griffin-b112bb195" target="blank" style="color:#26484A">Rebecca Wolf</a></h4>
                         <small class="text-muted">Student Outreach / Marketing Lead</small>
                         <p>Sophomore at Duke University</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div><!--end col-->
+
+            <div class="col-lg-3 col-md-6 col-12 pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="images/Rui.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/rui-xin-8070181b9/" target="blank" style="color:#26484A">Rui Xin</a></h4>
+                        <small class="text-muted">Tech Lead</small>
+                        <p>Senior at Duke majoring in Mathematics and Computer Science. Interested in how everything works. 
+</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

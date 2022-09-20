@@ -119,7 +119,7 @@
 
             <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="images/Nancy.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <img src="" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/jonathan-griffin-b112bb195" target="blank" style="color:#26484A">Rebecca Wolf</a></h4>
                         <small class="text-muted">Student Outreach / Marketing Lead</small>
@@ -173,7 +173,7 @@
 
             <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="images/Jaden.JPG" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <img src="" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/jonathan-griffin-b112bb195" target="blank" style="color:#26484A">Samuel Wong</a></h4>
                         <small class="text-muted">Student Outreach / Marketing</small>
@@ -191,29 +191,11 @@
 
             <div class="col-lg-3 col-md-6 col-12 pt-2">
                 <div class="team text-center rounded p-3 py-4">
-                    <img src="images/Nancy.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
-                    <div class="content mt-3">
-                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/jonathan-griffin-b112bb195" target="blank" style="color:#26484A">Nancy Phan</a></h4>
-                        <small class="text-muted">Student Outreach</small>
-                        <p>Undergrad at Duke Kunshan University studying Computation and Design, with concentration in Urban Planning Social Policy. Passionate about sustainable development and urban transportation systems.</p>
-                        <ul class="list-unstyled mt-3 social-icon social mb-0">
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
-                        </ul><!--end icon-->
-                    </div>
-                </div>
-            </div><!--end col-->
-
-            <div class="col-lg-3 col-md-6 col-12 pt-2">
-                <div class="team text-center rounded p-3 py-4">
                     <img src="images/Ada.JPG" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Ada Ye</a></h4>
                         <small class="text-muted">Product Management</small>
-                        <p>Senior majoring in Computer Science with a concentration in AI & Machine Learning alongside minors in Environmental Science & Policy and Mathematics. Interested in building innovative products that bring positive impacts to users and was a Product Manager Intern at Microsoft this summer. Also passionate about energy and previously business analytics at National Grid Renewables. Likes cooking, reading, hiking and birdwatching.</p>
+                        <p>Senior majoring in Computer Science with a concentration in AI & Machine Learning alongside minors in Environmental Science & Policy and Mathematics. Interested in energy and building innovative products that bring positive impacts to users. Previously a Product Manager Intern at Microsoft and business analytics at National Grid Renewables. Likes cooking, reading, hiking and birdwatching.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

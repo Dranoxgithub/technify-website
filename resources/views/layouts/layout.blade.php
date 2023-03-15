@@ -39,9 +39,9 @@
 
 			<div class="collapse navbar-collapse float-right" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a class="nav-link" href="/project_listing">Projects</a>
-					</li>
+					</li> -->
 					<li class="nav-item">
 						<a class="nav-link" href="/about_us">Our Team</a>
 					</li>

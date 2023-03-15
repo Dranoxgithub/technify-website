@@ -74,7 +74,7 @@
     <div class="row justify-content-center">
         <div class="col-sm-9 m-3 d-flex">
             <h2 class="">Featured Projects</h2>
-            <a class="ml-auto pr-4" href="/project_listing">See all</a>
+            <!-- <a class="ml-auto pr-4" href="/project_listing">See all</a> -->
         </div>
         
         <div class="d-flex flex-row flex-md-nowrap flex-wrap justify-content-center p-2">

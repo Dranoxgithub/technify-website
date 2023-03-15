@@ -39,7 +39,7 @@ Route::post('/projects/create', [
 ]);
 Route::get('/available_projects','ProjectsController@showAllAvailableProjects')->name('projects.showAllAvailableProjects');
 Route::get('/past_projects','ProjectsController@showAllPastProjects')->name('projects.showAllPastProjects');
-Route::get('/project_listing','ProjectsController@showProjectListing')->name('projects.showAllProjects');
+// Route::get('/project_listing','ProjectsController@showProjectListing')->name('projects.showAllProjects');
 Route::get('/projects/{id}','ProjectsController@show')->name('projects.show');
 Route::delete('/projects/{id}','ProjectsController@destroy')->name('projects.destroy');
 Route::get('/projects/{id}/edit','ProjectsController@edit')->name('projects.edit');

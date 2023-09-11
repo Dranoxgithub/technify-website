@@ -18,7 +18,7 @@
             <div class="team text-center rounded p-3 py-4">
                 <img src="images/Ejay.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
-                    <h4 class="title mb-0"><a href="https://www.linkedin.com/in/qi-xuan-khoo-767239168/" target="blank" style="color: #26484A;">Ejay Lin</a></h4>
+                    <h4 class="title mb-0"><a href="https://www.linkedin.com/in/ejay-lin/" target="blank" style="color: #26484A;">Ejay Lin</a></h4>
                     <small class="text-muted">Executive Director</small>
                     <p>Karsh Scholar at Duke studying Economics and Computer Science. A part-time musician, full-time foodie, and a dreamer who aspires to inspire before he expires.</p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
@@ -34,9 +34,9 @@
 
         <div class="col-lg-3 col-md-6 col-12  pt-2">
             <div class="team text-center rounded p-3 py-4">
-                <img src="images/Lily.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                <img src="images/Hannah.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
-                    <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Hannah Lawry</a></h4>
+                    <h4 class="title mb-0"><a href="https://www.linkedin.com/in/hannah-lawry-379782219/" target="blank" style="color:#26484A">Hannah Lawry</a></h4>
                     <small class="text-muted">Director of Product</small>
                     <p>Undergraduate student at Duke studying Computer Science, with a minor in Economics, and a certificate in Decision Sciences. Excited about the impact of tech and data on every industry. Loves to run and travel.</p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">

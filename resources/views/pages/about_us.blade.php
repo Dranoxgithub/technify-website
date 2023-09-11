@@ -81,10 +81,28 @@
 
             <div class="col-lg-3 col-md-6 col-12  pt-2">
                 <div class="team text-center rounded p-3 py-4">
+                    <img src="images/Khoo.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/qixuan-khoo/" target="blank" style="color:#26484A">Qi Xuan Khoo</a></h4>
+                        <small class="text-muted">Alumnus (Co-Founder, Co-Director)</small>
+                        <p>Karsh Scholar at Duke. A part-time musician, full-time foodie, and a dreamer who aspires to inspire before he expires.</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12  pt-2">
+                <div class="team text-center rounded p-3 py-4">
                     <img src="images/Shine.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/shinezwu/" target="blank" style="color:#26484A">Shine Wu</a></h4>
-                        <small class="text-muted">Co-director</small>
+                        <small class="text-muted">Alumnus (Co-Founder, Co-Director)</small>
                         <p>Robertson Scholar. Lover of the outdoors, climate and frontier tech investor, and avid basketball fan.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
@@ -102,7 +120,7 @@
                     <img src="images/Anni.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/anni-chen-02/" target="blank" style="color:#26484A">Anni Chen</a></h4>
-                        <small class="text-muted">Alumna (Co-founder)</small>
+                        <small class="text-muted">Alumnus (Co-founder)</small>
                         <p>Passionate about women in tech and tech for social good.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
@@ -138,9 +156,8 @@
                     <img src="images/Rui.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/rui-xin-8070181b9/" target="blank" style="color:#26484A">Rui Xin</a></h4>
-                        <small class="text-muted">Tech Lead</small>
-                        <p>Senior at Duke majoring in Mathematics and Computer Science. Interested in how everything works. 
-</p>
+                        <small class="text-muted">Alumnus (Tech Lead)</small>
+                        <p>Interested in how everything works.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

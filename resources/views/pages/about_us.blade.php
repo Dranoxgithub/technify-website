@@ -32,7 +32,7 @@
             </div>
         </div><!--end col-->
 
-        <div class="col-lg-3 col-md-6 col-12 pt-2">
+        <div class="col-lg-3 col-md-6 col-12  pt-2">
             <div class="team text-center rounded p-3 py-4">
                 <img src="images/HannahLawry.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">

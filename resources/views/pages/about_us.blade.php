@@ -34,7 +34,7 @@
 
         <div class="col-lg-3 col-md-6 col-12  pt-2">
             <div class="team text-center rounded p-3 py-4">
-                <img src="images/HannahLawry.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                <img src="images/Lily.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Hannah Lawry</a></h4>
                     <small class="text-muted">Director of Product</small>

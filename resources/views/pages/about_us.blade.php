@@ -36,7 +36,7 @@
             <div class="team text-center rounded p-3 py-4">
                 <img src="images/HannahLawry.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
-                    <h4 class="title mb-0"><a href="https://www.linkedin.com/in/hannah-lawry-379782219/" target="blank" style="color:#26484A">Hannah Lawry</a></h4>
+                    <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Hannah Lawry</a></h4>
                     <small class="text-muted">Director of Product</small>
                     <p>Undergraduate student at Duke studying Computer Science, with a minor in Economics, and a certificate in Decision Sciences. 
                         Excited about the impact of tech and data on every industry. Loves to run and travel.</p>

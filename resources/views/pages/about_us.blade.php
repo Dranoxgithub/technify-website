@@ -6,7 +6,7 @@
 <section class="container-fluid my-4">
     <div id="banner" class="row p-4 justify-content-center">
         <div class="content d-flex flex-column justify-content-center text-center">
-            <h1>Meet our team</h1>
+            <h1>Meet our Executive Team</h1>
             <h5>We are a group of students believing in tech for social good.</h5>
         </div>
     </div>
@@ -111,7 +111,7 @@
 <section class="container-fluid my-4">
     <div id="banner" class="row p-4 justify-content-center">
         <div class="content d-flex flex-column justify-content-center text-center">
-            <h1>Our Founder and Alumus</h1>
+            <h1>Our Founder and Alumni</h1>
             <h5>Meet the people who started it all.</h5>
         </div>
     </div>

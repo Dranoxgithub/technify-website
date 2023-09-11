@@ -74,7 +74,7 @@
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/aayushikpatel/" target="blank" style="color:#26484A">Aayushi Patel</a></h4>
                     <small class="text-muted">Director of Partner Outreach</small>
-                    <p></p>
+                    <p>Junior at Duke studying Computer Science and Literature. Passionate about impact entrepreneurship, especially in the healthcare and climate space. Loves to meditate, be outdoors, and discover new genres of music.</p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

@@ -16,7 +16,7 @@
     <div class="row">
         <div class="col-lg-3 col-md-6 col-12  pt-2">
             <div class="team text-center rounded p-3 py-4">
-                <img src="images/Ejay.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                <img src="images/Ejay.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/ejay-lin/" target="blank" style="color: #26484A;">Ejay Lin</a></h4>
                     <small class="text-muted">Executive Director</small>

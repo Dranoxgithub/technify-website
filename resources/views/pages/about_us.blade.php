@@ -146,7 +146,11 @@
 <section class="container-fluid my-4">
     <div id="banner" class="row p-4 justify-content-center">
         <div class="content d-flex flex-column justify-content-center text-center">
+<<<<<<< HEAD
             <h1>Our Founders and Alumni</h1>
+=======
+            <h1>Our Founder and Alumni</h1>
+>>>>>>> ec5c083 (row edit)
             <h5>Meet the people who started it all.</h5>
         </div>
     </div>
@@ -192,6 +196,7 @@
 
         <div class="col-lg-3 col-md-6 col-12 pt-2">
             <div class="team text-center rounded p-3 py-4">
+<<<<<<< HEAD
                 <img src="images/Whitney.png" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/whitney-elson/" target="blank" style="color:#26484A">Whitney Elson</a></h4>
@@ -229,6 +234,8 @@
 
         <div class="col-lg-3 col-md-6 col-12 pt-2">
             <div class="team text-center rounded p-3 py-4">
+=======
+>>>>>>> ec5c083 (row edit)
                 <img src="images/Anni.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/anni-chen-02/" target="blank" style="color:#26484A">Anni Chen</a></h4>

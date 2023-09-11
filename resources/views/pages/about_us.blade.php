@@ -81,11 +81,48 @@
 
             <div class="col-lg-3 col-md-6 col-12  pt-2">
                 <div class="team text-center rounded p-3 py-4">
+                    <img src="images/Jason.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/jyang295/" target="blank" style="color:#26484A">Jason Yang</a></h4>
+                        <small class="text-muted">Co-Director of Technology</small>
+                        <p>Senior at Duke studying Computer Science and Statistics. Passionate about the intersection between technology and equity.</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12  pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                    <img src="images/JohnYoo.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                    <div class="content mt-3">
+                        <h4 class="title mb-0"><a href="https://www.linkedin.com/in/john-yoo-6a974023b/" target="blank" style="color:#26484A">John Yoo</a></h4>
+                        <small class="text-muted">Co-Director of Technology</small>
+                        <p>Undergraduate at Duke University studying ECE/CS with a concentration in AI/ML. Passionate about machine/deep learning, web development, 
+                            and biotechnology that innovates life-changing technologies.</p>
+                        <ul class="list-unstyled mt-3 social-icon social mb-0">
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                            <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                        </ul><!--end icon-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12  pt-2">
+                <div class="team text-center rounded p-3 py-4">
                     <img src="images/Khoo.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                     <div class="content mt-3">
                         <h4 class="title mb-0"><a href="https://www.linkedin.com/in/qixuan-khoo/" target="blank" style="color:#26484A">Qi Xuan Khoo</a></h4>
                         <small class="text-muted">Alumnus (Co-Founder, Co-Director)</small>
-                        <p>Karsh Scholar at Duke. A part-time musician, full-time foodie, and a dreamer who aspires to inspire before he expires.</p>
+                        <p>Karsh Scholar. A part-time musician, full-time foodie, and a dreamer who aspires to inspire before he expires.</p>
                         <ul class="list-unstyled mt-3 social-icon social mb-0">
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                             <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

@@ -20,7 +20,7 @@
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/ejay-lin/" target="blank" style="color: #26484A;">Ejay Lin</a></h4>
                     <small class="text-muted">Executive Director</small>
-                    <p>Karsh Scholar at Duke studying Economics and Computer Science. A part-time musician, full-time foodie, and a dreamer who aspires to inspire before he expires.</p>
+                    <p>Senior at Duke studying Data Science and Political Science. Enthusiastic about entrepreneurship and sustainability, and advocator for tech-enabled social impact. A certified scuba diver, food blogger, and learning to appreciate arts.</p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
@@ -56,7 +56,7 @@
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/jyang295/" target="blank" style="color:#26484A">Jason Yang</a></h4>
                     <small class="text-muted">Co-Director of Technology</small>
-                    <p>Senior at Duke studying Computer Science and Statistics. Passionate about the intersection between technology and equity.</p>
+                    <p>Senior at Duke studying Computer Science and Statistics. Passionate about the intersection between technology and equity. Fan of the outdoors and reading.</p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
@@ -194,8 +194,8 @@
             <div class="team text-center rounded p-3 py-4">
                 <img src="images/Whitney.png" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
-                    <h4 class="title mb-0"><a href="https://www.linkedin.com/in/tharunraj7/" target="blank" style="color:#26484A">Whitney Elson</a></h4>
-                    <small class="text-muted">Product / Project Management Lead</small>
+                    <h4 class="title mb-0"><a href="https://www.linkedin.com/in/whitney-elson/" target="blank" style="color:#26484A">Whitney Elson</a></h4>
+                    <small class="text-muted">Alumnus (Product / Project Management Lead)</small>
                     <p>Senior at Duke studying Computer Science, Visual Media Studies and Innovation & Entrepreneurship. Passionate about the intersection of technology and design and understanding unique user needs. Part time yogi, surfer and artist.</p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
@@ -213,7 +213,7 @@
                 <img src="images/Lily.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Lily Li</a></h4>
-                    <small class="text-muted">Partner Outreach Lead</small>
+                    <small class="text-muted">Alumnus (Partner Outreach Lead)</small>
                     <p>Undergraduate student at Duke University studying Statistics and Psychology. Passionate about data-driven impactful work that connects and empowers. 
                         An enthusiast of musicals, nature, and FRIENDS! </p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">

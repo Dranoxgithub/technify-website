@@ -110,7 +110,7 @@
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/tanya2103/" target="blank" style="color:#26484A">Tanya Agarwal</a></h4>
                     <small class="text-muted">Co-Director of Student Outreach</small>
-                    <p>Tanya is a junior at Duke majoring in Computer Science and Financial Economics with a minor in Film. She has experience working at a fintech startup, SaaS search fund and investment banking. Outside Technify, she’s involved with Scale and Coin Business Society, Dzialga Fellowship and filmmaking at Duke. In her free time, Tanya enjoys science fiction, formula one and sailing.</p>
+                    <p></p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
@@ -145,11 +145,7 @@
 <section class="container-fluid my-4">
     <div id="banner" class="row p-4 justify-content-center">
         <div class="content d-flex flex-column justify-content-center text-center">
-<<<<<<< HEAD
             <h1>Our Founders and Alumni</h1>
-=======
-            <h1>Our Founder and Alumni</h1>
->>>>>>> ec5c083 (row edit)
             <h5>Meet the people who started it all.</h5>
         </div>
     </div>
@@ -195,49 +191,6 @@
 
         <div class="col-lg-3 col-md-6 col-12 pt-2">
             <div class="team text-center rounded p-3 py-4">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <img src="images/Whitney.png" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
-                <div class="content mt-3">
-                    <h4 class="title mb-0"><a href="https://www.linkedin.com/in/whitney-elson/" target="blank" style="color:#26484A">Whitney Elson</a></h4>
-                    <small class="text-muted">Alumnus (Product / Project Management Lead)</small>
-                    <p>Senior at Duke studying Computer Science, Visual Media Studies and Innovation & Entrepreneurship. Passionate about the intersection of technology and design and understanding unique user needs. Part time yogi, surfer and artist.</p>
-                    <ul class="list-unstyled mt-3 social-icon social mb-0">
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
-                    </ul><!--end icon-->
-                </div>
-            </div>
-        </div><!--end col-->
-
-        <div class="col-lg-3 col-md-6 col-12 pt-2">
-            <div class="team text-center rounded p-3 py-4">
-                <img src="images/Lily.jpg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
-                <div class="content mt-3">
-                    <h4 class="title mb-0"><a href="https://www.linkedin.com/in/lily-li-58a9821a2/" target="blank" style="color:#26484A">Lily Li</a></h4>
-                    <small class="text-muted">Alumnus (Partner Outreach Lead)</small>
-                    <p>Undergraduate student at Duke University studying Statistics and Psychology. Passionate about data-driven impactful work that connects and empowers. 
-                        An enthusiast of musicals, nature, and FRIENDS! </p>
-                    <ul class="list-unstyled mt-3 social-icon social mb-0">
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
-                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
-                    </ul><!--end icon-->
-                </div>
-            </div>
-        </div><!--end col-->
-
-        <div class="col-lg-3 col-md-6 col-12 pt-2">
-            <div class="team text-center rounded p-3 py-4">
-=======
->>>>>>> ec5c083 (row edit)
-=======
->>>>>>> bd24f17 (refactored whole page)
                 <img src="images/Anni.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/anni-chen-02/" target="blank" style="color:#26484A">Anni Chen</a></h4>
@@ -255,6 +208,5 @@
         </div><!--end col-->
     </div>
 </div>
-
 
 @endsection

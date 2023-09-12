@@ -110,7 +110,7 @@
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/tanya2103/" target="blank" style="color:#26484A">Tanya Agarwal</a></h4>
                     <small class="text-muted">Co-Director of Student Outreach</small>
-                    <p></p>
+                    <p>Tanya is a junior at Duke majoring in Computer Science and Financial Economics with a minor in Film. She has experience working at a fintech startup, SaaS search fund and investment banking. Outside Technify, she’s involved with Scale and Coin Business Society, Dzialga Fellowship and filmmaking at Duke. In her free time, Tanya enjoys science fiction, formula one and sailing.</p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

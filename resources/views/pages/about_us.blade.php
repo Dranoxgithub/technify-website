@@ -56,7 +56,7 @@
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/jyang295/" target="blank" style="color:#26484A">Jason Yang</a></h4>
                     <small class="text-muted">Co-Director of Technology</small>
-                    <p>Senior at Duke studying Computer Science and Statistics. Passionate about the intersection between technology and equity. Fan of the outdoors and reading.</p>
+                    <p>Senior at Duke studying Computer Science and Statistics. Passionate about the intersection between technology and equity, specifically Ed-Tech. Fan of the outdoors and literature.</p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
@@ -129,7 +129,7 @@
                 <div class="content mt-3">
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/malini-kamlani/" target="blank" style="color:#26484A">Malini Kamlani</a></h4>
                     <small class="text-muted">Co-Director of Student Outreach</small>
-                    <p></p>
+                    <p>Sophomore at Duke studying Computer Science and Finance. Excited about the growing intersection of social impact and business. Truly believe in the potential for tech solutions to change the world. Love dancing, listening to music, and baking.</p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

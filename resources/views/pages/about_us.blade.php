@@ -92,7 +92,7 @@
                     <h4 class="title mb-0"><a href="https://www.linkedin.com/in/john-yoo-6a974023b/" target="blank" style="color:#26484A">John Yoo</a></h4>
                     <small class="text-muted">Co-Director of Technology</small>
                     <p>Undergraduate at Duke University studying ECE/CS with a concentration in AI/ML. Passionate about machine/deep learning, web development, 
-                        and biotechnology that innovates life-changing technologies.</p>
+                        and biotechnology that innovates life-changing technologies. Loves to lift, be active outdoors, and play video games. </p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>

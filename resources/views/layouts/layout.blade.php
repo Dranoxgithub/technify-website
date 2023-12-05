@@ -45,11 +45,11 @@
 					<li class="nav-item">
 						<a class="nav-link" href="/about_us">Our Team</a>
 					</li>
-					<li class="nav-item d-none d-lg-block">
+					<!-- <li class="nav-item d-none d-lg-block">
 						<a class="nav-link hor-vector"> | </a>
-					</li>
+					</li> -->
 					<hr class="w-100 d-lg-none">
-					@guest
+					<!-- @guest
 
 						@if (Request::is('register'))
 							<li class="nav-item">
@@ -65,7 +65,7 @@
 							</li>
 							<li class="nav-item">
 								<a class="nav-link btn btn-light sign-up pb-1" href="/register">Sign Up</a>
-							</li>
+							</li> -->
 						@endif
 								
 						@else
@@ -167,8 +167,8 @@
 				</div>
 				<div class="col-md-3 d-none d-md-block p-2 footer-col-5 my-4">
 					<p class="footer-header">Partner With Us</p>
-					<a href="/register">Sign Up</a><br>
-					<a href="/login">Log In</a>
+					<!-- <a href="/register">Sign Up</a><br>
+					<a href="/login">Log In</a> -->
 				</div>
 			</div>
 		</div>
@@ -212,8 +212,8 @@
                 </div>
                 <div class="col-sm-2 p-2 footer-col-5 mt-4 mb-4 text-left">
                     <p class="footer-header">Partner With Us</p>
-                    <a href="">Sign Up</a><br>
-                    <a href="">Log In</a>
+                    <!-- <a href="">Sign Up</a><br>
+                    <a href="">Log In</a> -->
                 </div>
             </div>
         </div>

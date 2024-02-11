@@ -145,9 +145,9 @@
             <!-- <a class="btn btn-lg btn-primary mb-2" href="" style="background-color: #26484A">
                 Apply as Non-Profit
             </a> -->
-            <a class="btn btn-lg btn-primary p-3 pr-5 pl-5" href="/register" style="background-color: #26484A">
+            <!-- <a class="btn btn-lg btn-primary p-3 pr-5 pl-5" href="/register" style="background-color: #26484A">
                 Sign Me Up!
-            </a>
+            </a> -->
         </div>
     </div>
 </section>

@@ -165,11 +165,11 @@
 					<a href="/#Projects">Projects</a><br>
 					<a href="/about_us">Our Team</a><br>
 				</div>
-				<div class="col-md-3 d-none d-md-block p-2 footer-col-5 my-4">
+				<!-- <div class="col-md-3 d-none d-md-block p-2 footer-col-5 my-4">
 					<p class="footer-header">Partner With Us</p>
-					<!-- <a href="/register">Sign Up</a><br>
-					<a href="/login">Log In</a> -->
-				</div>
+					<a href="/register">Sign Up</a><br>
+					<a href="/login">Log In</a>
+				</div> -->
 			</div>
 		</div>
     {{-- <section class="container-fluid" style="">
@@ -210,11 +210,11 @@
                     <a class="" href="">Projects</a><br>
                     <a class="" href="">Our Team</a><br>
                 </div>
-                <div class="col-sm-2 p-2 footer-col-5 mt-4 mb-4 text-left">
+                <!-- <div class="col-sm-2 p-2 footer-col-5 mt-4 mb-4 text-left">
                     <p class="footer-header">Partner With Us</p>
-                    <!-- <a href="">Sign Up</a><br>
-                    <a href="">Log In</a> -->
-                </div>
+                    <<a href="">Sign Up</a><br>
+                    <a href="">Log In</a>
+                </div>  -->
             </div>
         </div>
     </section> --}}

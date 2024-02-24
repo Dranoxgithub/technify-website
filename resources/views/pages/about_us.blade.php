@@ -145,6 +145,53 @@
 <section class="container-fluid my-4">
     <div id="banner" class="row p-4 justify-content-center">
         <div class="content d-flex flex-column justify-content-center text-center">
+            <h1>Our Members</h1>
+            <h5>Meet our Product Managers, Software Engineers, and UI/UX Designers. </h5>
+        </div>
+    </div>
+</section>
+<div class="container bootdey">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-12  pt-2">
+            <div class="team text-center rounded p-3 py-4">
+                <img src="images/Rahul.jpeg" class="img-fluid avatar avatar-medium shadow rounded-circle profile-pic" alt="">
+                <div class="content mt-3">
+                    <h4 class="title mb-0">Rahul Bhandari</a></h4>
+                    <small class="text-muted">Class of 2026, Computer Science(AI/ML) </small>
+                    <p>Software Engineer</p>
+                    <ul class="list-unstyled mt-3 social-icon social mb-0">
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                    </ul><!--end icon-->
+                </div>
+            </div>
+        </div>
+    <div class="col-lg-3 col-md-6 col-12  pt-2">
+            <div class="team text-center rounded p-3 py-4">
+                <img src="images/Doreen.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                <div class="content mt-3">
+                    <h4 class="title mb-0">Doreen Echeverri</a></h4>
+                    <small class="text-muted">Class of 2025, Computer Science / Neuroscience</small>
+                    <p></p>
+                    <ul class="list-unstyled mt-3 social-icon social mb-0">
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                    </ul><!--end icon-->
+                </div>
+            </div>
+        </div>
+</div>
+
+
+<section class="container-fluid my-4">
+    <div id="banner" class="row p-4 justify-content-center">
+        <div class="content d-flex flex-column justify-content-center text-center">
             <h1>Our Founders and Alumni</h1>
             <h5>Meet the people who started it all.</h5>
         </div>

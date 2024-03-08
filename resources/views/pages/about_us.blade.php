@@ -171,10 +171,10 @@
         </div>
     <div class="col-lg-3 col-md-6 col-12  pt-2">
             <div class="team text-center rounded p-3 py-4">
-                <img src="images/Doreen.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                <img src="images/Doreen1_cropped.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
                 <div class="content mt-3">
                     <h4 class="title mb-0">Doreen Echeverri</a></h4>
-                    <small class="text-muted">Class of 2025, Computer Science / Neuroscience</small>
+                    <small class="text-muted">Class of 2025, Computer Science, Neuroscience</small>
                     <p></p>
                     <ul class="list-unstyled mt-3 social-icon social mb-0">
                         <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
@@ -186,8 +186,95 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-3 col-md-6 col-12  pt-2">
+            <div class="team text-center rounded p-3 py-4">
+                <img src="images/Nelly_cropped.JPG" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                <div class="content mt-3">
+                    <h4 class="title mb-0">Nelly Garces</a></h4>
+                    <small class="text-muted">Class of 2026, Computer Science</small>
+                    <p>UI/UX Designer</p>
+                    <ul class="list-unstyled mt-3 social-icon social mb-0">
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                    </ul><!--end icon-->
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12  pt-2">
+            <div class="team text-center rounded p-3 py-4">
+                <img src="images/Maya_cropped.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                <div class="content mt-3">
+                    <h4 class="title mb-0">Maya Stokes</a></h4>
+                    <small class="text-muted">Class of 2026, Computer Science, Financial Economics minor</small>
+                    <p>Product Manager</p>
+                    <ul class="list-unstyled mt-3 social-icon social mb-0">
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                    </ul><!--end icon-->
+                </div>
+            </div>
 </div>
+<div class="container bootdey">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-12  pt-2">
+                <div class="team text-center rounded p-3 py-4">
+                        <img src="images/Edrian_cropped.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">Edrian Liao</a></h4>
+                            <small class="text-muted">Class of 2025, Electrical Engineering, Computer Science</small>
+                            <p>Product Manager</p>
+                            <ul class="list-unstyled mt-3 social-icon social mb-0">
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                            </ul><!--end icon-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12  pt-2">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="images/Aria_cropped.jpeg" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">Aria Ragun</a></h4>
+                            <small class="text-muted">Class of 2027, Computer Science, Statistics</small>
+                            <p>Software Engineer</p>
+                            <ul class="list-unstyled mt-3 social-icon social mb-0">
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                                <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                            </ul><!--end icon-->
+                        </div>
+                    </div>
+                </div>
+            <div class="col-lg-3 col-md-6 col-12  pt-2">
+            <div class="team text-center rounded p-3 py-4">
+                <img src="images/Aayush_cropped.png" class="img-fluid avatar avatar-medium shadow rounded-pill profile-pic" alt="">
+                <div class="content mt-3">
+                    <h4 class="title mb-0">Aayush Kashyap</a></h4>
+                    <small class="text-muted">Class of 2027, Electrical Engineering,Computer Science</small>
+                    <p>Software Engineer</p>
+                    <ul class="list-unstyled mt-3 social-icon social mb-0">
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-facebook" title="Facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-instagram" title="Instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-twitter" title="Twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-google-plus" title="Google +"></i></a></li>
+                        <li class="list-inline-item"><a href="javascript:void(0)" class="rounded"><i class="mdi mdi-linkedin" title="Linkedin"></i></a></li>
+                    </ul><!--end icon-->
+                </div>
+            </div>
+            
 
+</div>
 
 <section class="container-fluid my-4">
     <div id="banner" class="row p-4 justify-content-center">
